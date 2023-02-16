@@ -6,6 +6,7 @@ package vista;
 
 import java.awt.Image;
 import javax.swing.ImageIcon;
+import javax.swing.JToggleButton;
 import modelo.Peon;
 import modelo.Tablero;
 
@@ -544,13 +545,9 @@ public class PnlTableroBotones extends javax.swing.JPanel {
     private void btnH3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnH3ActionPerformed
         // TODO add your handling code here:
 
-        if (btnH2.isSelected() && tableroA.retornarIdentificadorBotonesPorTablero().
-                equals("peonBlanco")) {
-            btnH3.setIcon(btnH2.getIcon());
-            btnH2.setIcon(null);
-        } else {
-            System.out.println("prueba de no hay ese icono");
-        }
+        validarMovimiento(btnH2, btnH3);
+ 
+        
     }//GEN-LAST:event_btnH3ActionPerformed
 
     private void btnH4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnH4ActionPerformed
@@ -837,6 +834,16 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         tablero[7][5] = "alfilBlanco";
         tablero[7][6] = "caballoBlanco";
         tablero[7][7] = "torreBlanco";
+    }
+    
+    public void validarMovimiento(JToggleButton btn1, JToggleButton btn2){
+        if (btn1.isSelected() && tableroA.retornarIdentificadorBotonesPorTablero().
+                equals("peonBlanco")) {
+            btn2.setIcon(btn1.getIcon());
+            btn1.setIcon(null);
+        } else {
+            System.out.println("prueba de no hay ese icono");
+        }
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
