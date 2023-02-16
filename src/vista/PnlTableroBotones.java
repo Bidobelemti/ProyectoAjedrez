@@ -700,13 +700,10 @@ public class PnlTableroBotones extends javax.swing.JPanel {
     private void btnH4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnH4ActionPerformed
         // TODO add your handling code here:
         System.out.println(tableroA.retornarIdentificadorBotonesPorTablero());
-        if (btnH2.isSelected() && tableroA.retornarIdentificadorBotonesPorTablero().
-                equals("peonBlanco")) {
-            btnH4.setIcon(btnH2.getIcon());
-            btnH2.setIcon(null);
-        } else {
+        validarMovimiento(btnH2, btnH4);
+        validarMovimiento(btnH3, btnH4);
             //System.out.println("prueba de no hay ese icono");
-        }
+        
     }//GEN-LAST:event_btnH4ActionPerformed
 
     private void btnD3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnD3ActionPerformed
