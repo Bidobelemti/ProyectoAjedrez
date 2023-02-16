@@ -524,10 +524,12 @@ public class PnlTableroBotones extends javax.swing.JPanel {
 
     private void btnF1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnF1ActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_btnF1ActionPerformed
 
     private void btnH1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnH1ActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_btnH1ActionPerformed
 //peon blanco 
     private void btnH2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnH2ActionPerformed
@@ -542,7 +544,8 @@ public class PnlTableroBotones extends javax.swing.JPanel {
     private void btnH3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnH3ActionPerformed
         // TODO add your handling code here:
 
-        if (btnH2.isSelected()) {
+        if (btnH2.isSelected() && tableroA.retornarIdentificadorBotonesPorTablero().
+                equals("peonBlanco")) {
             btnH3.setIcon(btnH2.getIcon());
             btnH2.setIcon(null);
         } else {
@@ -553,11 +556,12 @@ public class PnlTableroBotones extends javax.swing.JPanel {
     private void btnH4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnH4ActionPerformed
         // TODO add your handling code here:
         System.out.println(tableroA.retornarIdentificadorBotonesPorTablero());
-        if (btnH2.isSelected()) {
+        if (btnH2.isSelected() && tableroA.retornarIdentificadorBotonesPorTablero().
+                equals("peonBlanco")) {
             btnH4.setIcon(btnH2.getIcon());
             btnH2.setIcon(null);
         } else {
-            System.out.println("prueba de no hay ese icono");
+            //System.out.println("prueba de no hay ese icono");
         }
     }//GEN-LAST:event_btnH4ActionPerformed
 
