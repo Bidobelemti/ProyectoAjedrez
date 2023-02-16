@@ -9,7 +9,7 @@ import vista.PnlTableroBotones;
  */
 public class Tablero {
 
-    public String tablero[][] = new String[8][8];
+    public static String tablero[][] = new String[8][8];
     Peon peon;
 
     public String posicionActual;

@@ -670,7 +670,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
 
     private void btnF1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnF1ActionPerformed
         // TODO add your handling code here:
-        
+
     }//GEN-LAST:event_btnF1ActionPerformed
 
     private void btnH1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnH1ActionPerformed
@@ -695,15 +695,18 @@ public class PnlTableroBotones extends javax.swing.JPanel {
     private void btnH3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnH3ActionPerformed
         // TODO add your handling code here:
         validarMovimiento(btnH2, btnH3);
+        System.out.println(tableroA.getPosicionActual() + "pos");
+        System.out.println(tableroA.retornarIdentificadorBotonesPorTablero() + "ede");
+
     }//GEN-LAST:event_btnH3ActionPerformed
 
     private void btnH4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnH4ActionPerformed
         // TODO add your handling code here:
         System.out.println(tableroA.retornarIdentificadorBotonesPorTablero());
-        validarMovimiento(btnH2, btnH4);
+        //validarMovimiento(btnH2, btnH4);
         validarMovimiento(btnH3, btnH4);
-            //System.out.println("prueba de no hay ese icono");
-        
+        //System.out.println("prueba de no hay ese icono");
+
     }//GEN-LAST:event_btnH4ActionPerformed
 
     private void btnD3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnD3ActionPerformed
@@ -1097,23 +1100,108 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         tablero[7][6] = "caballoBlanco";
         tablero[7][7] = "torreBlanco";
     }
-    
-    public void validarMovimiento(JToggleButton btn1, JToggleButton btn2){
+
+    public void validarMovimiento(JToggleButton btn1, JToggleButton btn2) {
         if (btn1.isSelected() && tableroA.retornarIdentificadorBotonesPorTablero().
                 equals("peonBlanco")) {
             cambiarIcono(btn1, btn2);
+            System.out.println(tableroA.getPosicionBotonesTablero(btn1) + "  "
+                    + tableroA.getPosicionBotonesTablero(btn2));
+            tableroA.cambiarEnString(tableroA.getPosicionBotonesTablero(btn1),
+                    tableroA.getPosicionBotonesTablero(btn2));
         }
-        if(btn1.isSelected() && tableroA.retornarIdentificadorBotonesPorTablero().
-                equals("torreBlanco")){
+        if (btn1.isSelected() && tableroA.retornarIdentificadorBotonesPorTablero().
+                equals("torreBlanco")) {
             cambiarIcono(btn1, btn2);
+            System.out.println(tableroA.getPosicionBotonesTablero(btn1) + "  "
+                    + tableroA.getPosicionBotonesTablero(btn2));
+            tableroA.cambiarEnString(tableroA.getPosicionBotonesTablero(btn1),
+                    tableroA.getPosicionBotonesTablero(btn2));
         }
-    }
-    
-    public void cambiarIcono(JToggleButton btn1, JToggleButton btn2){
-        btn2.setIcon(btn1.getIcon());
-            btn1.setIcon(null);
+        System.out.println(tableroA.tablero[5][7] + "57");
+        System.out.println(tableroA.tablero[6][7] + "67");
+        System.out.println(tableroA.tablero[4][7] + "47");
+        quitarSeleccionBotones();
     }
 
+    public void cambiarIcono(JToggleButton btn1, JToggleButton btn2) {
+        btn2.setIcon(btn1.getIcon());
+        btn1.setIcon(null);
+    }
+
+    public void quitarSeleccionBotones() {
+        btnA1.setSelected(false);
+        btnB1.setSelected(false);
+        btnC1.setSelected(false);
+        btnD1.setSelected(false);
+        btnE1.setSelected(false);
+        btnF1.setSelected(false);
+        btnG1.setSelected(false);
+        btnH1.setSelected(false);
+
+        btnA2.setSelected(false);
+        btnB2.setSelected(false);
+        btnC2.setSelected(false);
+        btnD2.setSelected(false);
+        btnE2.setSelected(false);
+        btnF2.setSelected(false);
+        btnG2.setSelected(false);
+        btnH2.setSelected(false);
+
+        btnA3.setSelected(false);
+        btnB3.setSelected(false);
+        btnC3.setSelected(false);
+        btnD3.setSelected(false);
+        btnE3.setSelected(false);
+        btnF3.setSelected(false);
+        btnG3.setSelected(false);
+        btnH3.setSelected(false);
+
+        btnA4.setSelected(false);
+        btnB4.setSelected(false);
+        btnC4.setSelected(false);
+        btnD4.setSelected(false);
+        btnE4.setSelected(false);
+        btnF4.setSelected(false);
+        btnG4.setSelected(false);
+        btnH4.setSelected(false);
+
+        btnA5.setSelected(false);
+        btnB5.setSelected(false);
+        btnC5.setSelected(false);
+        btnD5.setSelected(false);
+        btnE5.setSelected(false);
+        btnF5.setSelected(false);
+        btnG5.setSelected(false);
+        btnH5.setSelected(false);
+
+        btnA6.setSelected(false);
+        btnB6.setSelected(false);
+        btnC6.setSelected(false);
+        btnD6.setSelected(false);
+        btnE6.setSelected(false);
+        btnF6.setSelected(false);
+        btnG6.setSelected(false);
+        btnH6.setSelected(false);
+
+        btnA7.setSelected(false);
+        btnB7.setSelected(false);
+        btnC7.setSelected(false);
+        btnD7.setSelected(false);
+        btnE7.setSelected(false);
+        btnF7.setSelected(false);
+        btnG7.setSelected(false);
+        btnH7.setSelected(false);
+
+        btnA8.setSelected(false);
+        btnB8.setSelected(false);
+        btnC8.setSelected(false);
+        btnD8.setSelected(false);
+        btnE8.setSelected(false);
+        btnF8.setSelected(false);
+        btnG8.setSelected(false);
+        btnH8.setSelected(false);
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public static javax.swing.JToggleButton btnA1;
     public static javax.swing.JToggleButton btnA2;
