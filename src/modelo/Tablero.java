@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package modelo;
 
 import javax.swing.JToggleButton;
@@ -185,20 +181,24 @@ public class Tablero {
     }
 
     public String retornarIdentificadorBotonesPorTablero(){
+        try{
         int x = Character.getNumericValue(posicionActual.charAt(0));
         int y = Character.getNumericValue(posicionActual.charAt(1));
         return tablero[x][y];
+        }catch(NullPointerException npe){
+            System.out.println("chale");
+            return "";
+        }
+        
     }
     
     private void cambiarEnString(String posAntigua, String posNueva) {
-        int xA = Character.getNumericValue(posAntigua.charAt(1));
-        int yA = Character.getNumericValue(posAntigua.charAt(0));
-
-        int xN = Character.getNumericValue(posNueva.charAt(1));
-        int yN = Character.getNumericValue(posNueva.charAt(0));
-               
-        tablero[yN][xN] = tablero[yA][xA];
-        tablero[yA][xA] = "";
+        int xA = Character.getNumericValue(posAntigua.charAt(0));
+        int yA = Character.getNumericValue(posAntigua.charAt(1));
+        int xN = Character.getNumericValue(posNueva.charAt(0));
+        int yN = Character.getNumericValue(posNueva.charAt(1));       
+        tablero[xN][yN] = tablero[xA][yA];
+        tablero[xA][yA] = "";
     }
     
 }

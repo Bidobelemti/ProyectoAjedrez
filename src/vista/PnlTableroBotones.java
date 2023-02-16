@@ -542,7 +542,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
     private void btnH3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnH3ActionPerformed
         // TODO add your handling code here:
 
-        if (btnH2.isSelected() && obtenerPosicionTablero(posicionNueva).equals("peonBlanco")) {
+        if (btnH2.isSelected()) {
             btnH3.setIcon(btnH2.getIcon());
             btnH2.setIcon(null);
         } else {
@@ -552,7 +552,13 @@ public class PnlTableroBotones extends javax.swing.JPanel {
 
     private void btnH4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnH4ActionPerformed
         // TODO add your handling code here:
-
+        System.out.println(tableroA.retornarIdentificadorBotonesPorTablero());
+        if (btnH2.isSelected()) {
+            btnH4.setIcon(btnH2.getIcon());
+            btnH2.setIcon(null);
+        } else {
+            System.out.println("prueba de no hay ese icono");
+        }
     }//GEN-LAST:event_btnH4ActionPerformed
 
     private void btnD3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnD3ActionPerformed
@@ -564,14 +570,14 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         // TODO add your handling code here:
         tableroA.setPosicionBotonesTablero(btnA2);
         System.out.println(tableroA.getPosicionActual() + " prueba de calse tablero");
-        System.out.println(tableroA.retornarIdentificadorBotonesPorTablero()+" prueba de posicion clase tablero ");
+        System.out.println(tableroA.retornarIdentificadorBotonesPorTablero() + " prueba de posicion clase tablero ");
     }//GEN-LAST:event_btnA2ActionPerformed
 
     private void btnB2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnB2ActionPerformed
         // TODO add your handling code here:
         tableroA.setPosicionBotonesTablero(btnB2);
         System.out.println(tableroA.getPosicionActual() + " prueba de calse tablero");
-        System.out.println(tableroA.retornarIdentificadorBotonesPorTablero()+" prueba de posicion clase tablero ");
+        System.out.println(tableroA.retornarIdentificadorBotonesPorTablero() + " prueba de posicion clase tablero ");
     }//GEN-LAST:event_btnB2ActionPerformed
 
     private void btnC2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnC2ActionPerformed
