@@ -181,6 +181,139 @@ public class Tablero {
         }
     }
 
+    public String getPosicionBotonesTablero(JToggleButton boton) {
+        if (boton == PnlTableroBotones.btnA8) {
+            return "00";
+        } else if (boton == PnlTableroBotones.btnB8) {
+            return "01";
+        } else if (boton == PnlTableroBotones.btnC8) {
+            return "02";
+        } else if (boton == PnlTableroBotones.btnD8) {
+            return "03";
+        } else if (boton == PnlTableroBotones.btnE8) {
+            return "04";
+        } else if (boton == PnlTableroBotones.btnF8) {
+            return "05";
+        } else if (boton == PnlTableroBotones.btnG8) {
+            return "06";
+        } else if (boton == PnlTableroBotones.btnH8) {
+            return "07";
+        } else if (boton == PnlTableroBotones.btnA7) {
+            return "10";
+        } else if (boton == PnlTableroBotones.btnB7) {
+            return "11";
+        } else if (boton == PnlTableroBotones.btnC7) {
+            return "12";
+        } else if (boton == PnlTableroBotones.btnD7) {
+            return "13";
+        } else if (boton == PnlTableroBotones.btnE7) {
+            return "14";
+        } else if (boton == PnlTableroBotones.btnF7) {
+            return "15";
+        } else if (boton == PnlTableroBotones.btnG7) {
+            return "16";
+        } else if (boton == PnlTableroBotones.btnH7) {
+            return "17";
+        } else if (boton == PnlTableroBotones.btnA6) {
+            return "20";
+        } else if (boton == PnlTableroBotones.btnB6) {
+            return "21";
+        } else if (boton == PnlTableroBotones.btnC6) {
+            return "22";
+        } else if (boton == PnlTableroBotones.btnD6) {
+            return "23";
+        } else if (boton == PnlTableroBotones.btnE6) {
+            return "24";
+        } else if (boton == PnlTableroBotones.btnF6) {
+            return "25";
+        } else if (boton == PnlTableroBotones.btnG6) {
+            return "26";
+        } else if (boton == PnlTableroBotones.btnH6) {
+            return "27";
+        } else if (boton == PnlTableroBotones.btnA5) {
+            return "30";
+        } else if (boton == PnlTableroBotones.btnB5) {
+            return "31";
+        } else if (boton == PnlTableroBotones.btnC5) {
+            return "32";
+        } else if (boton == PnlTableroBotones.btnD5) {
+            return "33";
+        } else if (boton == PnlTableroBotones.btnE5) {
+            return "34";
+        } else if (boton == PnlTableroBotones.btnF5) {
+            return "35";
+        } else if (boton == PnlTableroBotones.btnG5) {
+            return "36";
+        } else if (boton == PnlTableroBotones.btnH5) {
+            return "37";
+        } else if (boton == PnlTableroBotones.btnA4) {
+            return "40";
+        } else if (boton == PnlTableroBotones.btnB4) {
+            return "41";
+        } else if (boton == PnlTableroBotones.btnC4) {
+            return "42";
+        } else if (boton == PnlTableroBotones.btnD4) {
+            return "43";
+        } else if (boton == PnlTableroBotones.btnE4) {
+            return "44";
+        } else if (boton == PnlTableroBotones.btnF4) {
+            return "45";
+        } else if (boton == PnlTableroBotones.btnG4) {
+            return "46";
+        } else if (boton == PnlTableroBotones.btnH4) {
+            return "47";
+        } else if (boton == PnlTableroBotones.btnA3) {
+            return "50";
+        } else if (boton == PnlTableroBotones.btnB3) {
+            return "51";
+        } else if (boton == PnlTableroBotones.btnC3) {
+            return "52";
+        } else if (boton == PnlTableroBotones.btnD3) {
+            return "53";
+        } else if (boton == PnlTableroBotones.btnE3) {
+            return "54";
+        } else if (boton == PnlTableroBotones.btnF3) {
+            return "55";
+        } else if (boton == PnlTableroBotones.btnG3) {
+            return "56";
+        } else if (boton == PnlTableroBotones.btnH3) {
+            return "57";
+        } else if (boton == PnlTableroBotones.btnA2) {
+            return "60";
+        } else if (boton == PnlTableroBotones.btnB2) {
+            return "61";
+        } else if (boton == PnlTableroBotones.btnC2) {
+            return "62";
+        } else if (boton == PnlTableroBotones.btnD2) {
+            return "63";
+        } else if (boton == PnlTableroBotones.btnE2) {
+            return "64";
+        } else if (boton == PnlTableroBotones.btnF2) {
+            return "65";
+        } else if (boton == PnlTableroBotones.btnG2) {
+            return "66";
+        } else if (boton == PnlTableroBotones.btnH2) {
+            return "67";
+        } else if (boton == PnlTableroBotones.btnA1) {
+            return "70";
+        } else if (boton == PnlTableroBotones.btnB1) {
+            return "71";
+        } else if (boton == PnlTableroBotones.btnC1) {
+            return "72";
+        } else if (boton == PnlTableroBotones.btnD1) {
+            return "73";
+        } else if (boton == PnlTableroBotones.btnE1) {
+            return "74";
+        } else if (boton == PnlTableroBotones.btnF1) {
+            return "75";
+        } else if (boton == PnlTableroBotones.btnG1) {
+            return "76";
+        } else if (boton == PnlTableroBotones.btnH1) {
+            return "77";
+        }
+        return null;
+    }
+
     private JToggleButton boton(String posicion) {
         if (posicion.equals("00")) {
             return PnlTableroBotones.btnA8;
@@ -311,7 +444,7 @@ public class Tablero {
         } else if (posicion.equals("77")) {
             return PnlTableroBotones.btnH1;
         }
-        
+
         return null;
     }
 
@@ -327,7 +460,7 @@ public class Tablero {
 
     }
 
-    private void cambiarEnString(String posAntigua, String posNueva) {
+    public void cambiarEnString(String posAntigua, String posNueva) {
         int xA = Character.getNumericValue(posAntigua.charAt(0));
         int yA = Character.getNumericValue(posAntigua.charAt(1));
         int xN = Character.getNumericValue(posNueva.charAt(0));
