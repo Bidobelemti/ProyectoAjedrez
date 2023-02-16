@@ -32,6 +32,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         initComponents();
         iniciarTablero();
         tableroA.setTablero();
+        
         tableroA.cambiarEnPantalla(posicionAntigua, posicionNueva);
         tableroA.moverFicha(nombreFicha);
 
