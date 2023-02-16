@@ -10,6 +10,8 @@ import vista.PnlTableroBotones;
 public class Tablero {
 
     public String tablero[][] = new String[8][8];
+    Peon peon;
+
     public String posicionActual;
     public String posicionNueva;
 
@@ -177,7 +179,44 @@ public class Tablero {
         } else if (boton == PnlTableroBotones.btnH1) {
             this.posicionActual = "77";
         }
+    }
 
+    private JToggleButton boton(String posicion) {
+        if (posicion.equals("00")) {
+            return PnlTableroBotones.btnA8;
+        } else if (posicion.equals("01")) {
+            return PnlTableroBotones.btnB8;
+        } else if (posicion.equals("02")) {
+            return PnlTableroBotones.btnC8;
+        } else if (posicion.equals("03")) {
+            return PnlTableroBotones.btnD8;
+        } else if (posicion.equals("04")) {
+            return PnlTableroBotones.btnE8;
+        } else if (posicion.equals("05")) {
+            return PnlTableroBotones.btnF8;
+        } else if (posicion.equals("06")) {
+            return PnlTableroBotones.btnG8;
+        } else if (posicion.equals("07")) {
+            return PnlTableroBotones.btnH8;
+        } else if (posicion.equals("08")) {
+            return PnlTableroBotones.btnA7;
+        } else if (posicion.equals("09")) {
+            return PnlTableroBotones.btnB7;
+        } else if (posicion.equals("10")) {
+            return PnlTableroBotones.btnC7;
+        } else if (posicion.equals("11")) {
+            return PnlTableroBotones.btnD7;
+        } else if (posicion.equals("12")) {
+            return PnlTableroBotones.btnE7;
+        } else if (posicion.equals("13")) {
+            return PnlTableroBotones.btnF7;
+        } else if (posicion.equals("14")) {
+            return PnlTableroBotones.btnG7;
+        } else if (posicion.equals("15")) {
+            return PnlTableroBotones.btnH7;
+        }
+
+        return null;
     }
 
     public String retornarIdentificadorBotonesPorTablero() {
@@ -201,4 +240,57 @@ public class Tablero {
         tablero[xA][yA] = "";
     }
 
+    public void moverFicha(String nombreFicha) {
+
+        switch (nombreFicha) {
+
+            case "peonBlanco":
+                boolean validacion = peon.validarMovimiento(posicionActual.charAt(1),
+                        posicionNueva.charAt(1));
+                if (validacion == true) {
+                //    validarMovimiento();
+
+                }
+                break;
+            case "peonNegro":
+                break;
+        }
+
+    }
+
+    public void validarMovimiento(JToggleButton btn1, JToggleButton btn2) {
+        if (btn1.isSelected() && retornarIdentificadorBotonesPorTablero().
+                equals("peonBlanco")) {
+            btn2.setIcon(btn1.getIcon());
+            btn1.setIcon(null);
+        } else {
+            System.out.println("prueba de no hay ese icono");
+        }
+    }
+
 }
+
+/*
+if(direcion).equals(la direccion){
+nombreFicha == "peonBlanco";
+
+void (String){
+
+swtich (String){
+case 1: "peonBlanco"
+
+posicionActual
+posicionFinal
+
+if (posF > psI){
+posF == btn2
+psI == btn1
+
+{
+btn2.setIcon(btn1);
+
+
+to 6 o 12:
+
+}
+ */

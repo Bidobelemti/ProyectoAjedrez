@@ -41,4 +41,17 @@ public class Peon extends Ficha {
 
     }
 
+    public boolean validarMovimiento(int posicionInicial, int posicionFinal) {
+
+        boolean validador = false;
+
+        if (posicionFinal > posicionInicial) {
+            validador = true;
+
+        }
+
+        return validador;
+
+    }
+
 }
