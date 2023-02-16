@@ -198,24 +198,120 @@ public class Tablero {
             return PnlTableroBotones.btnG8;
         } else if (posicion.equals("07")) {
             return PnlTableroBotones.btnH8;
-        } else if (posicion.equals("08")) {
-            return PnlTableroBotones.btnA7;
-        } else if (posicion.equals("09")) {
-            return PnlTableroBotones.btnB7;
         } else if (posicion.equals("10")) {
-            return PnlTableroBotones.btnC7;
+            return PnlTableroBotones.btnA7;
         } else if (posicion.equals("11")) {
-            return PnlTableroBotones.btnD7;
+            return PnlTableroBotones.btnB7;
         } else if (posicion.equals("12")) {
-            return PnlTableroBotones.btnE7;
+            return PnlTableroBotones.btnC7;
         } else if (posicion.equals("13")) {
-            return PnlTableroBotones.btnF7;
+            return PnlTableroBotones.btnD7;
         } else if (posicion.equals("14")) {
-            return PnlTableroBotones.btnG7;
+            return PnlTableroBotones.btnE7;
         } else if (posicion.equals("15")) {
+            return PnlTableroBotones.btnF7;
+        } else if (posicion.equals("16")) {
+            return PnlTableroBotones.btnG7;
+        } else if (posicion.equals("17")) {
             return PnlTableroBotones.btnH7;
+        } else if (posicion.equals("20")) {
+            return PnlTableroBotones.btnA6;
+        } else if (posicion.equals("21")) {
+            return PnlTableroBotones.btnB6;
+        } else if (posicion.equals("22")) {
+            return PnlTableroBotones.btnC6;
+        } else if (posicion.equals("23")) {
+            return PnlTableroBotones.btnD6;
+        } else if (posicion.equals("24")) {
+            return PnlTableroBotones.btnE6;
+        } else if (posicion.equals("25")) {
+            return PnlTableroBotones.btnF6;
+        } else if (posicion.equals("26")) {
+            return PnlTableroBotones.btnG6;
+        } else if (posicion.equals("27")) {
+            return PnlTableroBotones.btnH6;
+        } else if (posicion.equals("30")) {
+            return PnlTableroBotones.btnA5;
+        } else if (posicion.equals("31")) {
+            return PnlTableroBotones.btnB5;
+        } else if (posicion.equals("32")) {
+            return PnlTableroBotones.btnC5;
+        } else if (posicion.equals("33")) {
+            return PnlTableroBotones.btnD5;
+        } else if (posicion.equals("34")) {
+            return PnlTableroBotones.btnE5;
+        } else if (posicion.equals("35")) {
+            return PnlTableroBotones.btnF5;
+        } else if (posicion.equals("36")) {
+            return PnlTableroBotones.btnG5;
+        } else if (posicion.equals("37")) {
+            return PnlTableroBotones.btnH5;
+        } else if (posicion.equals("40")) {
+            return PnlTableroBotones.btnA4;
+        } else if (posicion.equals("41")) {
+            return PnlTableroBotones.btnB4;
+        } else if (posicion.equals("42")) {
+            return PnlTableroBotones.btnC4;
+        } else if (posicion.equals("43")) {
+            return PnlTableroBotones.btnD4;
+        } else if (posicion.equals("44")) {
+            return PnlTableroBotones.btnE4;
+        } else if (posicion.equals("45")) {
+            return PnlTableroBotones.btnF4;
+        } else if (posicion.equals("46")) {
+            return PnlTableroBotones.btnG4;
+        } else if (posicion.equals("47")) {
+            return PnlTableroBotones.btnH4;
+        } else if (posicion.equals("50")) {
+            return PnlTableroBotones.btnA3;
+        } else if (posicion.equals("51")) {
+            return PnlTableroBotones.btnB3;
+        } else if (posicion.equals("52")) {
+            return PnlTableroBotones.btnC3;
+        } else if (posicion.equals("53")) {
+            return PnlTableroBotones.btnD3;
+        } else if (posicion.equals("54")) {
+            return PnlTableroBotones.btnE3;
+        } else if (posicion.equals("55")) {
+            return PnlTableroBotones.btnF3;
+        } else if (posicion.equals("56")) {
+            return PnlTableroBotones.btnG3;
+        } else if (posicion.equals("57")) {
+            return PnlTableroBotones.btnH3;
+        } else if (posicion.equals("60")) {
+            return PnlTableroBotones.btnA2;
+        } else if (posicion.equals("61")) {
+            return PnlTableroBotones.btnB2;
+        } else if (posicion.equals("62")) {
+            return PnlTableroBotones.btnC2;
+        } else if (posicion.equals("63")) {
+            return PnlTableroBotones.btnD2;
+        } else if (posicion.equals("64")) {
+            return PnlTableroBotones.btnE2;
+        } else if (posicion.equals("65")) {
+            return PnlTableroBotones.btnF2;
+        } else if (posicion.equals("66")) {
+            return PnlTableroBotones.btnG2;
+        } else if (posicion.equals("67")) {
+            return PnlTableroBotones.btnH2;
+        } else if (posicion.equals("70")) {
+            return PnlTableroBotones.btnA1;
+        } else if (posicion.equals("71")) {
+            return PnlTableroBotones.btnB1;
+        } else if (posicion.equals("72")) {
+            return PnlTableroBotones.btnC1;
+        } else if (posicion.equals("73")) {
+            return PnlTableroBotones.btnD1;
+        } else if (posicion.equals("74")) {
+            return PnlTableroBotones.btnE1;
+        } else if (posicion.equals("75")) {
+            return PnlTableroBotones.btnF1;
+        } else if (posicion.equals("76")) {
+            return PnlTableroBotones.btnG1;
+        } else if (posicion.equals("77")) {
+            return PnlTableroBotones.btnH1;
         }
-
+        
         return null;
     }
 
@@ -248,7 +344,7 @@ public class Tablero {
                 boolean validacion = peon.validarMovimiento(posicionActual.charAt(1),
                         posicionNueva.charAt(1));
                 if (validacion == true) {
-                //    validarMovimiento();
+                    //    validarMovimiento();
 
                 }
                 break;
