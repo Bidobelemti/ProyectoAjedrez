@@ -23,6 +23,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
     static String posicionAntigua;
     static String posicionNueva;
     static String posicionActual;
+    static String nombreFicha = "peonBlanco";
 
     /**
      * Creates new form PnlTableroBotonesRaros
@@ -31,6 +32,9 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         initComponents();
         iniciarTablero();
         tableroA.setTablero();
+        tableroA.cambiarEnPantalla(posicionAntigua, posicionNueva);
+        tableroA.moverFicha(nombreFicha);
+
     }
 
     /**

@@ -180,6 +180,8 @@ public class Tablero {
             this.posicionActual = "77";
         }
     }
+    
+    
 
     public String getPosicionBotonesTablero(JToggleButton boton) {
         if (boton == PnlTableroBotones.btnA8) {
@@ -477,7 +479,7 @@ public class Tablero {
                 boolean validacion = peon.validarMovimiento(posicionActual.charAt(1),
                         posicionNueva.charAt(1));
                 if (validacion == true) {
-                    //    validarMovimiento();
+                        cambiarEnPantalla(posicionActual, posicionNueva);
 
                 }
                 break;
@@ -487,14 +489,9 @@ public class Tablero {
 
     }
 
-    public void validarMovimiento(JToggleButton btn1, JToggleButton btn2) {
-        if (btn1.isSelected() && retornarIdentificadorBotonesPorTablero().
-                equals("peonBlanco")) {
-            btn2.setIcon(btn1.getIcon());
-            btn1.setIcon(null);
-        } else {
-            System.out.println("prueba de no hay ese icono");
-        }
+    public void cambiarEnPantalla(String posAntigua, String posNueva) {
+        boton(posNueva).setIcon(boton(posAntigua).getIcon());
+        boton(posAntigua).setIcon(null);
     }
 
 }
