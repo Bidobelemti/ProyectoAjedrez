@@ -6,6 +6,8 @@ package vista;
 
 import java.awt.Image;
 import javax.swing.ImageIcon;
+import modelo.Peon;
+import modelo.Tablero;
 
 /**
  *
@@ -13,6 +15,9 @@ import javax.swing.ImageIcon;
  */
 public class PnlTableroBotones extends javax.swing.JPanel {
 
+    Peon peon;
+    Tablero tableroA = new Tablero();
+    ;
     static String[][] tablero = new String[8][8];
     static String posicionAntigua;
     static String posicionNueva;
@@ -24,6 +29,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
     public PnlTableroBotones() {
         initComponents();
         iniciarTablero();
+        tableroA.setTablero();
     }
 
     /**
@@ -154,6 +160,11 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         btnH7.setBackground(new java.awt.Color(204, 204, 204));
         btnH7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/PeónNegro.png"))); // NOI18N
         btnH7.setBorder(null);
+        btnH7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnH7ActionPerformed(evt);
+            }
+        });
         pnlFondoTablero.add(btnH7, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 70, 70, 70));
 
         btnH8.setBackground(new java.awt.Color(126, 162, 214));
@@ -169,6 +180,11 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         btnG2.setBackground(new java.awt.Color(204, 204, 204));
         btnG2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/PeónBlanco.png"))); // NOI18N
         btnG2.setBorder(null);
+        btnG2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnG2ActionPerformed(evt);
+            }
+        });
         pnlFondoTablero.add(btnG2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 420, 70, 70));
 
         btnG3.setBackground(new java.awt.Color(126, 162, 214));
@@ -190,6 +206,11 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         btnG7.setBackground(new java.awt.Color(126, 162, 214));
         btnG7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/PeónNegro.png"))); // NOI18N
         btnG7.setBorder(null);
+        btnG7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnG7ActionPerformed(evt);
+            }
+        });
         pnlFondoTablero.add(btnG7, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 70, 70, 70));
 
         btnG8.setBackground(new java.awt.Color(204, 204, 204));
@@ -210,6 +231,11 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         btnF2.setBackground(new java.awt.Color(126, 162, 214));
         btnF2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/PeónBlanco.png"))); // NOI18N
         btnF2.setBorder(null);
+        btnF2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnF2ActionPerformed(evt);
+            }
+        });
         pnlFondoTablero.add(btnF2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 420, 70, 70));
 
         btnF3.setBackground(new java.awt.Color(204, 204, 204));
@@ -231,6 +257,11 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         btnF7.setBackground(new java.awt.Color(204, 204, 204));
         btnF7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/PeónNegro.png"))); // NOI18N
         btnF7.setBorder(null);
+        btnF7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnF7ActionPerformed(evt);
+            }
+        });
         pnlFondoTablero.add(btnF7, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 70, 70, 70));
 
         btnF8.setBackground(new java.awt.Color(126, 162, 214));
@@ -246,6 +277,11 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         btnE2.setBackground(new java.awt.Color(204, 204, 204));
         btnE2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/PeónBlanco.png"))); // NOI18N
         btnE2.setBorder(null);
+        btnE2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnE2ActionPerformed(evt);
+            }
+        });
         pnlFondoTablero.add(btnE2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 420, 70, 70));
 
         btnE3.setBackground(new java.awt.Color(126, 162, 214));
@@ -267,6 +303,11 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         btnE7.setBackground(new java.awt.Color(126, 162, 214));
         btnE7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/PeónNegro.png"))); // NOI18N
         btnE7.setBorder(null);
+        btnE7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnE7ActionPerformed(evt);
+            }
+        });
         pnlFondoTablero.add(btnE7, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 70, 70, 70));
 
         btnE8.setBackground(new java.awt.Color(204, 204, 204));
@@ -282,6 +323,11 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         btnD2.setBackground(new java.awt.Color(126, 162, 214));
         btnD2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/PeónBlanco.png"))); // NOI18N
         btnD2.setBorder(null);
+        btnD2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnD2ActionPerformed(evt);
+            }
+        });
         pnlFondoTablero.add(btnD2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 420, 70, 70));
 
         btnD3.setBackground(new java.awt.Color(204, 204, 204));
@@ -291,7 +337,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 btnD3ActionPerformed(evt);
             }
         });
-        pnlFondoTablero.add(btnD3, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 140, 70, 70));
+        pnlFondoTablero.add(btnD3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 350, 70, 70));
 
         btnD4.setBackground(new java.awt.Color(126, 162, 214));
         btnD4.setBorder(null);
@@ -308,6 +354,11 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         btnD7.setBackground(new java.awt.Color(204, 204, 204));
         btnD7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/PeónNegro.png"))); // NOI18N
         btnD7.setBorder(null);
+        btnD7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnD7ActionPerformed(evt);
+            }
+        });
         pnlFondoTablero.add(btnD7, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 70, 70, 70));
 
         btnD8.setBackground(new java.awt.Color(126, 162, 214));
@@ -323,6 +374,11 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         btnC2.setBackground(new java.awt.Color(204, 204, 204));
         btnC2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/PeónBlanco.png"))); // NOI18N
         btnC2.setBorder(null);
+        btnC2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnC2ActionPerformed(evt);
+            }
+        });
         pnlFondoTablero.add(btnC2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 420, 70, 70));
 
         btnC3.setBackground(new java.awt.Color(126, 162, 214));
@@ -344,6 +400,11 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         btnC7.setBackground(new java.awt.Color(126, 162, 214));
         btnC7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/PeónNegro.png"))); // NOI18N
         btnC7.setBorder(null);
+        btnC7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnC7ActionPerformed(evt);
+            }
+        });
         pnlFondoTablero.add(btnC7, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 70, 70, 70));
 
         btnC8.setBackground(new java.awt.Color(204, 204, 204));
@@ -359,6 +420,11 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         btnB2.setBackground(new java.awt.Color(126, 162, 214));
         btnB2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/PeónBlanco.png"))); // NOI18N
         btnB2.setBorder(null);
+        btnB2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnB2ActionPerformed(evt);
+            }
+        });
         pnlFondoTablero.add(btnB2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 420, 70, 70));
 
         btnB3.setBackground(new java.awt.Color(204, 204, 204));
@@ -380,6 +446,11 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         btnB7.setBackground(new java.awt.Color(204, 204, 204));
         btnB7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/PeónNegro.png"))); // NOI18N
         btnB7.setBorder(null);
+        btnB7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnB7ActionPerformed(evt);
+            }
+        });
         pnlFondoTablero.add(btnB7, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 70, 70, 70));
 
         btnB8.setBackground(new java.awt.Color(126, 162, 214));
@@ -395,6 +466,11 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         btnA2.setBackground(new java.awt.Color(204, 204, 204));
         btnA2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/PeónBlanco.png"))); // NOI18N
         btnA2.setBorder(null);
+        btnA2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnA2ActionPerformed(evt);
+            }
+        });
         pnlFondoTablero.add(btnA2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 420, 70, 70));
 
         btnA3.setBackground(new java.awt.Color(126, 162, 214));
@@ -416,6 +492,11 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         btnA7.setBackground(new java.awt.Color(126, 162, 214));
         btnA7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/PeónNegro.png"))); // NOI18N
         btnA7.setBorder(null);
+        btnA7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnA7ActionPerformed(evt);
+            }
+        });
         pnlFondoTablero.add(btnA7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 70, 70));
 
         btnA8.setBackground(new java.awt.Color(204, 204, 204));
@@ -448,45 +529,144 @@ public class PnlTableroBotones extends javax.swing.JPanel {
     private void btnH1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnH1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnH1ActionPerformed
-
+//peon blanco 
     private void btnH2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnH2ActionPerformed
-        
-        posicionActual=getBotonPosicionString(btnH2);
-        obtenerPosicionTablero(posicionNueva);
-        
-        btnH4.setIcon(btnH3.getIcon());
+        tableroA.setPosicionBotonesTablero(btnH2);
+        System.out.println(tableroA.getPosicionActual());
+        System.out.println(tableroA.retornarIdentificadorBotonesPorTablero());
+        if (tableroA.retornarIdentificadorBotonesPorTablero().equals("peonBlanco")) {
+            System.out.println("prueba de if");
+        }
     }//GEN-LAST:event_btnH2ActionPerformed
 
     private void btnH3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnH3ActionPerformed
         // TODO add your handling code here:
 
-        if (btnH2.isSelected()) {
-            //btnH3.setIcon(btnH2.getIcon());
+        if (btnH2.isSelected() && obtenerPosicionTablero(posicionNueva).equals("peonBlanco")) {
+            btnH3.setIcon(btnH2.getIcon());
             btnH2.setIcon(null);
+        } else {
+            System.out.println("prueba de no hay ese icono");
         }
     }//GEN-LAST:event_btnH3ActionPerformed
 
     private void btnH4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnH4ActionPerformed
         // TODO add your handling code here:
+
     }//GEN-LAST:event_btnH4ActionPerformed
 
     private void btnD3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnD3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnD3ActionPerformed
+//peones
+    //peones blancos
+    private void btnA2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnA2ActionPerformed
+        // TODO add your handling code here:
+        tableroA.setPosicionBotonesTablero(btnA2);
+        System.out.println(tableroA.getPosicionActual() + " prueba de calse tablero");
+        System.out.println(tableroA.retornarIdentificadorBotonesPorTablero()+" prueba de posicion clase tablero ");
+    }//GEN-LAST:event_btnA2ActionPerformed
+
+    private void btnB2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnB2ActionPerformed
+        // TODO add your handling code here:
+        tableroA.setPosicionBotonesTablero(btnB2);
+        System.out.println(tableroA.getPosicionActual() + " prueba de calse tablero");
+        System.out.println(tableroA.retornarIdentificadorBotonesPorTablero()+" prueba de posicion clase tablero ");
+    }//GEN-LAST:event_btnB2ActionPerformed
+
+    private void btnC2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnC2ActionPerformed
+        // TODO add your handling code here:
+        tableroA.setPosicionBotonesTablero(btnC2);
+        System.out.println(tableroA.getPosicionActual() + " prueba de calse tablero");
+    }//GEN-LAST:event_btnC2ActionPerformed
+
+    private void btnD2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnD2ActionPerformed
+        // TODO add your handling code here:
+        tableroA.setPosicionBotonesTablero(btnD2);
+        System.out.println(tableroA.getPosicionActual() + " prueba de calse tablero");
+    }//GEN-LAST:event_btnD2ActionPerformed
+
+    private void btnE2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnE2ActionPerformed
+        // TODO add your handling code here:
+        tableroA.setPosicionBotonesTablero(btnE2);
+        System.out.println(tableroA.getPosicionActual() + " prueba de calse tablero");
+    }//GEN-LAST:event_btnE2ActionPerformed
+
+    private void btnF2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnF2ActionPerformed
+        // TODO add your handling code here:
+        tableroA.setPosicionBotonesTablero(btnF2);
+        System.out.println(tableroA.getPosicionActual() + " prueba de calse tablero");
+    }//GEN-LAST:event_btnF2ActionPerformed
+
+    private void btnG2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnG2ActionPerformed
+        // TODO add your handling code here:
+        tableroA.setPosicionBotonesTablero(btnG2);
+        System.out.println(tableroA.getPosicionActual() + " prueba de calse tablero");
+    }//GEN-LAST:event_btnG2ActionPerformed
+//peones negros
+    private void btnA7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnA7ActionPerformed
+        // TODO add your handling code here:
+        tableroA.setPosicionBotonesTablero(btnA7);
+        System.out.println(tableroA.getPosicionActual() + " prueba de calse tablero");
+    }//GEN-LAST:event_btnA7ActionPerformed
+
+    private void btnB7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnB7ActionPerformed
+        // TODO add your handling code here:
+        tableroA.setPosicionBotonesTablero(btnB7);
+        System.out.println(tableroA.getPosicionActual() + " prueba de calse tablero");
+    }//GEN-LAST:event_btnB7ActionPerformed
+
+    private void btnC7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnC7ActionPerformed
+        // TODO add your handling code here:
+        tableroA.setPosicionBotonesTablero(btnC7);
+        System.out.println(tableroA.getPosicionActual() + " prueba de calse tablero");
+    }//GEN-LAST:event_btnC7ActionPerformed
+
+    private void btnD7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnD7ActionPerformed
+        // TODO add your handling code here:
+        tableroA.setPosicionBotonesTablero(btnD7);
+        System.out.println(tableroA.getPosicionActual() + " prueba de calse tablero");
+    }//GEN-LAST:event_btnD7ActionPerformed
+
+    private void btnE7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnE7ActionPerformed
+        // TODO add your handling code here:
+        tableroA.setPosicionBotonesTablero(btnE7);
+        System.out.println(tableroA.getPosicionActual() + " prueba de calse tablero");
+    }//GEN-LAST:event_btnE7ActionPerformed
+
+    private void btnF7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnF7ActionPerformed
+        // TODO add your handling code here:
+        tableroA.setPosicionBotonesTablero(btnF7);
+        System.out.println(tableroA.getPosicionActual() + " prueba de calse tablero");
+    }//GEN-LAST:event_btnF7ActionPerformed
+
+    private void btnG7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnG7ActionPerformed
+        // TODO add your handling code here:
+        tableroA.setPosicionBotonesTablero(btnG7);
+        System.out.println(tableroA.getPosicionActual() + " prueba de calse tablero");
+    }//GEN-LAST:event_btnG7ActionPerformed
+
+    private void btnH7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnH7ActionPerformed
+        // TODO add your handling code here:
+        tableroA.setPosicionBotonesTablero(btnH7);
+        System.out.println(tableroA.getPosicionActual() + " prueba de calse tablero");
+    }//GEN-LAST:event_btnH7ActionPerformed
 
     /*public void quitarSeleccionTablero(){
         for(JToggleButton b: ){
             
         }
     }*/
-    public String obtenerPosicionTablero(String p){
+    public String obtenerPosicionTablero(String p) {
         System.out.println(posicionActual);
         int x = Character.getNumericValue(posicionActual.charAt(0));
         int y = Character.getNumericValue(posicionActual.charAt(1));
-        System.out.println(x + "  "+y);
         System.out.println(tablero[x][y]);
-        return tablero[x][y];
+        String nombre = tablero[x][y];
+        //String nombre = tableroA.getTablero()[x][y];
+        return nombre;
     }
+
     private String getBotonPosicionString(Object boton) {
         if (boton == btnA8) {
             return "00";
@@ -620,7 +800,6 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         return null;
     }
 
-
     private void iniciarTablero() {
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
@@ -651,70 +830,70 @@ public class PnlTableroBotones extends javax.swing.JPanel {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JToggleButton btnA1;
-    private javax.swing.JToggleButton btnA2;
-    private javax.swing.JToggleButton btnA3;
-    private javax.swing.JToggleButton btnA4;
-    private javax.swing.JToggleButton btnA5;
-    private javax.swing.JToggleButton btnA6;
-    private javax.swing.JToggleButton btnA7;
-    private javax.swing.JToggleButton btnA8;
-    private javax.swing.JToggleButton btnB1;
-    private javax.swing.JToggleButton btnB2;
-    private javax.swing.JToggleButton btnB3;
-    private javax.swing.JToggleButton btnB4;
-    private javax.swing.JToggleButton btnB5;
-    private javax.swing.JToggleButton btnB6;
-    private javax.swing.JToggleButton btnB7;
-    private javax.swing.JToggleButton btnB8;
-    private javax.swing.JToggleButton btnC1;
-    private javax.swing.JToggleButton btnC2;
-    private javax.swing.JToggleButton btnC3;
-    private javax.swing.JToggleButton btnC4;
-    private javax.swing.JToggleButton btnC5;
-    private javax.swing.JToggleButton btnC6;
-    private javax.swing.JToggleButton btnC7;
-    private javax.swing.JToggleButton btnC8;
-    private javax.swing.JToggleButton btnD1;
-    private javax.swing.JToggleButton btnD2;
-    private javax.swing.JToggleButton btnD3;
-    private javax.swing.JToggleButton btnD4;
-    private javax.swing.JToggleButton btnD5;
-    private javax.swing.JToggleButton btnD6;
-    private javax.swing.JToggleButton btnD7;
-    private javax.swing.JToggleButton btnD8;
-    private javax.swing.JToggleButton btnE1;
-    private javax.swing.JToggleButton btnE2;
-    private javax.swing.JToggleButton btnE3;
-    private javax.swing.JToggleButton btnE4;
-    private javax.swing.JToggleButton btnE5;
-    private javax.swing.JToggleButton btnE6;
-    private javax.swing.JToggleButton btnE7;
-    private javax.swing.JToggleButton btnE8;
-    private javax.swing.JToggleButton btnF1;
-    private javax.swing.JToggleButton btnF2;
-    private javax.swing.JToggleButton btnF3;
-    private javax.swing.JToggleButton btnF4;
-    private javax.swing.JToggleButton btnF5;
-    private javax.swing.JToggleButton btnF6;
-    private javax.swing.JToggleButton btnF7;
-    private javax.swing.JToggleButton btnF8;
-    private javax.swing.JToggleButton btnG1;
-    private javax.swing.JToggleButton btnG2;
-    private javax.swing.JToggleButton btnG3;
-    private javax.swing.JToggleButton btnG4;
-    private javax.swing.JToggleButton btnG5;
-    private javax.swing.JToggleButton btnG6;
-    private javax.swing.JToggleButton btnG7;
-    private javax.swing.JToggleButton btnG8;
-    private javax.swing.JToggleButton btnH1;
-    private javax.swing.JToggleButton btnH2;
-    private javax.swing.JToggleButton btnH3;
-    private javax.swing.JToggleButton btnH4;
-    private javax.swing.JToggleButton btnH5;
-    private javax.swing.JToggleButton btnH6;
-    private javax.swing.JToggleButton btnH7;
-    private javax.swing.JToggleButton btnH8;
+    public static javax.swing.JToggleButton btnA1;
+    public static javax.swing.JToggleButton btnA2;
+    public static javax.swing.JToggleButton btnA3;
+    public static javax.swing.JToggleButton btnA4;
+    public static javax.swing.JToggleButton btnA5;
+    public static javax.swing.JToggleButton btnA6;
+    public static javax.swing.JToggleButton btnA7;
+    public static javax.swing.JToggleButton btnA8;
+    public static javax.swing.JToggleButton btnB1;
+    public static javax.swing.JToggleButton btnB2;
+    public static javax.swing.JToggleButton btnB3;
+    public static javax.swing.JToggleButton btnB4;
+    public static javax.swing.JToggleButton btnB5;
+    public static javax.swing.JToggleButton btnB6;
+    public static javax.swing.JToggleButton btnB7;
+    public static javax.swing.JToggleButton btnB8;
+    public static javax.swing.JToggleButton btnC1;
+    public static javax.swing.JToggleButton btnC2;
+    public static javax.swing.JToggleButton btnC3;
+    public static javax.swing.JToggleButton btnC4;
+    public static javax.swing.JToggleButton btnC5;
+    public static javax.swing.JToggleButton btnC6;
+    public static javax.swing.JToggleButton btnC7;
+    public static javax.swing.JToggleButton btnC8;
+    public static javax.swing.JToggleButton btnD1;
+    public static javax.swing.JToggleButton btnD2;
+    public static javax.swing.JToggleButton btnD3;
+    public static javax.swing.JToggleButton btnD4;
+    public static javax.swing.JToggleButton btnD5;
+    public static javax.swing.JToggleButton btnD6;
+    public static javax.swing.JToggleButton btnD7;
+    public static javax.swing.JToggleButton btnD8;
+    public static javax.swing.JToggleButton btnE1;
+    public static javax.swing.JToggleButton btnE2;
+    public static javax.swing.JToggleButton btnE3;
+    public static javax.swing.JToggleButton btnE4;
+    public static javax.swing.JToggleButton btnE5;
+    public static javax.swing.JToggleButton btnE6;
+    public static javax.swing.JToggleButton btnE7;
+    public static javax.swing.JToggleButton btnE8;
+    public static javax.swing.JToggleButton btnF1;
+    public static javax.swing.JToggleButton btnF2;
+    public static javax.swing.JToggleButton btnF3;
+    public static javax.swing.JToggleButton btnF4;
+    public static javax.swing.JToggleButton btnF5;
+    public static javax.swing.JToggleButton btnF6;
+    public static javax.swing.JToggleButton btnF7;
+    public static javax.swing.JToggleButton btnF8;
+    public static javax.swing.JToggleButton btnG1;
+    public static javax.swing.JToggleButton btnG2;
+    public static javax.swing.JToggleButton btnG3;
+    public static javax.swing.JToggleButton btnG4;
+    public static javax.swing.JToggleButton btnG5;
+    public static javax.swing.JToggleButton btnG6;
+    public static javax.swing.JToggleButton btnG7;
+    public static javax.swing.JToggleButton btnG8;
+    public static javax.swing.JToggleButton btnH1;
+    public static javax.swing.JToggleButton btnH2;
+    public static javax.swing.JToggleButton btnH3;
+    public static javax.swing.JToggleButton btnH4;
+    public static javax.swing.JToggleButton btnH5;
+    public static javax.swing.JToggleButton btnH6;
+    public static javax.swing.JToggleButton btnH7;
+    public static javax.swing.JToggleButton btnH8;
     private javax.swing.JPanel pnlFondoTablero;
     // End of variables declaration//GEN-END:variables
 }
