@@ -30,7 +30,7 @@ public class FrmChessGame extends javax.swing.JFrame {
         initComponents();
         //para que la ventana aparezca en el centro y no en la esquina
         this.setLocationRelativeTo(null);
-        this.setTitle("ChessGame EPN");
+        this.setTitle("Chess Game");
     }
 
     /**

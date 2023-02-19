@@ -277,16 +277,17 @@ public class PnlRegistroDeJugadores extends javax.swing.JPanel {
     private void pnlIniciarJuegoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlIniciarJuegoMouseClicked
         // TODO add your handling code here:
         String nombrePrimerJugador = txtNombrePrimerJugador.getText();
-        String colorFichaPrimerJugador = "";
+        String colorFichaPrimerJugador = asignarColorAJugadorUno();
         int puntuacionPrimerJugador = 0;
 
         String nombreSegundoJugador = txtNombreSegundoJugador.getText();
-        String colorFichaSegundoJugador = "";
+        String colorFichaSegundoJugador = asignarColorAJugadorDos();
         int puntuacionSegundoJugador = 0;
 
         jugadores[0] = new Jugador(nombrePrimerJugador, colorFichaPrimerJugador);
         jugadores[1] = new Jugador(nombreSegundoJugador, colorFichaSegundoJugador);
-
+        System.out.println(jugadores[0].toString());
+        System.out.println(jugadores[1].toString());
     }//GEN-LAST:event_pnlIniciarJuegoMouseClicked
 
     private void txtNombrePrimerJugadorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtNombrePrimerJugadorMouseClicked
@@ -318,12 +319,20 @@ public class PnlRegistroDeJugadores extends javax.swing.JPanel {
         rbtBlancasPrimerJugador.setSelected(true);
     }//GEN-LAST:event_rbtNegrasSegundoJugadorActionPerformed
 
-    public void asignarColorAJugadorUno(){
-        
+    public String asignarColorAJugadorUno(){
+        if(rbtBlancasPrimerJugador.isSelected()){
+            return "Balncas";
+        }else{
+            return "Negras";
+        }
     }
     
-    public void asignarColorAJugadorDos(){
-        
+    public String asignarColorAJugadorDos(){
+        if(rbtBlancasSegundoJugador.isSelected()){
+            return "Balncas";
+        }else{
+            return "Negras";
+        }
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup btgFichaPrimerJugador;

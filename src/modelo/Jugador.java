@@ -44,6 +44,11 @@ public class Jugador {
         this.puntuacion = puntuacion;
     }
 
+    @Override
+    public String toString() {
+        return "Jugador{" + "nombre=" + nombre + ", colorDeFicha=" + colorDeFicha + '}';
+    }
+
     
     
     

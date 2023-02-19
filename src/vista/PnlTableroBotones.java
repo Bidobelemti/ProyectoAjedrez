@@ -32,10 +32,10 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         initComponents();
         iniciarTablero();
         tableroA.setTablero();
-        
-        tableroA.cambiarEnPantalla(posicionAntigua, posicionNueva);
-        tableroA.moverFicha(nombreFicha);
 
+        /* tableroA.cambiarEnPantalla(posicionAntigua, posicionNueva);
+        tableroA.moverFicha(nombreFicha);
+         */
     }
 
     /**
@@ -47,6 +47,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jToggleButton1 = new javax.swing.JToggleButton();
         pnlFondoTablero = new javax.swing.JPanel();
         btnH1 = new javax.swing.JToggleButton();
         btnH2 = new javax.swing.JToggleButton();
@@ -112,6 +113,8 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         btnA6 = new javax.swing.JToggleButton();
         btnA7 = new javax.swing.JToggleButton();
         btnA8 = new javax.swing.JToggleButton();
+
+        jToggleButton1.setText("jToggleButton1");
 
         setBackground(new java.awt.Color(255, 255, 255));
 
@@ -699,30 +702,47 @@ public class PnlTableroBotones extends javax.swing.JPanel {
 
     private void btnH3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnH3ActionPerformed
         // TODO add your handling code here:
+        /*
         validarMovimiento(btnH2, btnH3);
         System.out.println(tableroA.getPosicionActual() + "pos");
         System.out.println(tableroA.retornarIdentificadorBotonesPorTablero() + "ede");
-
+         */
+        if (btnH2.isSelected()) {
+            btnH3.setIcon(btnH2.getIcon());
+            btnH2.setIcon(null);
+        }
+        quitarSeleccionBotones();
     }//GEN-LAST:event_btnH3ActionPerformed
 
     private void btnH4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnH4ActionPerformed
         // TODO add your handling code here:
+        /*
         System.out.println(tableroA.retornarIdentificadorBotonesPorTablero());
         //validarMovimiento(btnH2, btnH4);
         validarMovimiento(btnH3, btnH4);
-        //System.out.println("prueba de no hay ese icono");
-
+        //System.out.println("prueba de no hay ese icono");*/
+        if (btnH3.isSelected()) {
+            btnH4.setIcon(btnH3.getIcon());
+            btnH3.setIcon(null);
+        }
+        quitarSeleccionBotones();
     }//GEN-LAST:event_btnH4ActionPerformed
 
     private void btnD3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnD3ActionPerformed
         // TODO add your handling code here:
         //borrable
-        validarMovimiento(btnH1, btnD3);
+        //validarMovimiento(btnH1, btnD3);
+        if (btnD2.isSelected()) {
+            btnD3.setIcon(btnD2.getIcon());
+            btnD2.setIcon(null);
+        }
+        quitarSeleccionBotones();
     }//GEN-LAST:event_btnD3ActionPerformed
 //peones
     //peones blancos
     private void btnA2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnA2ActionPerformed
         // TODO add your handling code here:
+        validarMovimiento(btnA2, btnA3);
         tableroA.setPosicionBotonesTablero(btnA2);
         System.out.println(tableroA.getPosicionActual() + " prueba de calse tablero");
         System.out.println(tableroA.retornarIdentificadorBotonesPorTablero() + " prueba de posicion clase tablero ");
@@ -733,6 +753,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         tableroA.setPosicionBotonesTablero(btnB2);
         System.out.println(tableroA.getPosicionActual() + " prueba de calse tablero");
         System.out.println(tableroA.retornarIdentificadorBotonesPorTablero() + " prueba de posicion clase tablero ");
+        
     }//GEN-LAST:event_btnB2ActionPerformed
 
     private void btnC2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnC2ActionPerformed
@@ -819,6 +840,11 @@ public class PnlTableroBotones extends javax.swing.JPanel {
 
     private void btnG3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnG3ActionPerformed
         // TODO add your handling code here:
+        if (btnG2.isSelected()) {
+            btnG3.setIcon(btnG2.getIcon());
+            btnG2.setIcon(null);
+        }
+        quitarSeleccionBotones();
     }//GEN-LAST:event_btnG3ActionPerformed
 
     private void btnF4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnF4ActionPerformed
@@ -827,6 +853,11 @@ public class PnlTableroBotones extends javax.swing.JPanel {
 
     private void btnF3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnF3ActionPerformed
         // TODO add your handling code here:
+        if (btnF2.isSelected()) {
+            btnF3.setIcon(btnF2.getIcon());
+            btnF2.setIcon(null);
+        }
+        quitarSeleccionBotones();
     }//GEN-LAST:event_btnF3ActionPerformed
 
     private void btnE4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnE4ActionPerformed
@@ -835,6 +866,11 @@ public class PnlTableroBotones extends javax.swing.JPanel {
 
     private void btnE3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnE3ActionPerformed
         // TODO add your handling code here:
+        if (btnE2.isSelected()) {
+            btnE3.setIcon(btnE2.getIcon());
+            btnE2.setIcon(null);
+        }
+        quitarSeleccionBotones();
     }//GEN-LAST:event_btnE3ActionPerformed
 
     private void btnD4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnD4ActionPerformed
@@ -847,6 +883,11 @@ public class PnlTableroBotones extends javax.swing.JPanel {
 
     private void btnC3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnC3ActionPerformed
         // TODO add your handling code here:
+        if (btnC2.isSelected()) {
+            btnC3.setIcon(btnC2.getIcon());
+            btnC2.setIcon(null);
+        }
+        quitarSeleccionBotones();
     }//GEN-LAST:event_btnC3ActionPerformed
 
     private void btnB4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnB4ActionPerformed
@@ -855,6 +896,11 @@ public class PnlTableroBotones extends javax.swing.JPanel {
 
     private void btnB3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnB3ActionPerformed
         // TODO add your handling code here:
+        if (btnB2.isSelected()) {
+            btnB3.setIcon(btnB2.getIcon());
+            btnB2.setIcon(null);
+        }
+        quitarSeleccionBotones();
     }//GEN-LAST:event_btnB3ActionPerformed
 
     private void btnA4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnA4ActionPerformed
@@ -863,10 +909,21 @@ public class PnlTableroBotones extends javax.swing.JPanel {
 
     private void btnA3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnA3ActionPerformed
         // TODO add your handling code here:
+        //validarMovimiento(btnA2, btnA3);
+        if (btnA2.isSelected()) {
+            btnA3.setIcon(btnA2.getIcon());
+            btnA2.setIcon(null);
+        }
+        quitarSeleccionBotones();
     }//GEN-LAST:event_btnA3ActionPerformed
 
     private void btnA6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnA6ActionPerformed
         // TODO add your handling code here:
+        if (btnA7.isSelected()) {
+            btnA6.setIcon(btnA7.getIcon());
+            btnA7.setIcon(null);
+        }
+        quitarSeleccionBotones();
     }//GEN-LAST:event_btnA6ActionPerformed
 
     private void btnA5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnA5ActionPerformed
@@ -879,6 +936,11 @@ public class PnlTableroBotones extends javax.swing.JPanel {
 
     private void btnB6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnB6ActionPerformed
         // TODO add your handling code here:
+        if (btnB7.isSelected()) {
+            btnB6.setIcon(btnB7.getIcon());
+            btnB7.setIcon(null);
+        }
+        quitarSeleccionBotones();
     }//GEN-LAST:event_btnB6ActionPerformed
 
     private void btnC6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnC6ActionPerformed
@@ -895,6 +957,11 @@ public class PnlTableroBotones extends javax.swing.JPanel {
 
     private void btnD5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnD5ActionPerformed
         // TODO add your handling code here:
+        if (btnD7.isSelected()) {
+            btnD5.setIcon(btnD7.getIcon());
+            btnD7.setIcon(null);
+        }
+        quitarSeleccionBotones();
     }//GEN-LAST:event_btnD5ActionPerformed
 
     private void btnE6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnE6ActionPerformed
@@ -915,14 +982,25 @@ public class PnlTableroBotones extends javax.swing.JPanel {
 
     private void btnG6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnG6ActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_btnG6ActionPerformed
 
     private void btnG5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnG5ActionPerformed
         // TODO add your handling code here:
+        if (btnG7.isSelected()) {
+            btnG5.setIcon(btnG7.getIcon());
+            btnG7.setIcon(null);
+        }
+        quitarSeleccionBotones();
     }//GEN-LAST:event_btnG5ActionPerformed
 
     private void btnH6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnH6ActionPerformed
         // TODO add your handling code here:
+        if (btnG8.isSelected()) {
+            btnH6.setIcon(btnG8.getIcon());
+            btnG8.setIcon(null);
+        }
+        quitarSeleccionBotones();
     }//GEN-LAST:event_btnH6ActionPerformed
 
     private void btnH5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnH5ActionPerformed
@@ -1126,7 +1204,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         System.out.println(tableroA.tablero[5][7] + "57");
         System.out.println(tableroA.tablero[6][7] + "67");
         System.out.println(tableroA.tablero[4][7] + "47");
-        quitarSeleccionBotones();
+        //quitarSeleccionBotones();
     }
 
     public void cambiarIcono(JToggleButton btn1, JToggleButton btn2) {
@@ -1272,6 +1350,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
     public static javax.swing.JToggleButton btnH6;
     public static javax.swing.JToggleButton btnH7;
     public static javax.swing.JToggleButton btnH8;
+    private javax.swing.JToggleButton jToggleButton1;
     private javax.swing.JPanel pnlFondoTablero;
     // End of variables declaration//GEN-END:variables
 }
