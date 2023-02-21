@@ -517,6 +517,11 @@ public class PnlTableroBotones extends javax.swing.JPanel {
 
         btnA8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/TorreNegra.png"))); // NOI18N
         btnA8.setBorder(null);
+        btnA8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnA8ActionPerformed(evt);
+            }
+        });
         pnlFondoTablero.add(btnA8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 70, 70));
 
         add(pnlFondoTablero, java.awt.BorderLayout.CENTER);
@@ -524,34 +529,42 @@ public class PnlTableroBotones extends javax.swing.JPanel {
 
     private void btnA1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnA1ActionPerformed
         // TODO add your handling code here:
+        accionBoton(btnA1, 56);
     }//GEN-LAST:event_btnA1ActionPerformed
 
     private void btnB1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnB1ActionPerformed
         // TODO add your handling code here:
+        accionBoton(btnB1, 57);
     }//GEN-LAST:event_btnB1ActionPerformed
 
     private void btnC1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnC1ActionPerformed
         // TODO add your handling code here:
+        accionBoton(btnC1, 58);
     }//GEN-LAST:event_btnC1ActionPerformed
 
     private void btnD1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnD1ActionPerformed
         // TODO add your handling code here:
+        accionBoton(btnD1, 59);
     }//GEN-LAST:event_btnD1ActionPerformed
 
     private void btnE1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnE1ActionPerformed
         // TODO add your handling code here:
+        accionBoton(btnE1, 60);
     }//GEN-LAST:event_btnE1ActionPerformed
 
     private void btnF1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnF1ActionPerformed
         // TODO add your handling code here:
+        accionBoton(btnF1, 61);
     }//GEN-LAST:event_btnF1ActionPerformed
 
     private void btnG1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnG1ActionPerformed
         // TODO add your handling code here:
+        accionBoton(btnG1, 62);
     }//GEN-LAST:event_btnG1ActionPerformed
 
     private void btnH1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnH1ActionPerformed
         // TODO add your handling code here:
+        accionBoton(btnH1, 63);
     }//GEN-LAST:event_btnH1ActionPerformed
 
     private void btnA2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnA2ActionPerformed
@@ -570,55 +583,70 @@ public class PnlTableroBotones extends javax.swing.JPanel {
 
     private void btnD2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnD2ActionPerformed
         // TODO add your handling code here:
+        accionBoton(btnD2, 51);
     }//GEN-LAST:event_btnD2ActionPerformed
 
     private void btnE2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnE2ActionPerformed
         // TODO add your handling code here:
+        accionBoton(btnE2, 52);
     }//GEN-LAST:event_btnE2ActionPerformed
 
     private void btnF2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnF2ActionPerformed
         // TODO add your handling code here:
+        accionBoton(btnF2, 53);
     }//GEN-LAST:event_btnF2ActionPerformed
 
     private void btnG2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnG2ActionPerformed
         // TODO add your handling code here:
+        accionBoton(btnG2, 54);
     }//GEN-LAST:event_btnG2ActionPerformed
 
     private void btnH2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnH2ActionPerformed
         // TODO add your handling code here:
+        accionBoton(btnH2, 55);
     }//GEN-LAST:event_btnH2ActionPerformed
 
     private void btnA3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnA3ActionPerformed
         // TODO add your handling code here:
+        accionBoton(btnB3, 40);
     }//GEN-LAST:event_btnA3ActionPerformed
 
     private void btnB3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnB3ActionPerformed
-        accionBoton(btnB3, 40);
+        accionBoton(btnB3, 41);
     }//GEN-LAST:event_btnB3ActionPerformed
 
     private void btnC3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnC3ActionPerformed
-        accionBoton(btnC3, 41);
+        accionBoton(btnC3, 42);
     }//GEN-LAST:event_btnC3ActionPerformed
 
     private void btnD3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnD3ActionPerformed
         // TODO add your handling code here:
+        accionBoton(btnD3, 43);
     }//GEN-LAST:event_btnD3ActionPerformed
 
     private void btnE3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnE3ActionPerformed
         // TODO add your handling code here:
+        accionBoton(btnE3, 44);
     }//GEN-LAST:event_btnE3ActionPerformed
 
     private void btnF3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnF3ActionPerformed
         // TODO add your handling code here:
+        accionBoton(btnF3, 45);
     }//GEN-LAST:event_btnF3ActionPerformed
 
     private void btnG3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnG3ActionPerformed
         // TODO add your handling code here:
+        accionBoton(btnG3, 46);
     }//GEN-LAST:event_btnG3ActionPerformed
 
     private void btnH3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnH3ActionPerformed
         // TODO add your handling code here:
+        accionBoton(btnH3, 47);
     }//GEN-LAST:event_btnH3ActionPerformed
+
+    private void btnA8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnA8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnA8ActionPerformed
 
     private void accionBoton(JButton boton, int posicion) {
         boolean turnoBlanco = tablero.isEsTurnoBlanco();
