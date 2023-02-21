@@ -7,7 +7,7 @@ package vista;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import javax.swing.JPanel;
-import modelo.Jugador;
+import modelo.JugadorAntiguo;
 
 /**
  *
@@ -15,7 +15,7 @@ import modelo.Jugador;
  */
 public class PnlRegistroDeJugadores extends javax.swing.JPanel {
 
-    Jugador jugadores[] = new Jugador[2];
+    JugadorAntiguo jugadores[] = new JugadorAntiguo[2];
 
     public PnlRegistroDeJugadores() {
         initComponents();
@@ -284,8 +284,8 @@ public class PnlRegistroDeJugadores extends javax.swing.JPanel {
         String colorFichaSegundoJugador = asignarColorAJugadorDos();
         int puntuacionSegundoJugador = 0;
 
-        jugadores[0] = new Jugador(nombrePrimerJugador, colorFichaPrimerJugador);
-        jugadores[1] = new Jugador(nombreSegundoJugador, colorFichaSegundoJugador);
+        jugadores[0] = new JugadorAntiguo(nombrePrimerJugador, colorFichaPrimerJugador);
+        jugadores[1] = new JugadorAntiguo(nombreSegundoJugador, colorFichaSegundoJugador);
         System.out.println(jugadores[0].toString());
         System.out.println(jugadores[1].toString());
     }//GEN-LAST:event_pnlIniciarJuegoMouseClicked

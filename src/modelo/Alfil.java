@@ -8,7 +8,7 @@ package modelo;
  *
  * @author pc
  */
-public class Alfil extends Ficha {
+public class Alfil extends FichaAntigua {
 
     public Alfil(int movimientoX, int movimientoY, int posicionX, int posicionY) {
         super(movimientoX, movimientoY, posicionX, posicionY);

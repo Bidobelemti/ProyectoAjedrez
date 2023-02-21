@@ -4,53 +4,39 @@
  */
 package modelo;
 
+import java.util.ArrayList;
+
 /**
  *
- * @author pc
+ * @author Bidob
  */
 public class Jugador {
+    private final String usuario;
+    private final String color;
+    private ArrayList<Ficha> fichas;
+    private int puntaje;
     
-    private String nombre;
-    private String colorDeFicha;
-    private int puntuacion;
+    public Jugador(String usuario, String color, ArrayList fichas){
+        this.fichas = new ArrayList<>();
+        this.usuario = usuario;
+        this.color = color;
+        this.fichas = fichas;
+    }
 
-    public Jugador(String nombre, String colorDeFicha) {
-        this.nombre = nombre;
-        this.colorDeFicha = colorDeFicha;
-        
+    public ArrayList<Ficha> getFichas() {
+        return fichas;
     }
     
-    public String getNombre() {
-        return nombre;
+    public void setFichas(ArrayList<Ficha> fichas) {
+        this.fichas = fichas;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public int getPuntaje() {
+        return puntaje;
     }
 
-    public String getColorDeFicha() {
-        return colorDeFicha;
+    public void setPuntaje(int puntaje) {
+        this.puntaje = puntaje;
     }
-
-    public void setColorDeFicha(String colorDeFicha) {
-        this.colorDeFicha = colorDeFicha;
-    }
-
-    public int getPuntuacion() {
-        return puntuacion;
-    }
-
-    public void setPuntuacion(int puntuacion) {
-        this.puntuacion = puntuacion;
-    }
-
-    @Override
-    public String toString() {
-        return "Jugador{" + "nombre=" + nombre + ", colorDeFicha=" + colorDeFicha + '}';
-    }
-
-    
-    
-    
-    
+      
 }

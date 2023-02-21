@@ -8,7 +8,7 @@ package modelo;
  *
  * @author pc
  */
-public class Dama extends Ficha{
+public class Dama extends FichaAntigua{
 
     public Dama(int movimientoX, int movimientoY, int posicionX, int posicionY) {
         super(movimientoX, movimientoY, posicionX, posicionY);
