@@ -202,20 +202,45 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         pnlFondoTablero.add(btnH3, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 350, 70, 70));
 
         btnH4.setBorder(null);
+        btnH4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnH4ActionPerformed(evt);
+            }
+        });
         pnlFondoTablero.add(btnH4, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 280, 70, 70));
 
         btnH5.setBorder(null);
+        btnH5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnH5ActionPerformed(evt);
+            }
+        });
         pnlFondoTablero.add(btnH5, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 210, 70, 70));
 
         btnH6.setBorder(null);
+        btnH6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnH6ActionPerformed(evt);
+            }
+        });
         pnlFondoTablero.add(btnH6, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 140, 70, 70));
 
         btnH7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/PeónNegro.png"))); // NOI18N
         btnH7.setBorder(null);
+        btnH7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnH7ActionPerformed(evt);
+            }
+        });
         pnlFondoTablero.add(btnH7, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 70, 70, 70));
 
         btnH8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/TorreNegra.png"))); // NOI18N
         btnH8.setBorder(null);
+        btnH8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnH8ActionPerformed(evt);
+            }
+        });
         pnlFondoTablero.add(btnH8, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 0, 70, 70));
 
         btnG1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/CaballoBlanco.png"))); // NOI18N
@@ -245,20 +270,45 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         pnlFondoTablero.add(btnG3, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 350, 70, 70));
 
         btnG4.setBorder(null);
+        btnG4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnG4ActionPerformed(evt);
+            }
+        });
         pnlFondoTablero.add(btnG4, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 280, 70, 70));
 
         btnG5.setBorder(null);
+        btnG5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnG5ActionPerformed(evt);
+            }
+        });
         pnlFondoTablero.add(btnG5, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 210, 70, 70));
 
         btnG6.setBorder(null);
+        btnG6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnG6ActionPerformed(evt);
+            }
+        });
         pnlFondoTablero.add(btnG6, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 140, 70, 70));
 
         btnG7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/PeónNegro.png"))); // NOI18N
         btnG7.setBorder(null);
+        btnG7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnG7ActionPerformed(evt);
+            }
+        });
         pnlFondoTablero.add(btnG7, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 70, 70, 70));
 
         btnG8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/CaballoNegro.png"))); // NOI18N
         btnG8.setBorder(null);
+        btnG8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnG8ActionPerformed(evt);
+            }
+        });
         pnlFondoTablero.add(btnG8, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 0, 70, 70));
 
         btnF1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/AlfilBlanco.png"))); // NOI18N
@@ -288,20 +338,45 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         pnlFondoTablero.add(btnF3, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 350, 70, 70));
 
         btnF4.setBorder(null);
+        btnF4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnF4ActionPerformed(evt);
+            }
+        });
         pnlFondoTablero.add(btnF4, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 280, 70, 70));
 
         btnF5.setBorder(null);
+        btnF5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnF5ActionPerformed(evt);
+            }
+        });
         pnlFondoTablero.add(btnF5, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 210, 70, 70));
 
         btnF6.setBorder(null);
+        btnF6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnF6ActionPerformed(evt);
+            }
+        });
         pnlFondoTablero.add(btnF6, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 140, 70, 70));
 
         btnF7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/PeónNegro.png"))); // NOI18N
         btnF7.setBorder(null);
+        btnF7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnF7ActionPerformed(evt);
+            }
+        });
         pnlFondoTablero.add(btnF7, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 70, 70, 70));
 
         btnF8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/AlfilNegro.png"))); // NOI18N
         btnF8.setBorder(null);
+        btnF8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnF8ActionPerformed(evt);
+            }
+        });
         pnlFondoTablero.add(btnF8, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 0, 70, 70));
 
         btnE1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/ReyBlanco.png"))); // NOI18N
@@ -331,20 +406,45 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         pnlFondoTablero.add(btnE3, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 350, 70, 70));
 
         btnE4.setBorder(null);
+        btnE4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnE4ActionPerformed(evt);
+            }
+        });
         pnlFondoTablero.add(btnE4, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 280, 70, 70));
 
         btnE5.setBorder(null);
+        btnE5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnE5ActionPerformed(evt);
+            }
+        });
         pnlFondoTablero.add(btnE5, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 210, 70, 70));
 
         btnE6.setBorder(null);
+        btnE6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnE6ActionPerformed(evt);
+            }
+        });
         pnlFondoTablero.add(btnE6, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 140, 70, 70));
 
         btnE7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/PeónNegro.png"))); // NOI18N
         btnE7.setBorder(null);
+        btnE7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnE7ActionPerformed(evt);
+            }
+        });
         pnlFondoTablero.add(btnE7, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 70, 70, 70));
 
         btnE8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/ReyNegro.png"))); // NOI18N
         btnE8.setBorder(null);
+        btnE8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnE8ActionPerformed(evt);
+            }
+        });
         pnlFondoTablero.add(btnE8, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 0, 70, 70));
 
         btnD1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/DamaBlanca.png"))); // NOI18N
@@ -374,20 +474,45 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         pnlFondoTablero.add(btnD3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 350, 70, 70));
 
         btnD4.setBorder(null);
+        btnD4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnD4ActionPerformed(evt);
+            }
+        });
         pnlFondoTablero.add(btnD4, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 280, 70, 70));
 
         btnD5.setBorder(null);
+        btnD5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnD5ActionPerformed(evt);
+            }
+        });
         pnlFondoTablero.add(btnD5, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 210, 70, 70));
 
         btnD6.setBorder(null);
+        btnD6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnD6ActionPerformed(evt);
+            }
+        });
         pnlFondoTablero.add(btnD6, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 140, 70, 70));
 
         btnD7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/PeónNegro.png"))); // NOI18N
         btnD7.setBorder(null);
+        btnD7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnD7ActionPerformed(evt);
+            }
+        });
         pnlFondoTablero.add(btnD7, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 70, 70, 70));
 
         btnD8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/DamaNegra.png"))); // NOI18N
         btnD8.setBorder(null);
+        btnD8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnD8ActionPerformed(evt);
+            }
+        });
         pnlFondoTablero.add(btnD8, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 0, 70, 70));
 
         btnC1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/AlfilBlanco.png"))); // NOI18N
@@ -417,20 +542,45 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         pnlFondoTablero.add(btnC3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 350, 70, 70));
 
         btnC4.setBorder(null);
+        btnC4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnC4ActionPerformed(evt);
+            }
+        });
         pnlFondoTablero.add(btnC4, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 280, 70, 70));
 
         btnC5.setBorder(null);
+        btnC5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnC5ActionPerformed(evt);
+            }
+        });
         pnlFondoTablero.add(btnC5, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 210, 70, 70));
 
         btnC6.setBorder(null);
+        btnC6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnC6ActionPerformed(evt);
+            }
+        });
         pnlFondoTablero.add(btnC6, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 140, 70, 70));
 
         btnC7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/PeónNegro.png"))); // NOI18N
         btnC7.setBorder(null);
+        btnC7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnC7ActionPerformed(evt);
+            }
+        });
         pnlFondoTablero.add(btnC7, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 70, 70, 70));
 
         btnC8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/AlfilNegro.png"))); // NOI18N
         btnC8.setBorder(null);
+        btnC8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnC8ActionPerformed(evt);
+            }
+        });
         pnlFondoTablero.add(btnC8, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 0, 70, 70));
 
         btnB1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/CaballoBlanco.png"))); // NOI18N
@@ -460,20 +610,45 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         pnlFondoTablero.add(btnB3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 350, 70, 70));
 
         btnB4.setBorder(null);
+        btnB4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnB4ActionPerformed(evt);
+            }
+        });
         pnlFondoTablero.add(btnB4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 280, 70, 70));
 
         btnB5.setBorder(null);
+        btnB5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnB5ActionPerformed(evt);
+            }
+        });
         pnlFondoTablero.add(btnB5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 210, 70, 70));
 
         btnB6.setBorder(null);
+        btnB6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnB6ActionPerformed(evt);
+            }
+        });
         pnlFondoTablero.add(btnB6, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 140, 70, 70));
 
         btnB7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/PeónNegro.png"))); // NOI18N
         btnB7.setBorder(null);
+        btnB7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnB7ActionPerformed(evt);
+            }
+        });
         pnlFondoTablero.add(btnB7, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 70, 70, 70));
 
         btnB8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/CaballoNegro.png"))); // NOI18N
         btnB8.setBorder(null);
+        btnB8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnB8ActionPerformed(evt);
+            }
+        });
         pnlFondoTablero.add(btnB8, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, 70, 70));
 
         btnA1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/TorreBlanca.png"))); // NOI18N
@@ -503,16 +678,36 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         pnlFondoTablero.add(btnA3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 350, 70, 70));
 
         btnA4.setBorder(null);
+        btnA4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnA4ActionPerformed(evt);
+            }
+        });
         pnlFondoTablero.add(btnA4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 280, 70, 70));
 
         btnA5.setBorder(null);
+        btnA5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnA5ActionPerformed(evt);
+            }
+        });
         pnlFondoTablero.add(btnA5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 70, 70));
 
         btnA6.setBorder(null);
+        btnA6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnA6ActionPerformed(evt);
+            }
+        });
         pnlFondoTablero.add(btnA6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, 70, 70));
 
         btnA7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/PeónNegro.png"))); // NOI18N
         btnA7.setBorder(null);
+        btnA7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnA7ActionPerformed(evt);
+            }
+        });
         pnlFondoTablero.add(btnA7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 70, 70));
 
         btnA8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/TorreNegra.png"))); // NOI18N
@@ -528,52 +723,42 @@ public class PnlTableroBotones extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnA1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnA1ActionPerformed
-        // TODO add your handling code here:
         accionBoton(btnA1, 56);
     }//GEN-LAST:event_btnA1ActionPerformed
 
     private void btnB1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnB1ActionPerformed
-        // TODO add your handling code here:
         accionBoton(btnB1, 57);
     }//GEN-LAST:event_btnB1ActionPerformed
 
     private void btnC1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnC1ActionPerformed
-        // TODO add your handling code here:
         accionBoton(btnC1, 58);
     }//GEN-LAST:event_btnC1ActionPerformed
 
     private void btnD1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnD1ActionPerformed
-        // TODO add your handling code here:
         accionBoton(btnD1, 59);
     }//GEN-LAST:event_btnD1ActionPerformed
 
     private void btnE1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnE1ActionPerformed
-        // TODO add your handling code here:
         accionBoton(btnE1, 60);
     }//GEN-LAST:event_btnE1ActionPerformed
 
     private void btnF1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnF1ActionPerformed
-        // TODO add your handling code here:
         accionBoton(btnF1, 61);
     }//GEN-LAST:event_btnF1ActionPerformed
 
     private void btnG1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnG1ActionPerformed
-        // TODO add your handling code here:
         accionBoton(btnG1, 62);
     }//GEN-LAST:event_btnG1ActionPerformed
 
     private void btnH1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnH1ActionPerformed
-        // TODO add your handling code here:
         accionBoton(btnH1, 63);
     }//GEN-LAST:event_btnH1ActionPerformed
 
     private void btnA2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnA2ActionPerformed
-        //tablero.setBtnSeleccionado(btnA2);
         accionBoton(btnA2, 48);
     }//GEN-LAST:event_btnA2ActionPerformed
 
     private void btnB2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnB2ActionPerformed
-        //tablero.setBtnSeleccionado(btnB2);
         accionBoton(btnB2, 49);
     }//GEN-LAST:event_btnB2ActionPerformed
 
@@ -582,32 +767,26 @@ public class PnlTableroBotones extends javax.swing.JPanel {
     }//GEN-LAST:event_btnC2ActionPerformed
 
     private void btnD2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnD2ActionPerformed
-        // TODO add your handling code here:
         accionBoton(btnD2, 51);
     }//GEN-LAST:event_btnD2ActionPerformed
 
     private void btnE2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnE2ActionPerformed
-        // TODO add your handling code here:
         accionBoton(btnE2, 52);
     }//GEN-LAST:event_btnE2ActionPerformed
 
     private void btnF2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnF2ActionPerformed
-        // TODO add your handling code here:
         accionBoton(btnF2, 53);
     }//GEN-LAST:event_btnF2ActionPerformed
 
     private void btnG2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnG2ActionPerformed
-        // TODO add your handling code here:
         accionBoton(btnG2, 54);
     }//GEN-LAST:event_btnG2ActionPerformed
 
     private void btnH2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnH2ActionPerformed
-        // TODO add your handling code here:
         accionBoton(btnH2, 55);
     }//GEN-LAST:event_btnH2ActionPerformed
 
     private void btnA3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnA3ActionPerformed
-        // TODO add your handling code here:
         accionBoton(btnB3, 40);
     }//GEN-LAST:event_btnA3ActionPerformed
 
@@ -620,33 +799,185 @@ public class PnlTableroBotones extends javax.swing.JPanel {
     }//GEN-LAST:event_btnC3ActionPerformed
 
     private void btnD3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnD3ActionPerformed
-        // TODO add your handling code here:
         accionBoton(btnD3, 43);
     }//GEN-LAST:event_btnD3ActionPerformed
 
     private void btnE3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnE3ActionPerformed
-        // TODO add your handling code here:
         accionBoton(btnE3, 44);
     }//GEN-LAST:event_btnE3ActionPerformed
 
     private void btnF3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnF3ActionPerformed
-        // TODO add your handling code here:
         accionBoton(btnF3, 45);
     }//GEN-LAST:event_btnF3ActionPerformed
 
     private void btnG3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnG3ActionPerformed
-        // TODO add your handling code here:
         accionBoton(btnG3, 46);
     }//GEN-LAST:event_btnG3ActionPerformed
 
     private void btnH3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnH3ActionPerformed
-        // TODO add your handling code here:
         accionBoton(btnH3, 47);
     }//GEN-LAST:event_btnH3ActionPerformed
 
     private void btnA8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnA8ActionPerformed
-        // TODO add your handling code here:
+        accionBoton(btnA8, 0);
     }//GEN-LAST:event_btnA8ActionPerformed
+
+    private void btnB8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnB8ActionPerformed
+        accionBoton(btnB8, 1);
+    }//GEN-LAST:event_btnB8ActionPerformed
+
+    private void btnC8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnC8ActionPerformed
+        accionBoton(btnC8, 2);
+    }//GEN-LAST:event_btnC8ActionPerformed
+
+    private void btnD8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnD8ActionPerformed
+        accionBoton(btnD8, 3);
+    }//GEN-LAST:event_btnD8ActionPerformed
+
+    private void btnE8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnE8ActionPerformed
+        accionBoton(btnE8, 4);
+    }//GEN-LAST:event_btnE8ActionPerformed
+
+    private void btnF8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnF8ActionPerformed
+        accionBoton(btnF8, 5);
+    }//GEN-LAST:event_btnF8ActionPerformed
+
+    private void btnG8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnG8ActionPerformed
+        accionBoton(btnG8, 6);
+    }//GEN-LAST:event_btnG8ActionPerformed
+
+    private void btnH8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnH8ActionPerformed
+        accionBoton(btnH8, 7);
+    }//GEN-LAST:event_btnH8ActionPerformed
+
+    private void btnA7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnA7ActionPerformed
+        accionBoton(btnA7, 8);
+    }//GEN-LAST:event_btnA7ActionPerformed
+
+    private void btnB7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnB7ActionPerformed
+        accionBoton(btnB7, 9);
+    }//GEN-LAST:event_btnB7ActionPerformed
+
+    private void btnC7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnC7ActionPerformed
+        accionBoton(btnC7, 10);
+    }//GEN-LAST:event_btnC7ActionPerformed
+
+    private void btnD7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnD7ActionPerformed
+        accionBoton(btnD7, 11);
+    }//GEN-LAST:event_btnD7ActionPerformed
+
+    private void btnE7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnE7ActionPerformed
+        accionBoton(btnE7, 12);
+    }//GEN-LAST:event_btnE7ActionPerformed
+
+    private void btnF7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnF7ActionPerformed
+        accionBoton(btnF7, 13);
+    }//GEN-LAST:event_btnF7ActionPerformed
+
+    private void btnG7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnG7ActionPerformed
+        accionBoton(btnG7, 14);
+    }//GEN-LAST:event_btnG7ActionPerformed
+
+    private void btnH7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnH7ActionPerformed
+        accionBoton(btnH7, 15);
+    }//GEN-LAST:event_btnH7ActionPerformed
+
+    private void btnA6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnA6ActionPerformed
+        accionBoton(btnA6, 16);
+    }//GEN-LAST:event_btnA6ActionPerformed
+
+    private void btnB6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnB6ActionPerformed
+        accionBoton(btnB6, 17);
+    }//GEN-LAST:event_btnB6ActionPerformed
+
+    private void btnC6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnC6ActionPerformed
+        accionBoton(btnC6, 18);
+    }//GEN-LAST:event_btnC6ActionPerformed
+
+    private void btnD6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnD6ActionPerformed
+        accionBoton(btnD6, 19);
+    }//GEN-LAST:event_btnD6ActionPerformed
+
+    private void btnE6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnE6ActionPerformed
+        accionBoton(btnE6, 20);
+    }//GEN-LAST:event_btnE6ActionPerformed
+
+    private void btnF6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnF6ActionPerformed
+        accionBoton(btnF6, 21);
+    }//GEN-LAST:event_btnF6ActionPerformed
+
+    private void btnG6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnG6ActionPerformed
+        accionBoton(btnG6, 22);
+    }//GEN-LAST:event_btnG6ActionPerformed
+
+    private void btnH6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnH6ActionPerformed
+        accionBoton(btnH6, 23);
+    }//GEN-LAST:event_btnH6ActionPerformed
+
+    private void btnA5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnA5ActionPerformed
+        // TODO add your handling code here:
+        accionBoton(btnA5, 24);
+    }//GEN-LAST:event_btnA5ActionPerformed
+
+    private void btnB5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnB5ActionPerformed
+        accionBoton(btnB5, 25);
+    }//GEN-LAST:event_btnB5ActionPerformed
+
+    private void btnC5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnC5ActionPerformed
+        accionBoton(btnC5, 26);
+    }//GEN-LAST:event_btnC5ActionPerformed
+
+    private void btnD5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnD5ActionPerformed
+        accionBoton(btnD5, 27);
+    }//GEN-LAST:event_btnD5ActionPerformed
+
+    private void btnE5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnE5ActionPerformed
+        accionBoton(btnE5, 28);
+    }//GEN-LAST:event_btnE5ActionPerformed
+
+    private void btnF5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnF5ActionPerformed
+        accionBoton(btnF5, 29);
+    }//GEN-LAST:event_btnF5ActionPerformed
+
+    private void btnG5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnG5ActionPerformed
+        accionBoton(btnG5, 30);
+    }//GEN-LAST:event_btnG5ActionPerformed
+
+    private void btnH5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnH5ActionPerformed
+        accionBoton(btnH5, 31);
+    }//GEN-LAST:event_btnH5ActionPerformed
+
+    private void btnA4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnA4ActionPerformed
+        accionBoton(btnA4, 32);
+    }//GEN-LAST:event_btnA4ActionPerformed
+
+    private void btnB4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnB4ActionPerformed
+        accionBoton(btnB4, 33);
+    }//GEN-LAST:event_btnB4ActionPerformed
+
+    private void btnC4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnC4ActionPerformed
+        accionBoton(btnC4, 34);
+    }//GEN-LAST:event_btnC4ActionPerformed
+
+    private void btnD4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnD4ActionPerformed
+        accionBoton(btnD4, 35);
+    }//GEN-LAST:event_btnD4ActionPerformed
+
+    private void btnE4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnE4ActionPerformed
+        accionBoton(btnE4, 36);
+    }//GEN-LAST:event_btnE4ActionPerformed
+
+    private void btnF4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnF4ActionPerformed
+        accionBoton(btnF4, 37);
+    }//GEN-LAST:event_btnF4ActionPerformed
+
+    private void btnG4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnG4ActionPerformed
+        accionBoton(btnG4, 38);
+    }//GEN-LAST:event_btnG4ActionPerformed
+
+    private void btnH4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnH4ActionPerformed
+        accionBoton(btnH4, 39);
+    }//GEN-LAST:event_btnH4ActionPerformed
 
     private void accionBoton(JButton boton, int posicion) {
         boolean turnoBlanco = tablero.isEsTurnoBlanco();
