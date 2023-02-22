@@ -46,7 +46,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++, n++) {
                 matrizCasillas[i][j] = ArrayButtons[n];
-                System.out.println(i+" i"+j+" j"+" ");
+                System.out.println(i + " i" + j + " j" + " ");
             }
         }
     }
@@ -990,10 +990,8 @@ public class PnlTableroBotones extends javax.swing.JPanel {
             
             ficha.setCasilla(boton);
             TableroAjedrez.pintarCasillasNormal(tablero.getTablero());
-            
-            //ficha.poneImagenes(boton.getWidth(), boton.getHeight());
-            
-            //tablero.cambiarTurno();
+
+            tablero.cambiarTurno();
             btnSeleccionado = null;
             ficha = null;
         } else {
@@ -1106,6 +1104,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
             }
         }
     }
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public static javax.swing.JButton btnA1;

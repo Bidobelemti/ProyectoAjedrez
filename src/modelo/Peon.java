@@ -8,7 +8,7 @@ import java.awt.Color;
 import javax.swing.JButton;
 
 public class Peon extends Ficha {
-    
+        
     public Peon(boolean esBlanca, int tipo, int id, JButton casilla) {
         super(esBlanca, tipo, id, casilla);
     }
