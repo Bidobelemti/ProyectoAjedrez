@@ -61,6 +61,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         Ficha peonBlanco6 = new Peon(true, 1, 6, tablero.getTablero()[6][6]);
         Ficha peonBlanco7 = new Peon(true, 1, 7, tablero.getTablero()[6][7]);
         //agregar las demas fichas
+        fichasBlancas.add(peonBlanco0);
         fichasBlancas.add(peonBlanco1);
         fichasBlancas.add(peonBlanco2);
         fichasBlancas.add(peonBlanco3);
@@ -1092,7 +1093,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                             ficha.movimiento(posicion, turnoBlanco, true);
                         } else {
                             System.out.println("no esta posicion inicial");
-                            peon.movimiento(posicion, turnoBlanco, false);
+                            ficha.movimiento(posicion, turnoBlanco, false);
                         }
                         System.out.println("1");
                     }
