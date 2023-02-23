@@ -142,7 +142,6 @@ public class Caballo extends Ficha {
 
             i = movimientoX - 1;
             j = movimientoY + 2;
-
             if ((i >= 0) && (i < 8) && (j < 8) && (j >= 0)) {
                 if (TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j], TableroAjedrez.getBlanco())) {
                     TableroAjedrez.getTablero()[i][j].setBackground(Color.red);
