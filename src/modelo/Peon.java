@@ -30,6 +30,21 @@ public class Peon extends Ficha {
                     System.out.println(i+","+j + " Matriz");
                 }
             }
+            
+            /*
+             int x = posicion / 8;
+        int y = posicion % 8;
+        int i, j;
+        //Las fichas blancan irán hacia arriba.
+        if (turnoBlanco) {
+            i = x-1; j = y;
+            if((i >= 0) && (i < 8) && (j < 8) && (j >= 0)){
+                if(!juego.casillaOcupada(juego.tablero[i][j], juego.negro) && !juego.casillaOcupada(juego.tablero[i][j], juego.blanco)){
+                    juego.tablero[i][j].setBackground(Color.blue);
+                    System.out.println(i+","+j);
+                }
+            }
+             */
             i = movimientoX-2; j = movimientoY;
             if((i >= 0) && (i < 8) && (j < 8) && (j >= 0) && primerTurno){
                 if(!TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j], 
