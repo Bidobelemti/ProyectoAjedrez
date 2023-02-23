@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import modelo.Alfil;
+import modelo.Caballo;
 
 public class PnlTableroBotones extends javax.swing.JPanel {
 
@@ -87,6 +88,12 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         fichasBlancas.add(alfilBlanco0);
         fichasBlancas.add(alfilBlanco1);
         
+        //Caballos blancos
+        Ficha caballoBlanco0 = new Caballo (true, 3, 10, tablero.getTablero()[7][1]);
+        Ficha caballoBlanco1 = new Caballo (true, 3, 11, tablero.getTablero()[7][6]);
+        fichasBlancas.add(caballoBlanco0);
+        fichasBlancas.add(caballoBlanco1);
+        
         //peones negros
         Ficha peonNegro0 = new Peon(false, 1, 0, tablero.getTablero()[1][0]);
         Ficha peonNegro1 = new Peon(false, 1, 1, tablero.getTablero()[1][1]);
@@ -105,13 +112,18 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         fichasNegras.add(peonNegro5);
         fichasNegras.add(peonNegro6);
         fichasNegras.add(peonNegro7);
+        
         //Torres negras
         
         //Caballos negros
+        Ficha caballoNegro0 = new Caballo (false, 3, 10, tablero.getTablero()[7][1]);
+        Ficha caballoNegro1 = new Caballo (false, 3, 11, tablero.getTablero()[7][6]);
+        fichasNegras.add(caballoNegro0);
+        fichasNegras.add(caballoNegro1);
         
         //Alfiles negros
-        Ficha alfilNegro0 = new Alfil(false,4,12,tablero.getTablero()[0][2]);
-        Ficha alfilNegro1 = new Alfil(false,4,12,tablero.getTablero()[0][5]);
+        Ficha alfilNegro0 = new Alfil(false,4,12,tablero.getTablero()[0][1]);
+        Ficha alfilNegro1 = new Alfil(false,4,13,tablero.getTablero()[0][6]);
         fichasNegras.add(alfilNegro0);
         fichasNegras.add(alfilNegro1);
         
@@ -1131,6 +1143,11 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                     }
                     if (ficha.getTipoFicha() == 4) {
                         System.out.println("entrando a alfil");
+                        ficha.movimiento(posicion,turnoBlanco,false);
+                    }
+                    
+                    if (ficha.getTipoFicha() == 3) {
+                        System.out.println("entrando a caballo");
                         ficha.movimiento(posicion,turnoBlanco,false);
                     }
 
