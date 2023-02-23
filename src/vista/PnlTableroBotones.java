@@ -10,6 +10,7 @@ import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import modelo.Alfil;
 import modelo.Caballo;
+import modelo.Torre;
 
 public class PnlTableroBotones extends javax.swing.JPanel {
 
@@ -17,7 +18,6 @@ public class PnlTableroBotones extends javax.swing.JPanel {
     JButton[][] matrizCasillas;
     JButton ArrayButtons[];
     TableroAjedrez tablero;
-    Peon peon;
     Ficha ficha;
     static ArrayList<Ficha> fichasNegras = new ArrayList<>();
     static ArrayList<Ficha> fichasBlancas = new ArrayList<>();
@@ -94,6 +94,13 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         fichasBlancas.add(caballoBlanco0);
         fichasBlancas.add(caballoBlanco1);
         
+        //torres blancas
+        Ficha torreBlanco0 = new Torre(true, 2, 8, tablero.getTablero()[7][0]); 
+        Ficha torreBlanco1 = new Torre(true, 2, 9, tablero.getTablero()[7][7]);
+        fichasBlancas.add(torreBlanco0);
+        fichasBlancas.add(torreBlanco1);
+        
+        
         //peones negros
         Ficha peonNegro0 = new Peon(false, 1, 0, tablero.getTablero()[1][0]);
         Ficha peonNegro1 = new Peon(false, 1, 1, tablero.getTablero()[1][1]);
@@ -126,6 +133,12 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         Ficha alfilNegro1 = new Alfil(false,4,13,tablero.getTablero()[0][6]);
         fichasNegras.add(alfilNegro0);
         fichasNegras.add(alfilNegro1);
+        
+        //torres negras
+        Ficha torreNegro0 = new Torre(false, 2, 8, tablero.getTablero()[0][0]); 
+        Ficha torreNegro1 = new Torre(false, 2, 9, tablero.getTablero()[0][7]);
+        fichasNegras.add(torreNegro0);
+        fichasNegras.add(torreNegro1);
         
         
         blanco = new Jugador("Camelo", "blanco", fichasBlancas);
@@ -1141,6 +1154,13 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                         }
                         System.out.println("1");
                     }
+                    
+                    if (ficha.getTipoFicha() == 2) {
+                        System.out.println("entrando torre");
+                        ficha.movimiento(posicion, turnoBlanco, false);
+                        
+                    } 
+                    
                     if (ficha.getTipoFicha() == 4) {
                         System.out.println("entrando a alfil");
                         ficha.movimiento(posicion,turnoBlanco,false);
