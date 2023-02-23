@@ -1,29 +1,151 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package modelo;
+import java.awt.Color;
+import javax.swing.JButton;
 
 /**
  *
  * @author pc
  */
-public class Alfil extends FichaAntigua {
+public class Alfil extends Ficha {
 
-    public Alfil(int movimientoX, int movimientoY, int posicionX, int posicionY) {
-        super(movimientoX, movimientoY, posicionX, posicionY);
-    }
-    
-    
-
-    @Override
-    public void moverFichaBlanca() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public Alfil(boolean esBlanca, int tipo, int id, JButton casilla) {
+        super(esBlanca, tipo, id, casilla);
     }
 
     @Override
-    public void moverFichaNegra() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public void movimiento(int posicion, boolean turnoBlanco, boolean primerTurno) {
+        System.out.println("entrando al metodo del alfil");
+        super.movimientoX = posicion / 8;
+        super.movimientoY = posicion % 8;
+        int i = movimientoX - 1;
+        int j = movimientoY - 1;
+        boolean ocupada = false;
+        if (turnoBlanco) {
+            while ((i >= 0) && (i < 8) && (j < 8) && (j >= 0) && !ocupada) {
+                if(!TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j], TableroAjedrez.getNegro()) 
+                        && !TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j], TableroAjedrez.getBlanco())){
+                    TableroAjedrez.getTablero()[i][j].setBackground(Color.blue);
+                } else {
+                    ocupada = true;
+                    if (TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j], TableroAjedrez.getNegro())) {
+                        TableroAjedrez.getTablero()[i][j].setBackground(Color.red);
+                    }
+                }
+                i--;
+                j--;
+            }
+            ocupada = false;
+            i = movimientoX + 1;
+            j = movimientoY + 1;
+            while ((i >= 0) && (i < 8) && (j < 8) && (j >= 0) && !ocupada) {
+                if (!TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j], TableroAjedrez.getNegro()) 
+                        && !TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j], TableroAjedrez.getBlanco())) {
+                    TableroAjedrez.getTablero()[i][j].setBackground(Color.blue);
+                } else {
+                    ocupada = true;
+                    if (TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j], TableroAjedrez.getNegro())) {
+                        TableroAjedrez.getTablero()[i][j].setBackground(Color.red);
+                    }
+                }
+                i++;
+                j++;
+            }
+            ocupada = false;
+            i = movimientoX + 1;
+            j = movimientoY - 1;
+            while ((i >= 0) && (i < 8) && (j < 8) && (j >= 0) && !ocupada) {
+                if (!TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j], TableroAjedrez.getNegro()) 
+                        && !TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j], TableroAjedrez.getBlanco())) {
+                    TableroAjedrez.getTablero()[i][j].setBackground(Color.blue);
+                } else {
+                    ocupada = true;
+                    if (TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j], TableroAjedrez.getNegro())) {
+                        TableroAjedrez.getTablero()[i][j].setBackground(Color.red);
+                    }
+                }
+                i++;
+                j--;
+            }
+            ocupada = false;
+            i = movimientoX - 1;
+            j = movimientoY + 1;
+            while ((i >= 0) && (i < 8) && (j < 8) && (j >= 0) && !ocupada) {
+                if (!TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j], TableroAjedrez.getNegro()) 
+                        && !TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j], TableroAjedrez.getBlanco())) {
+                    TableroAjedrez.getTablero()[i][j].setBackground(Color.blue);
+                } else {
+                    ocupada = true;
+                    if (TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j], TableroAjedrez.getNegro())) {
+                        TableroAjedrez.getTablero()[i][j].setBackground(Color.red);
+                    }
+                }
+                i--;
+                j++;
+            }
+        } else {
+            while ((i >= 0) && (i < 8) && (j < 8) && (j >= 0) && !ocupada) {
+                if (!TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j], TableroAjedrez.getNegro()) 
+                        && !TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j], TableroAjedrez.getBlanco())) {
+                    TableroAjedrez.getTablero()[i][j].setBackground(Color.blue);
+                } else {
+                    ocupada = true;
+                    if (TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j], TableroAjedrez.getBlanco())) {
+                        TableroAjedrez.getTablero()[i][j].setBackground(Color.red);
+                    }
+                }
+                i--;
+                j--;
+            }
+            ocupada = false;
+            i = movimientoX + 1;
+            j = movimientoY + 1;
+            while ((i >= 0) && (i < 8) && (j < 8) && (j >= 0) && !ocupada) {
+                if (!TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j], TableroAjedrez.getNegro()) 
+                        && !TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j], TableroAjedrez.getBlanco())) {
+                    TableroAjedrez.getTablero()[i][j].setBackground(Color.blue);
+                } else {
+                    ocupada = true;
+                    if (TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j], TableroAjedrez.getBlanco())) {
+                        TableroAjedrez.getTablero()[i][j].setBackground(Color.red);
+                    }
+                }
+                i++;
+                j++;
+            }
+            ocupada = false;
+            i = movimientoX + 1;
+            j = movimientoY - 1;
+            while ((i >= 0) && (i < 8) && (j < 8) && (j >= 0) && !ocupada) {
+                if (!TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j], TableroAjedrez.getNegro()) 
+                        && !TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j], TableroAjedrez.getBlanco())) {
+                    TableroAjedrez.getTablero()[i][j].setBackground(Color.blue);
+                } else {
+                    ocupada = true;
+                    if (TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j], TableroAjedrez.getBlanco())) {
+                        TableroAjedrez.getTablero()[i][j].setBackground(Color.red);
+                    }
+                }
+                i++;
+                j--;
+            }
+            ocupada = false;
+            i = movimientoX - 1;
+            j = movimientoY + 1;
+            while ((i >= 0) && (i < 8) && (j < 8) && (j >= 0) && !ocupada) {
+                if (!TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j], TableroAjedrez.getNegro()) 
+                        && !TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j], TableroAjedrez.getBlanco())) {
+                    TableroAjedrez.getTablero()[i][j].setBackground(Color.blue);
+                } else {
+                    ocupada = true;
+                    if (TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j], TableroAjedrez.getBlanco())) {
+                        TableroAjedrez.getTablero()[i][j].setBackground(Color.red);
+                    }
+                }
+                i--;
+                j++;
+            }
+        }
     }
+
     
 }

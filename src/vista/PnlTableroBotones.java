@@ -8,6 +8,7 @@ import java.awt.Color;
 import java.util.ArrayList;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
+import modelo.Alfil;
 
 public class PnlTableroBotones extends javax.swing.JPanel {
 
@@ -52,6 +53,16 @@ public class PnlTableroBotones extends javax.swing.JPanel {
     }
 
     public void iniciarFichas() {
+        /**
+         * Declaracion de fichas
+         * 1 - peon  
+         * 2 - Torre  
+         * 3 - Caballo  
+         * 4 - Alfil  
+         * 5 - Dama 
+         * 6 - Rey
+         */
+        
         Ficha peonBlanco0 = new Peon(true, 1, 0, tablero.getTablero()[6][0]);
         Ficha peonBlanco1 = new Peon(true, 1, 1, tablero.getTablero()[6][1]);
         Ficha peonBlanco2 = new Peon(true, 1, 2, tablero.getTablero()[6][2]);
@@ -60,7 +71,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         Ficha peonBlanco5 = new Peon(true, 1, 5, tablero.getTablero()[6][5]);
         Ficha peonBlanco6 = new Peon(true, 1, 6, tablero.getTablero()[6][6]);
         Ficha peonBlanco7 = new Peon(true, 1, 7, tablero.getTablero()[6][7]);
-        //agregar las demas fichas
+        
         fichasBlancas.add(peonBlanco0);
         fichasBlancas.add(peonBlanco1);
         fichasBlancas.add(peonBlanco2);
@@ -69,6 +80,13 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         fichasBlancas.add(peonBlanco5);
         fichasBlancas.add(peonBlanco6);
         fichasBlancas.add(peonBlanco7);
+        
+        //Alfiles blancos
+        Ficha alfilBlanco0 = new Alfil(true,4,12,tablero.getTablero()[7][2]);
+        Ficha alfilBlanco1 = new Alfil(true,4,13,tablero.getTablero()[7][5]);
+        fichasBlancas.add(alfilBlanco0);
+        fichasBlancas.add(alfilBlanco1);
+        
         //peones negros
         Ficha peonNegro0 = new Peon(false, 1, 0, tablero.getTablero()[1][0]);
         Ficha peonNegro1 = new Peon(false, 1, 1, tablero.getTablero()[1][1]);
@@ -78,7 +96,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         Ficha peonNegro5 = new Peon(false, 1, 5, tablero.getTablero()[1][5]);
         Ficha peonNegro6 = new Peon(false, 1, 6, tablero.getTablero()[1][6]);
         Ficha peonNegro7 = new Peon(false, 1, 7, tablero.getTablero()[1][7]);
-        //agregar las demas fichas
+
         fichasNegras.add(peonNegro0);
         fichasNegras.add(peonNegro1);
         fichasNegras.add(peonNegro2);
@@ -87,7 +105,17 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         fichasNegras.add(peonNegro5);
         fichasNegras.add(peonNegro6);
         fichasNegras.add(peonNegro7);
-
+        //Torres negras
+        
+        //Caballos negros
+        
+        //Alfiles negros
+        Ficha alfilNegro0 = new Alfil(false,4,12,tablero.getTablero()[0][2]);
+        Ficha alfilNegro1 = new Alfil(false,4,12,tablero.getTablero()[0][5]);
+        fichasNegras.add(alfilNegro0);
+        fichasNegras.add(alfilNegro1);
+        
+        
         blanco = new Jugador("Camelo", "blanco", fichasBlancas);
         negro = new Jugador("Pepe", "negro", fichasNegras);
         tablero.setBlanco(blanco);
@@ -988,7 +1016,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
             System.out.println("wenas primer if");
             boton.setIcon(btnSeleccionado.getIcon());
             btnSeleccionado.setIcon(null);
-            
+
             ficha.setCasilla(boton);
             TableroAjedrez.pintarCasillasNormal(tablero.getTablero());
 
@@ -1028,9 +1056,13 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                             //this.dispose();
                         }
                     }
+
                     ficha.setCasilla(null);
-                    btnSeleccionado.setIcon(null);
                     ficha.setCasilla(boton);
+                    boton.setIcon(btnSeleccionado.getIcon());
+                    btnSeleccionado.setIcon(null);
+
+                    //ficha.setCasilla(boton);
                     if (ficha.getTipoFicha() == 1 && ((posicion >= 0) && (posicion <= 7) || (posicion >= 56) && (posicion <= 63))) {
                         String[] opciones = new String[4];
                         opciones[0] = "Torre";
@@ -1096,6 +1128,10 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                             ficha.movimiento(posicion, turnoBlanco, false);
                         }
                         System.out.println("1");
+                    }
+                    if (ficha.getTipoFicha() == 4) {
+                        System.out.println("entrando a alfil");
+                        ficha.movimiento(posicion,turnoBlanco,false);
                     }
 
                 }
