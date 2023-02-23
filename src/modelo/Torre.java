@@ -23,19 +23,22 @@ public class Torre extends Ficha {
         super.movimientoY = posicion % 8;
         int i = movimientoX - 1;
         int j = movimientoY;
-        boolean ocupado = false;
+        boolean ocupada = false;
 
         //movimiento de la torre de fichas blancas
         // > <
-        while ((i >= 0) && (i < 8) && !ocupado) {
+        while ((i >= 0) && (i < 8) && !ocupada) {
             if (!TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j], TableroAjedrez.getNegro())
                     && !TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j], TableroAjedrez.getBlanco())) {
+
                 TableroAjedrez.getTablero()[i][j].setBackground(Color.blue);
                 System.out.println(i + "," + j + " Matriz");
+
             } else {
-                ocupado = true;
-                if (turnoBlanco && !TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j], TableroAjedrez.getNegro())
-                        || !TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j], TableroAjedrez.getBlanco())) {
+                ocupada = true;
+                if (turnoBlanco && TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j], TableroAjedrez.getNegro())
+                        || !turnoBlanco && TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j], TableroAjedrez.getBlanco())) {
+
                     TableroAjedrez.getTablero()[i][j].setBackground(Color.red);
                     System.out.println(i + "," + j + " Matriz");
                 }
@@ -47,17 +50,20 @@ public class Torre extends Ficha {
 
         i = movimientoX + 1;
         j = movimientoY;
-        ocupado = false;
+        ocupada = false;
 
-        while ((i >= 0) && (i < 8) && !ocupado) {
+        while ((i >= 0) && (i < 8) && !ocupada) {
             if (!TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j], TableroAjedrez.getNegro())
                     && !TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j], TableroAjedrez.getBlanco())) {
+
                 TableroAjedrez.getTablero()[i][j].setBackground(Color.blue);
                 System.out.println(i + "," + j + " Matriz");
+
             } else {
-                ocupado = true;
-                if (turnoBlanco && !TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j], TableroAjedrez.getNegro())
-                        || !TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j], TableroAjedrez.getBlanco())) {
+                ocupada = true;
+                if (turnoBlanco && TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j], TableroAjedrez.getNegro())
+                        || !turnoBlanco && TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j], TableroAjedrez.getBlanco())) {
+
                     TableroAjedrez.getTablero()[i][j].setBackground(Color.red);
                     System.out.println(i + "," + j + " Matriz");
                 }
@@ -69,17 +75,18 @@ public class Torre extends Ficha {
 
         i = movimientoX;
         j = movimientoY + 1;
-        ocupado = false;
+        ocupada = false;
 
-        while ((i >= 0) && (i < 8) && !ocupado) {
+        while ((i >= 0) && (i < 8) && (j < 8) && (j >= 0) && !ocupada) {
             if (!TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j], TableroAjedrez.getNegro())
                     && !TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j], TableroAjedrez.getBlanco())) {
                 TableroAjedrez.getTablero()[i][j].setBackground(Color.blue);
                 System.out.println(i + "," + j + " Matriz");
             } else {
-                ocupado = true;
-                if (turnoBlanco && !TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j], TableroAjedrez.getNegro())
-                        || !TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j], TableroAjedrez.getBlanco())) {
+                ocupada = true;
+                if (turnoBlanco && TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j], TableroAjedrez.getNegro())
+                        || !turnoBlanco && TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j], TableroAjedrez.getBlanco())) {
+
                     TableroAjedrez.getTablero()[i][j].setBackground(Color.red);
                     System.out.println(i + "," + j + " Matriz");
                 }
@@ -91,17 +98,18 @@ public class Torre extends Ficha {
 
         i = movimientoX;
         j = movimientoY - 1;
-        ocupado = false;
-        
-        while ((i >= 0) && (i < 8) && !ocupado) {
+        ocupada = false;
+
+        while ((i >= 0) && (i < 8) && (j < 8) && (j >= 0) && !ocupada) {
             if (!TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j], TableroAjedrez.getNegro())
                     && !TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j], TableroAjedrez.getBlanco())) {
                 TableroAjedrez.getTablero()[i][j].setBackground(Color.blue);
                 System.out.println(i + "," + j + " Matriz");
             } else {
-                ocupado = true;
-                if (turnoBlanco && !TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j], TableroAjedrez.getNegro())
-                        || !TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j], TableroAjedrez.getBlanco())) {
+                ocupada = true;
+                if (turnoBlanco && TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j], TableroAjedrez.getNegro())
+                        || !turnoBlanco && TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j], TableroAjedrez.getBlanco())) {
+
                     TableroAjedrez.getTablero()[i][j].setBackground(Color.red);
                     System.out.println(i + "," + j + " Matriz");
                 }
@@ -112,7 +120,5 @@ public class Torre extends Ficha {
         }
 
     }
-    
-    
-    
+
 }

@@ -1161,15 +1161,17 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                         
                     } 
                     
+                    if (ficha.getTipoFicha() == 3) {
+                        System.out.println("entrando a caballo");
+                        ficha.movimiento(posicion,turnoBlanco,false);
+                    }
+                    
                     if (ficha.getTipoFicha() == 4) {
                         System.out.println("entrando a alfil");
                         ficha.movimiento(posicion,turnoBlanco,false);
                     }
                     
-                    if (ficha.getTipoFicha() == 3) {
-                        System.out.println("entrando a caballo");
-                        ficha.movimiento(posicion,turnoBlanco,false);
-                    }
+                    
 
                 }
                 if (ficha == null) {
