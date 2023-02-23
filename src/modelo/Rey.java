@@ -4,26 +4,65 @@
  */
 package modelo;
 
+import java.awt.Color;
+import javax.swing.JButton;
+
 /**
  *
  * @author pc
  */
-public class Rey extends FichaAntigua{
+public class Rey extends Ficha {
 
-    public Rey(int movimientoX, int movimientoY, int posicionX, int posicionY) {
-        super(movimientoX, movimientoY, posicionX, posicionY);
+    public Rey(boolean esBlanca, int tipo, int id, JButton casilla) {
+        super(esBlanca, tipo, id, casilla);
     }
 
     @Override
-    public void moverFichaBlanca() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+    public void movimiento(int posicion, boolean turnoBlanco, boolean primerTurno) {
+        super.movimientoX = posicion / 8;
+        super.movimientoY = posicion % 8;
+        int i = movimientoX;
+        int j = movimientoY;
 
-    @Override
-    public void moverFichaNegra() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        if (turnoBlanco) {
+            for (i = movimientoX - 1; i < movimientoX + 2; i++) {
+                for (j = movimientoY - 1; i < movimientoY + 2; j++) {
+                    if ((i != movimientoX) || (j != movimientoY)) {
+                        if ((i >= 0) && (i < 8) && (j >= 0) && (j < 8)) {
+                            if (!TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j],
+                                    TableroAjedrez.getNegro())) {
+                                TableroAjedrez.getTablero()[i][j].setBackground(Color.red);
+                            } else {
+                                if (!TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j],
+                                        TableroAjedrez.getBlanco())) {
+                                    TableroAjedrez.getTablero()[i][j].setBackground(Color.blue);
+                                }
+
+                            }
+                        }
+                    }
+                }
+            }
+        } else {
+            for (i = movimientoX - 1; i < movimientoX + 2; i++) {
+                for (j = movimientoY - 1; i < movimientoY + 2; j++) {
+                    if ((i != movimientoX) || (j != movimientoY)) {
+                        if ((i >= 0) && (i < 8) && (j >= 0) && (j < 8)) {
+                            if (!TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j],
+                                    TableroAjedrez.getBlanco())) {
+                                TableroAjedrez.getTablero()[i][j].setBackground(Color.red);
+                            } else {
+                                if (!TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j],
+                                        TableroAjedrez.getNegro())) {
+                                    TableroAjedrez.getTablero()[i][j].setBackground(Color.blue);
+                                }
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
     }
-    
-    
-    
 }

@@ -4,26 +4,25 @@
  */
 package modelo;
 
+import javax.swing.JButton;
+
 /**
  *
  * @author pc
  */
-public class Dama extends FichaAntigua{
+public class Dama extends Ficha{
+    Alfil alfil;
+    Torre torre;
 
-    public Dama(int movimientoX, int movimientoY, int posicionX, int posicionY) {
-        super(movimientoX, movimientoY, posicionX, posicionY);
-    }
-    
-    
-
-    @Override
-    public void moverFichaBlanca() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public Dama(boolean esBlanca, int tipo, int id, JButton casilla) {
+        super(esBlanca, tipo, id, casilla);
     }
 
     @Override
-    public void moverFichaNegra() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public void movimiento(int posicion, boolean turnoBlanco, boolean primerTurno) {
+        alfil.movimiento(posicion, turnoBlanco,false);
+        torre.movimiento(posicion, turnoBlanco, false);
     }
+
     
 }
