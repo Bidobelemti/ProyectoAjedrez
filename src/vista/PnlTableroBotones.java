@@ -123,8 +123,8 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         //Torres negras
         
         //Caballos negros
-        Ficha caballoNegro0 = new Caballo (false, 3, 10, tablero.getTablero()[7][1]);
-        Ficha caballoNegro1 = new Caballo (false, 3, 11, tablero.getTablero()[7][6]);
+        Ficha caballoNegro0 = new Caballo (false, 3, 10, tablero.getTablero()[0][1]);
+        Ficha caballoNegro1 = new Caballo (false, 3, 11, tablero.getTablero()[0][6]);
         fichasNegras.add(caballoNegro0);
         fichasNegras.add(caballoNegro1);
         
