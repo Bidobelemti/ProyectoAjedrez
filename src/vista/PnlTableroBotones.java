@@ -230,10 +230,15 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         btnA6 = new javax.swing.JButton();
         btnA7 = new javax.swing.JButton();
         btnA8 = new javax.swing.JButton();
+        pnlBordeIzquierdo = new javax.swing.JPanel();
+        pnlBordeSuperior = new javax.swing.JPanel();
+        pnlBordeDerecho = new javax.swing.JPanel();
+        pnlBordeInf = new javax.swing.JPanel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new java.awt.BorderLayout());
 
+        pnlFondoTablero.setBackground(new java.awt.Color(255, 255, 255));
         pnlFondoTablero.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnH1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/TorreBlanca.png"))); // NOI18N
@@ -243,7 +248,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 btnH1ActionPerformed(evt);
             }
         });
-        pnlFondoTablero.add(btnH1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 490, 70, 70));
+        pnlFondoTablero.add(btnH1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 510, 70, 70));
 
         btnH2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/PeónBlanco.png"))); // NOI18N
         btnH2.setBorder(null);
@@ -253,7 +258,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 btnH2ActionPerformed(evt);
             }
         });
-        pnlFondoTablero.add(btnH2, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 420, 70, 70));
+        pnlFondoTablero.add(btnH2, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 440, 70, 70));
 
         btnH3.setBorder(null);
         btnH3.addActionListener(new java.awt.event.ActionListener() {
@@ -261,7 +266,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 btnH3ActionPerformed(evt);
             }
         });
-        pnlFondoTablero.add(btnH3, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 350, 70, 70));
+        pnlFondoTablero.add(btnH3, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 370, 70, 70));
 
         btnH4.setBorder(null);
         btnH4.addActionListener(new java.awt.event.ActionListener() {
@@ -269,7 +274,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 btnH4ActionPerformed(evt);
             }
         });
-        pnlFondoTablero.add(btnH4, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 280, 70, 70));
+        pnlFondoTablero.add(btnH4, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 300, 70, 70));
 
         btnH5.setBorder(null);
         btnH5.addActionListener(new java.awt.event.ActionListener() {
@@ -277,7 +282,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 btnH5ActionPerformed(evt);
             }
         });
-        pnlFondoTablero.add(btnH5, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 210, 70, 70));
+        pnlFondoTablero.add(btnH5, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 230, 70, 70));
 
         btnH6.setBorder(null);
         btnH6.addActionListener(new java.awt.event.ActionListener() {
@@ -285,7 +290,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 btnH6ActionPerformed(evt);
             }
         });
-        pnlFondoTablero.add(btnH6, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 140, 70, 70));
+        pnlFondoTablero.add(btnH6, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 160, 70, 70));
 
         btnH7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/PeónNegro.png"))); // NOI18N
         btnH7.setBorder(null);
@@ -294,7 +299,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 btnH7ActionPerformed(evt);
             }
         });
-        pnlFondoTablero.add(btnH7, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 70, 70, 70));
+        pnlFondoTablero.add(btnH7, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 90, 70, 70));
 
         btnH8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/TorreNegra.png"))); // NOI18N
         btnH8.setBorder(null);
@@ -303,7 +308,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 btnH8ActionPerformed(evt);
             }
         });
-        pnlFondoTablero.add(btnH8, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 0, 70, 70));
+        pnlFondoTablero.add(btnH8, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 20, 70, 70));
 
         btnG1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/CaballoBlanco.png"))); // NOI18N
         btnG1.setBorder(null);
@@ -312,7 +317,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 btnG1ActionPerformed(evt);
             }
         });
-        pnlFondoTablero.add(btnG1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 490, 70, 70));
+        pnlFondoTablero.add(btnG1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 510, 70, 70));
 
         btnG2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/PeónBlanco.png"))); // NOI18N
         btnG2.setBorder(null);
@@ -321,7 +326,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 btnG2ActionPerformed(evt);
             }
         });
-        pnlFondoTablero.add(btnG2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 420, 70, 70));
+        pnlFondoTablero.add(btnG2, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 440, 70, 70));
 
         btnG3.setBorder(null);
         btnG3.addActionListener(new java.awt.event.ActionListener() {
@@ -329,7 +334,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 btnG3ActionPerformed(evt);
             }
         });
-        pnlFondoTablero.add(btnG3, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 350, 70, 70));
+        pnlFondoTablero.add(btnG3, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 370, 70, 70));
 
         btnG4.setBorder(null);
         btnG4.addActionListener(new java.awt.event.ActionListener() {
@@ -337,7 +342,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 btnG4ActionPerformed(evt);
             }
         });
-        pnlFondoTablero.add(btnG4, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 280, 70, 70));
+        pnlFondoTablero.add(btnG4, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 300, 70, 70));
 
         btnG5.setBorder(null);
         btnG5.addActionListener(new java.awt.event.ActionListener() {
@@ -345,7 +350,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 btnG5ActionPerformed(evt);
             }
         });
-        pnlFondoTablero.add(btnG5, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 210, 70, 70));
+        pnlFondoTablero.add(btnG5, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 230, 70, 70));
 
         btnG6.setBorder(null);
         btnG6.addActionListener(new java.awt.event.ActionListener() {
@@ -353,7 +358,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 btnG6ActionPerformed(evt);
             }
         });
-        pnlFondoTablero.add(btnG6, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 140, 70, 70));
+        pnlFondoTablero.add(btnG6, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 160, 70, 70));
 
         btnG7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/PeónNegro.png"))); // NOI18N
         btnG7.setBorder(null);
@@ -362,7 +367,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 btnG7ActionPerformed(evt);
             }
         });
-        pnlFondoTablero.add(btnG7, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 70, 70, 70));
+        pnlFondoTablero.add(btnG7, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 90, 70, 70));
 
         btnG8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/CaballoNegro.png"))); // NOI18N
         btnG8.setBorder(null);
@@ -371,7 +376,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 btnG8ActionPerformed(evt);
             }
         });
-        pnlFondoTablero.add(btnG8, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 0, 70, 70));
+        pnlFondoTablero.add(btnG8, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 20, 70, 70));
 
         btnF1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/AlfilBlanco.png"))); // NOI18N
         btnF1.setBorder(null);
@@ -380,7 +385,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 btnF1ActionPerformed(evt);
             }
         });
-        pnlFondoTablero.add(btnF1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 490, 70, 70));
+        pnlFondoTablero.add(btnF1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 510, 70, 70));
 
         btnF2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/PeónBlanco.png"))); // NOI18N
         btnF2.setBorder(null);
@@ -389,7 +394,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 btnF2ActionPerformed(evt);
             }
         });
-        pnlFondoTablero.add(btnF2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 420, 70, 70));
+        pnlFondoTablero.add(btnF2, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 440, 70, 70));
 
         btnF3.setBorder(null);
         btnF3.addActionListener(new java.awt.event.ActionListener() {
@@ -397,7 +402,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 btnF3ActionPerformed(evt);
             }
         });
-        pnlFondoTablero.add(btnF3, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 350, 70, 70));
+        pnlFondoTablero.add(btnF3, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 370, 70, 70));
 
         btnF4.setBorder(null);
         btnF4.addActionListener(new java.awt.event.ActionListener() {
@@ -405,7 +410,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 btnF4ActionPerformed(evt);
             }
         });
-        pnlFondoTablero.add(btnF4, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 280, 70, 70));
+        pnlFondoTablero.add(btnF4, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 300, 70, 70));
 
         btnF5.setBorder(null);
         btnF5.addActionListener(new java.awt.event.ActionListener() {
@@ -413,7 +418,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 btnF5ActionPerformed(evt);
             }
         });
-        pnlFondoTablero.add(btnF5, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 210, 70, 70));
+        pnlFondoTablero.add(btnF5, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 230, 70, 70));
 
         btnF6.setBorder(null);
         btnF6.addActionListener(new java.awt.event.ActionListener() {
@@ -421,7 +426,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 btnF6ActionPerformed(evt);
             }
         });
-        pnlFondoTablero.add(btnF6, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 140, 70, 70));
+        pnlFondoTablero.add(btnF6, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 160, 70, 70));
 
         btnF7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/PeónNegro.png"))); // NOI18N
         btnF7.setBorder(null);
@@ -430,7 +435,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 btnF7ActionPerformed(evt);
             }
         });
-        pnlFondoTablero.add(btnF7, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 70, 70, 70));
+        pnlFondoTablero.add(btnF7, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 90, 70, 70));
 
         btnF8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/AlfilNegro.png"))); // NOI18N
         btnF8.setBorder(null);
@@ -439,7 +444,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 btnF8ActionPerformed(evt);
             }
         });
-        pnlFondoTablero.add(btnF8, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 0, 70, 70));
+        pnlFondoTablero.add(btnF8, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 20, 70, 70));
 
         btnE1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/ReyBlanco.png"))); // NOI18N
         btnE1.setBorder(null);
@@ -448,7 +453,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 btnE1ActionPerformed(evt);
             }
         });
-        pnlFondoTablero.add(btnE1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 490, 70, 70));
+        pnlFondoTablero.add(btnE1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 510, 70, 70));
 
         btnE2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/PeónBlanco.png"))); // NOI18N
         btnE2.setBorder(null);
@@ -457,7 +462,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 btnE2ActionPerformed(evt);
             }
         });
-        pnlFondoTablero.add(btnE2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 420, 70, 70));
+        pnlFondoTablero.add(btnE2, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 440, 70, 70));
 
         btnE3.setBorder(null);
         btnE3.addActionListener(new java.awt.event.ActionListener() {
@@ -465,7 +470,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 btnE3ActionPerformed(evt);
             }
         });
-        pnlFondoTablero.add(btnE3, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 350, 70, 70));
+        pnlFondoTablero.add(btnE3, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 370, 70, 70));
 
         btnE4.setBorder(null);
         btnE4.addActionListener(new java.awt.event.ActionListener() {
@@ -473,7 +478,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 btnE4ActionPerformed(evt);
             }
         });
-        pnlFondoTablero.add(btnE4, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 280, 70, 70));
+        pnlFondoTablero.add(btnE4, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 300, 70, 70));
 
         btnE5.setBorder(null);
         btnE5.addActionListener(new java.awt.event.ActionListener() {
@@ -481,7 +486,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 btnE5ActionPerformed(evt);
             }
         });
-        pnlFondoTablero.add(btnE5, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 210, 70, 70));
+        pnlFondoTablero.add(btnE5, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 230, 70, 70));
 
         btnE6.setBorder(null);
         btnE6.addActionListener(new java.awt.event.ActionListener() {
@@ -489,7 +494,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 btnE6ActionPerformed(evt);
             }
         });
-        pnlFondoTablero.add(btnE6, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 140, 70, 70));
+        pnlFondoTablero.add(btnE6, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 160, 70, 70));
 
         btnE7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/PeónNegro.png"))); // NOI18N
         btnE7.setBorder(null);
@@ -498,7 +503,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 btnE7ActionPerformed(evt);
             }
         });
-        pnlFondoTablero.add(btnE7, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 70, 70, 70));
+        pnlFondoTablero.add(btnE7, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 90, 70, 70));
 
         btnE8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/ReyNegro.png"))); // NOI18N
         btnE8.setBorder(null);
@@ -507,7 +512,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 btnE8ActionPerformed(evt);
             }
         });
-        pnlFondoTablero.add(btnE8, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 0, 70, 70));
+        pnlFondoTablero.add(btnE8, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 20, 70, 70));
 
         btnD1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/DamaBlanca.png"))); // NOI18N
         btnD1.setBorder(null);
@@ -516,7 +521,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 btnD1ActionPerformed(evt);
             }
         });
-        pnlFondoTablero.add(btnD1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 490, 70, 70));
+        pnlFondoTablero.add(btnD1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 510, 70, 70));
 
         btnD2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/PeónBlanco.png"))); // NOI18N
         btnD2.setBorder(null);
@@ -525,7 +530,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 btnD2ActionPerformed(evt);
             }
         });
-        pnlFondoTablero.add(btnD2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 420, 70, 70));
+        pnlFondoTablero.add(btnD2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 440, 70, 70));
 
         btnD3.setBorder(null);
         btnD3.addActionListener(new java.awt.event.ActionListener() {
@@ -533,7 +538,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 btnD3ActionPerformed(evt);
             }
         });
-        pnlFondoTablero.add(btnD3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 350, 70, 70));
+        pnlFondoTablero.add(btnD3, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 370, 70, 70));
 
         btnD4.setBorder(null);
         btnD4.addActionListener(new java.awt.event.ActionListener() {
@@ -541,7 +546,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 btnD4ActionPerformed(evt);
             }
         });
-        pnlFondoTablero.add(btnD4, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 280, 70, 70));
+        pnlFondoTablero.add(btnD4, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 300, 70, 70));
 
         btnD5.setBorder(null);
         btnD5.addActionListener(new java.awt.event.ActionListener() {
@@ -549,7 +554,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 btnD5ActionPerformed(evt);
             }
         });
-        pnlFondoTablero.add(btnD5, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 210, 70, 70));
+        pnlFondoTablero.add(btnD5, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 230, 70, 70));
 
         btnD6.setBorder(null);
         btnD6.addActionListener(new java.awt.event.ActionListener() {
@@ -557,7 +562,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 btnD6ActionPerformed(evt);
             }
         });
-        pnlFondoTablero.add(btnD6, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 140, 70, 70));
+        pnlFondoTablero.add(btnD6, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 160, 70, 70));
 
         btnD7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/PeónNegro.png"))); // NOI18N
         btnD7.setBorder(null);
@@ -566,7 +571,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 btnD7ActionPerformed(evt);
             }
         });
-        pnlFondoTablero.add(btnD7, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 70, 70, 70));
+        pnlFondoTablero.add(btnD7, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 90, 70, 70));
 
         btnD8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/DamaNegra.png"))); // NOI18N
         btnD8.setBorder(null);
@@ -575,7 +580,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 btnD8ActionPerformed(evt);
             }
         });
-        pnlFondoTablero.add(btnD8, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 0, 70, 70));
+        pnlFondoTablero.add(btnD8, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 20, 70, 70));
 
         btnC1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/AlfilBlanco.png"))); // NOI18N
         btnC1.setBorder(null);
@@ -584,7 +589,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 btnC1ActionPerformed(evt);
             }
         });
-        pnlFondoTablero.add(btnC1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 490, 70, 70));
+        pnlFondoTablero.add(btnC1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 510, 70, 70));
 
         btnC2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/PeónBlanco.png"))); // NOI18N
         btnC2.setBorder(null);
@@ -593,7 +598,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 btnC2ActionPerformed(evt);
             }
         });
-        pnlFondoTablero.add(btnC2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 420, 70, 70));
+        pnlFondoTablero.add(btnC2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 440, 70, 70));
 
         btnC3.setBorder(null);
         btnC3.addActionListener(new java.awt.event.ActionListener() {
@@ -601,7 +606,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 btnC3ActionPerformed(evt);
             }
         });
-        pnlFondoTablero.add(btnC3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 350, 70, 70));
+        pnlFondoTablero.add(btnC3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 370, 70, 70));
 
         btnC4.setBorder(null);
         btnC4.addActionListener(new java.awt.event.ActionListener() {
@@ -609,7 +614,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 btnC4ActionPerformed(evt);
             }
         });
-        pnlFondoTablero.add(btnC4, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 280, 70, 70));
+        pnlFondoTablero.add(btnC4, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 300, 70, 70));
 
         btnC5.setBorder(null);
         btnC5.addActionListener(new java.awt.event.ActionListener() {
@@ -617,7 +622,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 btnC5ActionPerformed(evt);
             }
         });
-        pnlFondoTablero.add(btnC5, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 210, 70, 70));
+        pnlFondoTablero.add(btnC5, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 230, 70, 70));
 
         btnC6.setBorder(null);
         btnC6.addActionListener(new java.awt.event.ActionListener() {
@@ -625,7 +630,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 btnC6ActionPerformed(evt);
             }
         });
-        pnlFondoTablero.add(btnC6, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 140, 70, 70));
+        pnlFondoTablero.add(btnC6, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 160, 70, 70));
 
         btnC7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/PeónNegro.png"))); // NOI18N
         btnC7.setBorder(null);
@@ -634,7 +639,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 btnC7ActionPerformed(evt);
             }
         });
-        pnlFondoTablero.add(btnC7, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 70, 70, 70));
+        pnlFondoTablero.add(btnC7, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 90, 70, 70));
 
         btnC8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/AlfilNegro.png"))); // NOI18N
         btnC8.setBorder(null);
@@ -643,7 +648,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 btnC8ActionPerformed(evt);
             }
         });
-        pnlFondoTablero.add(btnC8, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 0, 70, 70));
+        pnlFondoTablero.add(btnC8, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 20, 70, 70));
 
         btnB1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/CaballoBlanco.png"))); // NOI18N
         btnB1.setBorder(null);
@@ -652,7 +657,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 btnB1ActionPerformed(evt);
             }
         });
-        pnlFondoTablero.add(btnB1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 490, 70, 70));
+        pnlFondoTablero.add(btnB1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 510, 70, 70));
 
         btnB2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/PeónBlanco.png"))); // NOI18N
         btnB2.setBorder(null);
@@ -661,7 +666,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 btnB2ActionPerformed(evt);
             }
         });
-        pnlFondoTablero.add(btnB2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 420, 70, 70));
+        pnlFondoTablero.add(btnB2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 440, 70, 70));
 
         btnB3.setBorder(null);
         btnB3.addActionListener(new java.awt.event.ActionListener() {
@@ -669,7 +674,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 btnB3ActionPerformed(evt);
             }
         });
-        pnlFondoTablero.add(btnB3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 350, 70, 70));
+        pnlFondoTablero.add(btnB3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 370, 70, 70));
 
         btnB4.setBorder(null);
         btnB4.addActionListener(new java.awt.event.ActionListener() {
@@ -677,7 +682,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 btnB4ActionPerformed(evt);
             }
         });
-        pnlFondoTablero.add(btnB4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 280, 70, 70));
+        pnlFondoTablero.add(btnB4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 300, 70, 70));
 
         btnB5.setBorder(null);
         btnB5.addActionListener(new java.awt.event.ActionListener() {
@@ -685,7 +690,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 btnB5ActionPerformed(evt);
             }
         });
-        pnlFondoTablero.add(btnB5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 210, 70, 70));
+        pnlFondoTablero.add(btnB5, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 230, 70, 70));
 
         btnB6.setBorder(null);
         btnB6.addActionListener(new java.awt.event.ActionListener() {
@@ -693,7 +698,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 btnB6ActionPerformed(evt);
             }
         });
-        pnlFondoTablero.add(btnB6, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 140, 70, 70));
+        pnlFondoTablero.add(btnB6, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 160, 70, 70));
 
         btnB7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/PeónNegro.png"))); // NOI18N
         btnB7.setBorder(null);
@@ -702,7 +707,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 btnB7ActionPerformed(evt);
             }
         });
-        pnlFondoTablero.add(btnB7, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 70, 70, 70));
+        pnlFondoTablero.add(btnB7, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 90, 70, 70));
 
         btnB8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/CaballoNegro.png"))); // NOI18N
         btnB8.setBorder(null);
@@ -711,7 +716,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 btnB8ActionPerformed(evt);
             }
         });
-        pnlFondoTablero.add(btnB8, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, 70, 70));
+        pnlFondoTablero.add(btnB8, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 20, 70, 70));
 
         btnA1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/TorreBlanca.png"))); // NOI18N
         btnA1.setBorder(null);
@@ -720,7 +725,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 btnA1ActionPerformed(evt);
             }
         });
-        pnlFondoTablero.add(btnA1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 490, 70, 70));
+        pnlFondoTablero.add(btnA1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 510, 70, 70));
 
         btnA2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/PeónBlanco.png"))); // NOI18N
         btnA2.setBorder(null);
@@ -729,7 +734,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 btnA2ActionPerformed(evt);
             }
         });
-        pnlFondoTablero.add(btnA2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 420, 70, 70));
+        pnlFondoTablero.add(btnA2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 440, 70, 70));
 
         btnA3.setBorder(null);
         btnA3.addActionListener(new java.awt.event.ActionListener() {
@@ -737,7 +742,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 btnA3ActionPerformed(evt);
             }
         });
-        pnlFondoTablero.add(btnA3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 350, 70, 70));
+        pnlFondoTablero.add(btnA3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 370, 70, 70));
 
         btnA4.setBorder(null);
         btnA4.addActionListener(new java.awt.event.ActionListener() {
@@ -745,7 +750,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 btnA4ActionPerformed(evt);
             }
         });
-        pnlFondoTablero.add(btnA4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 280, 70, 70));
+        pnlFondoTablero.add(btnA4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 300, 70, 70));
 
         btnA5.setBorder(null);
         btnA5.addActionListener(new java.awt.event.ActionListener() {
@@ -753,7 +758,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 btnA5ActionPerformed(evt);
             }
         });
-        pnlFondoTablero.add(btnA5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 70, 70));
+        pnlFondoTablero.add(btnA5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 230, 70, 70));
 
         btnA6.setBorder(null);
         btnA6.addActionListener(new java.awt.event.ActionListener() {
@@ -761,7 +766,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 btnA6ActionPerformed(evt);
             }
         });
-        pnlFondoTablero.add(btnA6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, 70, 70));
+        pnlFondoTablero.add(btnA6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 160, 70, 70));
 
         btnA7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/PeónNegro.png"))); // NOI18N
         btnA7.setBorder(null);
@@ -770,7 +775,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 btnA7ActionPerformed(evt);
             }
         });
-        pnlFondoTablero.add(btnA7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 70, 70));
+        pnlFondoTablero.add(btnA7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, 70, 70));
 
         btnA8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/TorreNegra.png"))); // NOI18N
         btnA8.setBorder(null);
@@ -779,7 +784,67 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 btnA8ActionPerformed(evt);
             }
         });
-        pnlFondoTablero.add(btnA8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 70, 70));
+        pnlFondoTablero.add(btnA8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, 70, 70));
+
+        pnlBordeIzquierdo.setBackground(new java.awt.Color(0, 109, 200));
+
+        javax.swing.GroupLayout pnlBordeIzquierdoLayout = new javax.swing.GroupLayout(pnlBordeIzquierdo);
+        pnlBordeIzquierdo.setLayout(pnlBordeIzquierdoLayout);
+        pnlBordeIzquierdoLayout.setHorizontalGroup(
+            pnlBordeIzquierdoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 10, Short.MAX_VALUE)
+        );
+        pnlBordeIzquierdoLayout.setVerticalGroup(
+            pnlBordeIzquierdoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 570, Short.MAX_VALUE)
+        );
+
+        pnlFondoTablero.add(pnlBordeIzquierdo, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, -1, -1));
+
+        pnlBordeSuperior.setBackground(new java.awt.Color(0, 109, 200));
+
+        javax.swing.GroupLayout pnlBordeSuperiorLayout = new javax.swing.GroupLayout(pnlBordeSuperior);
+        pnlBordeSuperior.setLayout(pnlBordeSuperiorLayout);
+        pnlBordeSuperiorLayout.setHorizontalGroup(
+            pnlBordeSuperiorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 570, Short.MAX_VALUE)
+        );
+        pnlBordeSuperiorLayout.setVerticalGroup(
+            pnlBordeSuperiorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 10, Short.MAX_VALUE)
+        );
+
+        pnlFondoTablero.add(pnlBordeSuperior, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, -1, -1));
+
+        pnlBordeDerecho.setBackground(new java.awt.Color(0, 109, 200));
+
+        javax.swing.GroupLayout pnlBordeDerechoLayout = new javax.swing.GroupLayout(pnlBordeDerecho);
+        pnlBordeDerecho.setLayout(pnlBordeDerechoLayout);
+        pnlBordeDerechoLayout.setHorizontalGroup(
+            pnlBordeDerechoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 10, Short.MAX_VALUE)
+        );
+        pnlBordeDerechoLayout.setVerticalGroup(
+            pnlBordeDerechoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 570, Short.MAX_VALUE)
+        );
+
+        pnlFondoTablero.add(pnlBordeDerecho, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 20, -1, -1));
+
+        pnlBordeInf.setBackground(new java.awt.Color(0, 109, 200));
+
+        javax.swing.GroupLayout pnlBordeInfLayout = new javax.swing.GroupLayout(pnlBordeInf);
+        pnlBordeInf.setLayout(pnlBordeInfLayout);
+        pnlBordeInfLayout.setHorizontalGroup(
+            pnlBordeInfLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 570, Short.MAX_VALUE)
+        );
+        pnlBordeInfLayout.setVerticalGroup(
+            pnlBordeInfLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 10, Short.MAX_VALUE)
+        );
+
+        pnlFondoTablero.add(pnlBordeInf, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 580, -1, -1));
 
         add(pnlFondoTablero, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
@@ -1262,6 +1327,12 @@ public class PnlTableroBotones extends javax.swing.JPanel {
     public static javax.swing.JButton btnH6;
     public static javax.swing.JButton btnH7;
     public static javax.swing.JButton btnH8;
+    private javax.swing.JPanel pnlBordeDerecho;
+    private javax.swing.JPanel pnlBordeInf;
+    private javax.swing.JPanel pnlBordeInferior;
+    private javax.swing.JPanel pnlBordeInferior1;
+    private javax.swing.JPanel pnlBordeIzquierdo;
+    private javax.swing.JPanel pnlBordeSuperior;
     private javax.swing.JPanel pnlFondoTablero;
     // End of variables declaration//GEN-END:variables
 
