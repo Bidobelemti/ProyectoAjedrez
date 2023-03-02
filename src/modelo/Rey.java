@@ -19,6 +19,8 @@ public class Rey extends Ficha {
 
     @Override
     public void movimiento(int posicion, boolean turnoBlanco, boolean primerTurno) {
+        /*
+        System.out.println("entra al metodo del rey");
         super.movimientoX = posicion / 8;
         super.movimientoY = posicion % 8;
         int i = movimientoX;
@@ -32,10 +34,12 @@ public class Rey extends Ficha {
                             if (!TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j],
                                     TableroAjedrez.getNegro())) {
                                 TableroAjedrez.getTablero()[i][j].setBackground(Color.red);
+                                System.out.println(i+","+j + " Matriz");
                             } else {
                                 if (!TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j],
                                         TableroAjedrez.getBlanco())) {
                                     TableroAjedrez.getTablero()[i][j].setBackground(Color.blue);
+                                    System.out.println(i+","+j + " Matriz");
                                 }
 
                             }
@@ -51,10 +55,12 @@ public class Rey extends Ficha {
                             if (!TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j],
                                     TableroAjedrez.getBlanco())) {
                                 TableroAjedrez.getTablero()[i][j].setBackground(Color.red);
+                                System.out.println(i+","+j + " Matriz");
                             } else {
                                 if (!TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j],
                                         TableroAjedrez.getNegro())) {
                                     TableroAjedrez.getTablero()[i][j].setBackground(Color.blue);
+                                    System.out.println(i+","+j + " Matriz");
                                 }
 
                             }
@@ -63,6 +69,6 @@ public class Rey extends Ficha {
                 }
             }
         }
-
+*/
     }
 }

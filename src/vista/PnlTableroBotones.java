@@ -79,32 +79,31 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         fichasBlancas.add(peonBlanco6);
         fichasBlancas.add(peonBlanco7);
 
-        //Alfiles blancos
-        Ficha alfilBlanco0 = new Alfil(true, 4, 12, tablero.getTablero()[7][2]);
-        Ficha alfilBlanco1 = new Alfil(true, 4, 13, tablero.getTablero()[7][5]);
-        fichasBlancas.add(alfilBlanco0);
-        fichasBlancas.add(alfilBlanco1);
-
-        //Caballos blancos
-        Ficha caballoBlanco0 = new Caballo(true, 3, 10, tablero.getTablero()[7][1]);
-        Ficha caballoBlanco1 = new Caballo(true, 3, 11, tablero.getTablero()[7][6]);
-        fichasBlancas.add(caballoBlanco0);
-        fichasBlancas.add(caballoBlanco1);
-
         //torres blancos
         Ficha torreBlanco0 = new Torre(true, 2, 8, tablero.getTablero()[7][0]);
         Ficha torreBlanco1 = new Torre(true, 2, 9, tablero.getTablero()[7][7]);
         fichasBlancas.add(torreBlanco0);
         fichasBlancas.add(torreBlanco1);
-
-        //Rey blanco
-        Ficha reyBlanco = new Rey(true, 6, 15, tablero.getTablero()[7][4]);
-        fichasBlancas.add(reyBlanco);
-
+        
+        //Caballos blancos
+        Ficha caballoBlanco0 = new Caballo(true, 3, 10, tablero.getTablero()[7][1]);
+        Ficha caballoBlanco1 = new Caballo(true, 3, 11, tablero.getTablero()[7][6]);
+        fichasBlancas.add(caballoBlanco0);
+        fichasBlancas.add(caballoBlanco1);
+        
+        //Alfiles blancos
+        Ficha alfilBlanco0 = new Alfil(true, 4, 12, tablero.getTablero()[7][2]);
+        Ficha alfilBlanco1 = new Alfil(true, 4, 13, tablero.getTablero()[7][5]);
+        fichasBlancas.add(alfilBlanco0);
+        fichasBlancas.add(alfilBlanco1);
+        
         //Dama blanco
         Ficha damaBlanco = new Dama(true, 5, 14, tablero.getTablero()[7][3]);
         fichasBlancas.add(damaBlanco);
 
+        //Rey blanco
+        Ficha reyBlanco = new Rey(true, 6, 15, tablero.getTablero()[7][4]);
+        fichasBlancas.add(reyBlanco);
         //peones negros
         Ficha peonNegro0 = new Peon(false, 1, 0, tablero.getTablero()[1][0]);
         Ficha peonNegro1 = new Peon(false, 1, 1, tablero.getTablero()[1][1]);
@@ -125,6 +124,11 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         fichasNegras.add(peonNegro7);
 
         //Torres negras
+        Ficha torreNegro0 = new Torre(false, 2, 8, tablero.getTablero()[0][0]);
+        Ficha torreNegro1 = new Torre(false, 2, 9, tablero.getTablero()[0][7]);
+        fichasNegras.add(torreNegro0);
+        fichasNegras.add(torreNegro1);
+        
         //Caballos negros
         Ficha caballoNegro0 = new Caballo(false, 3, 10, tablero.getTablero()[0][1]);
         Ficha caballoNegro1 = new Caballo(false, 3, 11, tablero.getTablero()[0][6]);
@@ -136,21 +140,15 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         Ficha alfilNegro1 = new Alfil(false, 4, 13, tablero.getTablero()[0][5]);
         fichasNegras.add(alfilNegro0);
         fichasNegras.add(alfilNegro1);
-
-        //torres negros
-        Ficha torreNegro0 = new Torre(false, 2, 8, tablero.getTablero()[0][0]);
-        Ficha torreNegro1 = new Torre(false, 2, 9, tablero.getTablero()[0][7]);
-        fichasNegras.add(torreNegro0);
-        fichasNegras.add(torreNegro1);
-
-        //Rey negro
-        Ficha reyNegro = new Rey(false, 6, 15, tablero.getTablero()[0][4]);
-        fichasNegras.add(reyNegro);
-
+        
         //Dama blanco
         Ficha damaNegro = new Dama(true, 5, 14, tablero.getTablero()[0][3]);
         fichasNegras.add(damaNegro);
-
+        
+        //Rey negro
+        Ficha reyNegro = new Rey(false, 6, 15, tablero.getTablero()[0][4]);
+        fichasNegras.add(reyNegro);
+        
         blanco = new Jugador("Camelo", "blanco", fichasBlancas);
         negro = new Jugador("Pepe", "negro", fichasNegras);
         tablero.setBlanco(blanco);
@@ -1091,11 +1089,11 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                             //this.dispose();
                         }
                     }
-                    
+
                     ficha.setCasilla(null);
                     boton.setIcon(btnSeleccionado.getIcon());
                     btnSeleccionado.setIcon(null);
-                    
+
                     if (ficha.getTipoFicha() == 1 && ((posicion >= 0) && (posicion <= 7) || (posicion >= 56) && (posicion <= 63))) {
                         String[] opciones = new String[4];
                         opciones[0] = "Torre";
