@@ -1091,15 +1091,11 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                             //this.dispose();
                         }
                     }
-                    System.out.println(boton.getIcon());
-                    System.out.println(btnSeleccionado);
+                    
                     ficha.setCasilla(null);
                     boton.setIcon(btnSeleccionado.getIcon());
-                    ficha.setCasilla(boton);
                     btnSeleccionado.setIcon(null);
-                    System.out.println(boton.getIcon()+" icono del boton");
-                    System.out.println(boton);
-                    ficha.setCasilla(boton);
+                    
                     if (ficha.getTipoFicha() == 1 && ((posicion >= 0) && (posicion <= 7) || (posicion >= 56) && (posicion <= 63))) {
                         String[] opciones = new String[4];
                         opciones[0] = "Torre";
@@ -1119,6 +1115,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                         ficha.poneImagenes(boton.getWidth(), boton.getHeight());
                     }
                     TableroAjedrez.pintarCasillasNormal(tablero.getTablero());
+                    ficha.setCasilla(boton);
                     tablero.cambiarTurno();
                     btnSeleccionado = null;
                     ficha = null;
