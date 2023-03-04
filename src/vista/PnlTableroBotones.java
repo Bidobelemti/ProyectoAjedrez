@@ -39,10 +39,10 @@ public class PnlTableroBotones extends javax.swing.JPanel {
             btnA1, btnB1, btnC1, btnD1, btnE1, btnF1, btnG1, btnH1};
         llenarMatriz();
         TableroAjedrez.pintarCasillasNormal(matrizCasillas);
-        tablero = new TableroAjedrez(matrizCasillas/*,blanco,negro*/);
+        tablero = new TableroAjedrez(matrizCasillas);
         iniciarFichas();
 
-        //System.out.println(tablero.getNegro().getFichas().size());
+        
     }
 
     public void llenarMatriz() {
@@ -50,7 +50,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++, n++) {
                 matrizCasillas[i][j] = ArrayButtons[n];
-                System.out.println(i + " i" + j + " j" + " ");
+                
             }
         }
     }
@@ -914,7 +914,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
     }//GEN-LAST:event_btnH2ActionPerformed
 
     private void btnA3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnA3ActionPerformed
-        accionBoton(btnB3, 40);
+        accionBoton(btnA3, 40);
     }//GEN-LAST:event_btnA3ActionPerformed
 
     private void btnB3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnB3ActionPerformed
@@ -1111,7 +1111,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
 
         if (boton.getBackground().equals(Color.blue)) {
             ficha.setCasilla(null);
-            System.out.println("wenas primer if");
+            
             boton.setIcon(btnSeleccionado.getIcon());
             btnSeleccionado.setIcon(null);
 
@@ -1122,7 +1122,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
             btnSeleccionado = null;
             ficha = null;
         } else {
-            System.out.println("wenas primer else");
+            
             if (boton.getBackground().equals(Color.red)) {
                 Ficha comida = null;
                 if (turnoBlanco) {
@@ -1190,13 +1190,13 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 int i;
                 i = 0;
                 System.out.println(tablero.getNegro().getFichas());
-                while (ficha == null && (i < tablero.getNegro().getFichas().size() || i < tablero.getBlanco().getFichas().size())) {
+                while (ficha == null && (i < tablero.getNegro().getFichas().size() || i < 
+                        tablero.getBlanco().getFichas().size())) {
                     if (i < tablero.getNegro().getFichas().size() && !turnoBlanco) {
                         System.out.println("turno negro");
                         System.out.println(tablero.getNegro().getFichas().get(i).getCasilla() + "El boton");
                         System.out.println(boton);
                         if (tablero.getNegro().getFichas().get(i).getCasilla().equals(boton)) {
-                            System.out.println("entrando al if del if del while para negros");
                             btnSeleccionado = tablero.getNegro().getFichas().get(i).getCasilla();
                             ficha = tablero.getNegro().getFichas().get(i);
                         }

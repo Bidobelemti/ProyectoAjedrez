@@ -15,12 +15,9 @@ public abstract class Ficha {
 
     public Ficha(boolean esBlanca, int tipo, int id, JButton casilla) {
         this.esFichaBlanca = esBlanca;
-        System.out.println("Guardando casilla");
         this.tipoFicha = tipo;
         this.identificacion = id;
         this.casilla = casilla;
-       
-        //System.out.println(getTipoFicha() +" peones" +String.valueOf(casilla.getBackground()));
     }
 
     public JButton getCasilla() {
