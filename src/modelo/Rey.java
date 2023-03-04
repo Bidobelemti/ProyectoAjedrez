@@ -19,22 +19,23 @@ public class Rey extends Ficha {
 
     @Override
     public void movimiento(int posicion, boolean turnoBlanco, boolean primerTurno) {
-        /*
-        System.out.println("entra al metodo del rey");
+        
         super.movimientoX = posicion / 8;
         super.movimientoY = posicion % 8;
         int i = movimientoX;
         int j = movimientoY;
 
         if (turnoBlanco) {
+            System.out.println("entra al metodo del rey");
             for (i = movimientoX - 1; i < movimientoX + 2; i++) {
-                for (j = movimientoY - 1; i < movimientoY + 2; j++) {
+                for (j = movimientoY - 1; j < movimientoY + 2; j++) {
                     if ((i != movimientoX) || (j != movimientoY)) {
-                        if ((i >= 0) && (i < 8) && (j >= 0) && (j < 8)) {
-                            if (!TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j],
+                        if ((i >= 0) && (i < 8) && (j >= 0) && (j < 8)) {  
+                            if (TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j],
                                     TableroAjedrez.getNegro())) {
                                 TableroAjedrez.getTablero()[i][j].setBackground(Color.red);
                                 System.out.println(i+","+j + " Matriz");
+                                
                             } else {
                                 if (!TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j],
                                         TableroAjedrez.getBlanco())) {
@@ -49,10 +50,10 @@ public class Rey extends Ficha {
             }
         } else {
             for (i = movimientoX - 1; i < movimientoX + 2; i++) {
-                for (j = movimientoY - 1; i < movimientoY + 2; j++) {
+                for (j = movimientoY - 1; j < movimientoY + 2; j++) {
                     if ((i != movimientoX) || (j != movimientoY)) {
                         if ((i >= 0) && (i < 8) && (j >= 0) && (j < 8)) {
-                            if (!TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j],
+                            if (TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j],
                                     TableroAjedrez.getBlanco())) {
                                 TableroAjedrez.getTablero()[i][j].setBackground(Color.red);
                                 System.out.println(i+","+j + " Matriz");
@@ -69,6 +70,5 @@ public class Rey extends Ficha {
                 }
             }
         }
-*/
     }
 }

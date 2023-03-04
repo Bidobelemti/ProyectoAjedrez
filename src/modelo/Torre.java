@@ -26,7 +26,6 @@ public class Torre extends Ficha {
         boolean ocupada = false;
 
         //movimiento de la torre de fichas blancas
-        // > <
         while ((i >= 0) && (i < 8) && !ocupada) {
             if (!TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j], TableroAjedrez.getNegro())
                     && !TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j], TableroAjedrez.getBlanco())) {
