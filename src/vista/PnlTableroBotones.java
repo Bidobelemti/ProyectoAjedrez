@@ -23,6 +23,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
     Ficha ficha;
     static ArrayList<Ficha> fichasNegras = new ArrayList<>();
     static ArrayList<Ficha> fichasBlancas = new ArrayList<>();
+    PnlCoronacion pnlCoronacion;
     Jugador blanco;
     Jugador negro;
 
@@ -41,8 +42,8 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         TableroAjedrez.pintarCasillasNormal(matrizCasillas);
         tablero = new TableroAjedrez(matrizCasillas);
         iniciarFichas();
+        pnlCoronacion = new PnlCoronacion();
 
-        
     }
 
     public void llenarMatriz() {
@@ -50,7 +51,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++, n++) {
                 matrizCasillas[i][j] = ArrayButtons[n];
-                
+
             }
         }
     }
@@ -84,19 +85,19 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         Ficha torreBlanco1 = new Torre(true, 2, 9, tablero.getTablero()[7][7]);
         fichasBlancas.add(torreBlanco0);
         fichasBlancas.add(torreBlanco1);
-        
+
         //Caballos blancos
         Ficha caballoBlanco0 = new Caballo(true, 3, 10, tablero.getTablero()[7][1]);
         Ficha caballoBlanco1 = new Caballo(true, 3, 11, tablero.getTablero()[7][6]);
         fichasBlancas.add(caballoBlanco0);
         fichasBlancas.add(caballoBlanco1);
-        
+
         //Alfiles blancos
         Ficha alfilBlanco0 = new Alfil(true, 4, 12, tablero.getTablero()[7][2]);
         Ficha alfilBlanco1 = new Alfil(true, 4, 13, tablero.getTablero()[7][5]);
         fichasBlancas.add(alfilBlanco0);
         fichasBlancas.add(alfilBlanco1);
-        
+
         //Dama blanco
         Ficha damaBlanco = new Dama(true, 5, 14, tablero.getTablero()[7][3]);
         fichasBlancas.add(damaBlanco);
@@ -128,7 +129,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         Ficha torreNegro1 = new Torre(false, 2, 9, tablero.getTablero()[0][7]);
         fichasNegras.add(torreNegro0);
         fichasNegras.add(torreNegro1);
-        
+
         //Caballos negros
         Ficha caballoNegro0 = new Caballo(false, 3, 10, tablero.getTablero()[0][1]);
         Ficha caballoNegro1 = new Caballo(false, 3, 11, tablero.getTablero()[0][6]);
@@ -140,15 +141,15 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         Ficha alfilNegro1 = new Alfil(false, 4, 13, tablero.getTablero()[0][5]);
         fichasNegras.add(alfilNegro0);
         fichasNegras.add(alfilNegro1);
-        
+
         //Dama blanco
         Ficha damaNegro = new Dama(true, 5, 14, tablero.getTablero()[0][3]);
         fichasNegras.add(damaNegro);
-        
+
         //Rey negro
         Ficha reyNegro = new Rey(false, 6, 15, tablero.getTablero()[0][4]);
         fichasNegras.add(reyNegro);
-        
+
         blanco = new Jugador("Camelo", "blanco", fichasBlancas);
         negro = new Jugador("Pepe", "negro", fichasNegras);
         tablero.setBlanco(blanco);
@@ -1111,18 +1112,37 @@ public class PnlTableroBotones extends javax.swing.JPanel {
 
         if (boton.getBackground().equals(Color.blue)) {
             ficha.setCasilla(null);
-            
             boton.setIcon(btnSeleccionado.getIcon());
             btnSeleccionado.setIcon(null);
-
             ficha.setCasilla(boton);
-            TableroAjedrez.pintarCasillasNormal(tablero.getTablero());
+            if (ficha.getTipoFicha() == 1 && ((posicion >= 0) && (posicion <= 7) || (posicion >= 56) && (posicion <= 63))) {
+                String[] opciones = new String[4];
+                opciones[0] = "Torre";
+                opciones[1] = "Caballo";
+                opciones[2] = "Alfil";
+                opciones[3] = "Dama";
+                if (turnoBlanco && (posicion >= 0) && (posicion <= 7)) {
+                    System.out.println("entrando al if de la coronación");
+                    FrmChessGame.agregarPanelDerecho(pnlCoronacion);
+                } else {
+                    if (!turnoBlanco && (posicion >= 56) && (posicion <= 63)) {
+                        System.out.println("entrando a la coronación");
+                        FrmChessGame.agregarPanelDerecho(pnlCoronacion);
+                    } else {
+                        System.out.println("Error");
+                    }
+                }
+            } else {
+                //ficha.poneImagenes(boton.getWidth(), boton.getHeight());
+                System.out.println("Entrando al else de la coronación");
+            }
 
+            TableroAjedrez.pintarCasillasNormal(tablero.getTablero());
             tablero.cambiarTurno();
             btnSeleccionado = null;
             ficha = null;
         } else {
-            
+
             if (boton.getBackground().equals(Color.red)) {
                 Ficha comida = null;
                 if (turnoBlanco) {
@@ -1166,16 +1186,20 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                         opciones[2] = "Alfil";
                         opciones[3] = "Dama";
                         if (turnoBlanco && (posicion >= 0) && (posicion <= 7)) {
-
+                            System.out.println("Entrando al if de la coronación roja");
+                            FrmChessGame.agregarPanelDerecho(pnlCoronacion);
                         } else {
                             if (!turnoBlanco && (posicion >= 56) && (posicion <= 63)) {
-
+                                System.out.println("entrando a la coronación roja");
+                                FrmChessGame.agregarPanelDerecho(pnlCoronacion);
+                                System.out.println(PnlCoronacion.tipoFicha);
                             } else {
                                 System.out.println("Error");
                             }
                         }
                     } else {
-                        ficha.poneImagenes(boton.getWidth(), boton.getHeight());
+                        //ficha.poneImagenes(boton.getWidth(), boton.getHeight());
+                        System.out.println("Entrando al else de la coronación roja");
                     }
                     TableroAjedrez.pintarCasillasNormal(tablero.getTablero());
                     ficha.setCasilla(boton);
@@ -1190,8 +1214,8 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 int i;
                 i = 0;
                 System.out.println(tablero.getNegro().getFichas());
-                while (ficha == null && (i < tablero.getNegro().getFichas().size() || i < 
-                        tablero.getBlanco().getFichas().size())) {
+                while (ficha == null && (i < tablero.getNegro().getFichas().size() || i
+                        < tablero.getBlanco().getFichas().size())) {
                     if (i < tablero.getNegro().getFichas().size() && !turnoBlanco) {
                         System.out.println("turno negro");
                         System.out.println(tablero.getNegro().getFichas().get(i).getCasilla() + "El boton");

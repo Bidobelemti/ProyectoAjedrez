@@ -18,8 +18,8 @@ public class FrmChessGame extends javax.swing.JFrame {
     //se inicializa la variable de la clase de desplazamiento
     Desface desplazamiento = new Desface();
 
-    PnlRegistroDeJugadores pnlRegistroDeJugadores;
-    PnlTableroBotones pnlTablero;
+    static PnlRegistroDeJugadores pnlRegistroDeJugadores;
+    static PnlTableroBotones pnlTablero;
 
     // PnlTablero pnlTablero;
 
@@ -292,7 +292,7 @@ public class FrmChessGame extends javax.swing.JFrame {
         agregarPanelDerecho(pnlPuntuaciones);
     }//GEN-LAST:event_pnlPuntuacionesMouseClicked
 
-    private void agregarPanelDerecho(JPanel pnl) {
+    public static void agregarPanelDerecho(JPanel pnl) {
         //ajustamos el tamaño
         pnl.setSize(350, 600);
         //colocamos, la esquina superior izquierda posee coordenadas (0,0)
@@ -306,7 +306,7 @@ public class FrmChessGame extends javax.swing.JFrame {
         pnlMenuDerecho.repaint();
     }
 
-    private void agregarPanelIzquierdo(JPanel pnl) {
+    public static void agregarPanelIzquierdo(JPanel pnl) {
         //ajustamos el tamaño
         pnl.setSize(650, 600);
         //colocamos, la esquina superior izquierda posee coordenadas (0,0)
@@ -368,8 +368,8 @@ public class FrmChessGame extends javax.swing.JFrame {
     private javax.swing.JPanel pnlFondo;
     private javax.swing.JPanel pnlFondoAzul;
     private javax.swing.JPanel pnlJugar;
-    private javax.swing.JPanel pnlMenuDerecho;
-    private javax.swing.JPanel pnlMenuIzquierdo;
+    private static javax.swing.JPanel pnlMenuDerecho;
+    private static javax.swing.JPanel pnlMenuIzquierdo;
     private javax.swing.JPanel pnlPuntuaciones;
     // End of variables declaration//GEN-END:variables
 }

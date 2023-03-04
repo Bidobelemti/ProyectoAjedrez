@@ -10,9 +10,7 @@ package vista;
  */
 public class PnlCoronacion extends javax.swing.JPanel {
 
-    /**
-     * Creates new form PnlCoronacion
-     */
+    static int tipoFicha;
     public PnlCoronacion() {
         initComponents();
     }
@@ -52,6 +50,11 @@ public class PnlCoronacion extends javax.swing.JPanel {
         pnlFondo.add(lblEscojaUnaFicha, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, -1, -1));
 
         pnlCaballo.setBackground(new java.awt.Color(0, 109, 200));
+        pnlCaballo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pnlCaballoMouseClicked(evt);
+            }
+        });
 
         lblIconoCaballo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/CaballoBlanco.png"))); // NOI18N
 
@@ -199,6 +202,10 @@ public class PnlCoronacion extends javax.swing.JPanel {
             .addComponent(pnlFondo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void pnlCaballoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlCaballoMouseClicked
+        tipoFicha = 1;
+    }//GEN-LAST:event_pnlCaballoMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
