@@ -33,44 +33,52 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="pnlFondoAzulSuperior" min="-2" max="-2" attributes="0"/>
           <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="lblPrimerJugador" min="-2" max="-2" attributes="0"/>
-                          <Component id="lblNombrePrimerJugador" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtNombrePrimerJugador" min="-2" pref="260" max="-2" attributes="0"/>
-                          <Component id="sprNombrePrimerJugador" min="-2" pref="260" max="-2" attributes="0"/>
-                          <Component id="lblFichaPrimerJugador" min="-2" max="-2" attributes="0"/>
-                          <Component id="lblSegundoJugador" min="-2" max="-2" attributes="0"/>
-                          <Component id="lblNombreSegundoJugador" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtNombreSegundoJugador" min="-2" pref="260" max="-2" attributes="0"/>
-                          <Component id="sprNombreSegundoJugador" min="-2" pref="260" max="-2" attributes="0"/>
-                          <Component id="lblFichaSegundoJugador" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="108" max="-2" attributes="0"/>
-                              <Component id="rbtNegrasSegundoJugador" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
-                              <Component id="rbtBlancasPrimerJugador" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                              <Component id="rbtNegrasPrimerJugador" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
+                      <Component id="pnlFondoAzulSuperior" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="rbtBlancasSegundoJugador" min="-2" max="-2" attributes="0"/>
-                          <Component id="pnlIniciarJuego" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="lblPrimerJugador" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblNombrePrimerJugador" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtNombrePrimerJugador" min="-2" pref="260" max="-2" attributes="0"/>
+                                  <Component id="sprNombrePrimerJugador" min="-2" pref="260" max="-2" attributes="0"/>
+                                  <Component id="lblFichaPrimerJugador" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblSegundoJugador" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblNombreSegundoJugador" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtNombreSegundoJugador" min="-2" pref="260" max="-2" attributes="0"/>
+                                  <Component id="sprNombreSegundoJugador" min="-2" pref="260" max="-2" attributes="0"/>
+                                  <Component id="lblFichaSegundoJugador" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="108" max="-2" attributes="0"/>
+                                      <Component id="rbtNegrasSegundoJugador" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                                      <Component id="rbtBlancasPrimerJugador" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                                      <Component id="rbtNegrasPrimerJugador" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="rbtBlancasSegundoJugador" min="-2" max="-2" attributes="0"/>
+                                  <Component id="pnlIniciarJuego" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
                       </Group>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="pnlFondoAzulDerecho" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-              <Component id="pnlFondoAzulDerecho" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>

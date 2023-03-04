@@ -15,10 +15,11 @@ import modelo.JugadorAntiguo;
  */
 public class PnlRegistroDeJugadores extends javax.swing.JPanel {
 
-    JugadorAntiguo jugadores[] = new JugadorAntiguo[2];
+    static String jugadores[][];
 
     public PnlRegistroDeJugadores() {
         initComponents();
+        
     }
 
     /**
@@ -193,37 +194,42 @@ public class PnlRegistroDeJugadores extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnlFondoAzulSuperior, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblPrimerJugador)
-                            .addComponent(lblNombrePrimerJugador)
-                            .addComponent(txtNombrePrimerJugador, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(sprNombrePrimerJugador, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblFichaPrimerJugador)
-                            .addComponent(lblSegundoJugador)
-                            .addComponent(lblNombreSegundoJugador)
-                            .addComponent(txtNombreSegundoJugador, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(sprNombreSegundoJugador, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblFichaSegundoJugador)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(108, 108, 108)
-                                .addComponent(rbtNegrasSegundoJugador))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(16, 16, 16)
-                                .addComponent(rbtBlancasPrimerJugador)
-                                .addGap(30, 30, 30)
-                                .addComponent(rbtNegrasPrimerJugador))))
+                        .addComponent(pnlFondoAzulSuperior, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(38, 38, 38)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(rbtBlancasSegundoJugador)
-                            .addComponent(pnlIniciarJuego, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(31, 31, 31)
-                .addComponent(pnlFondoAzulDerecho, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(20, 20, 20)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblPrimerJugador)
+                                    .addComponent(lblNombrePrimerJugador)
+                                    .addComponent(txtNombrePrimerJugador, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(sprNombrePrimerJugador, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lblFichaPrimerJugador)
+                                    .addComponent(lblSegundoJugador)
+                                    .addComponent(lblNombreSegundoJugador)
+                                    .addComponent(txtNombreSegundoJugador, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(sprNombreSegundoJugador, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lblFichaSegundoJugador)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(108, 108, 108)
+                                        .addComponent(rbtNegrasSegundoJugador))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(16, 16, 16)
+                                        .addComponent(rbtBlancasPrimerJugador)
+                                        .addGap(30, 30, 30)
+                                        .addComponent(rbtNegrasPrimerJugador))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(38, 38, 38)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(rbtBlancasSegundoJugador)
+                                    .addComponent(pnlIniciarJuego, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(pnlFondoAzulDerecho, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(6, 6, 6))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -284,10 +290,12 @@ public class PnlRegistroDeJugadores extends javax.swing.JPanel {
         String colorFichaSegundoJugador = asignarColorAJugadorDos();
         int puntuacionSegundoJugador = 0;
 
-        jugadores[0] = new JugadorAntiguo(nombrePrimerJugador, colorFichaPrimerJugador);
-        jugadores[1] = new JugadorAntiguo(nombreSegundoJugador, colorFichaSegundoJugador);
-        System.out.println(jugadores[0].toString());
-        System.out.println(jugadores[1].toString());
+        jugadores [0][0]= nombrePrimerJugador;
+        jugadores [0][1] = colorFichaPrimerJugador;
+        
+        jugadores [1][0] = nombreSegundoJugador;
+        jugadores [1][1] = colorFichaSegundoJugador;
+        
     }//GEN-LAST:event_pnlIniciarJuegoMouseClicked
 
     private void txtNombrePrimerJugadorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtNombrePrimerJugadorMouseClicked
@@ -319,9 +327,23 @@ public class PnlRegistroDeJugadores extends javax.swing.JPanel {
         rbtBlancasPrimerJugador.setSelected(true);
     }//GEN-LAST:event_rbtNegrasSegundoJugadorActionPerformed
 
+    public static String retornarJugadorBlanco(){
+        if(jugadores[0][1].equals("Blancas")){
+            return jugadores[0][0];
+        }else{
+            return jugadores[1][0];
+        }
+    }
+    public static String retornarJugadorNegro(){
+        if(jugadores[0][1].equals("Negras")){
+            return jugadores[0][0];
+        }else{
+            return jugadores[1][0];
+        }
+    }
     public String asignarColorAJugadorUno(){
         if(rbtBlancasPrimerJugador.isSelected()){
-            return "Balncas";
+            return "Blancas";
         }else{
             return "Negras";
         }
@@ -329,7 +351,7 @@ public class PnlRegistroDeJugadores extends javax.swing.JPanel {
     
     public String asignarColorAJugadorDos(){
         if(rbtBlancasSegundoJugador.isSelected()){
-            return "Balncas";
+            return "Blancas";
         }else{
             return "Negras";
         }
