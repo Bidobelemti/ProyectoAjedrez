@@ -226,28 +226,28 @@ public class JdCoronacion extends javax.swing.JDialog {
 
     private void pnlCaballoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlCaballoMouseClicked
         
-        System.out.println("Caballo");
-        tipoFicha = 0;
+        System.out.println("Caballo select");
+        tipoFicha = 1;
         dispose();
     }//GEN-LAST:event_pnlCaballoMouseClicked
 
     private void pnlTorreMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlTorreMouseClicked
         
-        System.out.println("Torre");
-        tipoFicha = 1;
+        System.out.println("Torre select");
+        tipoFicha = 0;
         dispose();
     }//GEN-LAST:event_pnlTorreMouseClicked
 
     private void pnlAlfilMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlAlfilMouseClicked
         
-        System.out.println("Alfil");
+        System.out.println("Alfil select");
         tipoFicha = 2;
         dispose();
     }//GEN-LAST:event_pnlAlfilMouseClicked
 
     private void pnlDamaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlDamaMouseClicked
         
-        System.out.println("Dama");
+        System.out.println("Dama select");
         tipoFicha = 3;
         dispose();
     }//GEN-LAST:event_pnlDamaMouseClicked
