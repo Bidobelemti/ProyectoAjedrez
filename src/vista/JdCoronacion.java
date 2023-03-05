@@ -1,17 +1,19 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JDialog.java to edit this template
  */
 package vista;
 
 /**
  *
- * @author pc
+ * @author Bidob
  */
-public class PnlCoronacion extends javax.swing.JPanel {
+public class JdCoronacion extends javax.swing.JDialog {
 
     static int tipoFicha;
-    public PnlCoronacion() {
+    
+    public JdCoronacion(java.awt.Frame parent, boolean modal) {
+        super(parent, modal);
         initComponents();
     }
 
@@ -40,7 +42,9 @@ public class PnlCoronacion extends javax.swing.JPanel {
         lblTextoDama = new javax.swing.JLabel();
         sprEscogerFicha = new javax.swing.JSeparator();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setUndecorated(true);
+        setResizable(false);
 
         pnlFondo.setBackground(new java.awt.Color(255, 255, 255));
         pnlFondo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -70,7 +74,7 @@ public class PnlCoronacion extends javax.swing.JPanel {
             .addGroup(pnlCaballoLayout.createSequentialGroup()
                 .addGap(28, 28, 28)
                 .addComponent(lblTextoCaballo)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 107, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
                 .addComponent(lblIconoCaballo, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(16, 16, 16))
         );
@@ -86,9 +90,14 @@ public class PnlCoronacion extends javax.swing.JPanel {
                 .addGap(23, 23, 23))
         );
 
-        pnlFondo.add(pnlCaballo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 300, 80));
+        pnlFondo.add(pnlCaballo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, 210, 80));
 
         pnlTorre.setBackground(new java.awt.Color(0, 109, 200));
+        pnlTorre.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pnlTorreMouseClicked(evt);
+            }
+        });
 
         lblIconoTorre.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/TorreBlanca.png"))); // NOI18N
 
@@ -104,7 +113,7 @@ public class PnlCoronacion extends javax.swing.JPanel {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlTorreLayout.createSequentialGroup()
                 .addGap(30, 30, 30)
                 .addComponent(lblTextoTorre)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 128, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
                 .addComponent(lblIconoTorre, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(16, 16, 16))
         );
@@ -120,9 +129,14 @@ public class PnlCoronacion extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        pnlFondo.add(pnlTorre, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 240, 300, 80));
+        pnlFondo.add(pnlTorre, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 110, 210, 80));
 
         pnlAlfil.setBackground(new java.awt.Color(0, 109, 200));
+        pnlAlfil.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pnlAlfilMouseClicked(evt);
+            }
+        });
 
         lblIconoAlfil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/AlfilBlanco.png"))); // NOI18N
 
@@ -138,7 +152,7 @@ public class PnlCoronacion extends javax.swing.JPanel {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlAlfilLayout.createSequentialGroup()
                 .addGap(34, 34, 34)
                 .addComponent(lblTextoAlfil)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 151, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
                 .addComponent(lblIconoAlfil, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -154,9 +168,14 @@ public class PnlCoronacion extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        pnlFondo.add(pnlAlfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 370, 300, 80));
+        pnlFondo.add(pnlAlfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, 210, 80));
 
         pnlDama.setBackground(new java.awt.Color(0, 109, 200));
+        pnlDama.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pnlDamaMouseClicked(evt);
+            }
+        });
 
         lblIconoCaballo3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/DamaBlanca.png"))); // NOI18N
 
@@ -172,7 +191,7 @@ public class PnlCoronacion extends javax.swing.JPanel {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlDamaLayout.createSequentialGroup()
                 .addGap(35, 35, 35)
                 .addComponent(lblTextoDama)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 117, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
                 .addComponent(lblIconoCaballo3, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(16, 16, 16))
         );
@@ -188,26 +207,94 @@ public class PnlCoronacion extends javax.swing.JPanel {
                 .addGap(21, 21, 21))
         );
 
-        pnlFondo.add(pnlDama, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 500, 300, 80));
+        pnlFondo.add(pnlDama, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 200, 210, 80));
         pnlFondo.add(sprEscogerFicha, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 280, 30));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnlFondo, javax.swing.GroupLayout.DEFAULT_SIZE, 350, Short.MAX_VALUE)
+            .addComponent(pnlFondo, javax.swing.GroupLayout.PREFERRED_SIZE, 510, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnlFondo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pnlFondo, javax.swing.GroupLayout.PREFERRED_SIZE, 346, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
+
+        pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void pnlCaballoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlCaballoMouseClicked
-        tipoFicha = 1;
-        System.out.println("caballo");
+        
+        System.out.println("Caballo");
+        tipoFicha = 0;
+        dispose();
     }//GEN-LAST:event_pnlCaballoMouseClicked
 
+    private void pnlTorreMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlTorreMouseClicked
+        
+        System.out.println("Torre");
+        tipoFicha = 1;
+        dispose();
+    }//GEN-LAST:event_pnlTorreMouseClicked
+
+    private void pnlAlfilMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlAlfilMouseClicked
+        
+        System.out.println("Alfil");
+        tipoFicha = 2;
+        dispose();
+    }//GEN-LAST:event_pnlAlfilMouseClicked
+
+    private void pnlDamaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlDamaMouseClicked
+        
+        System.out.println("Dama");
+        tipoFicha = 3;
+        dispose();
+    }//GEN-LAST:event_pnlDamaMouseClicked
+    
+    
+    
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(JdCoronacion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(JdCoronacion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(JdCoronacion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(JdCoronacion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the dialog */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                JdCoronacion dialog = new JdCoronacion(new javax.swing.JFrame(), true);
+                dialog.addWindowListener(new java.awt.event.WindowAdapter() {
+                    @Override
+                    public void windowClosing(java.awt.event.WindowEvent e) {
+                        System.exit(0);
+                    }
+                });
+                dialog.setVisible(true);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel lblEscojaUnaFicha;

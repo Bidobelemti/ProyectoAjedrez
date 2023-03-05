@@ -5,7 +5,9 @@ import modelo.Jugador;
 import modelo.Peon;
 import modelo.TableroAjedrez;
 import java.awt.Color;
+import java.awt.Frame;
 import java.util.ArrayList;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import modelo.Alfil;
@@ -26,6 +28,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
     PnlCoronacion pnlCoronacion;
     Jugador blanco;
     Jugador negro;
+    JdCoronacion corona;
 
     public PnlTableroBotones() {
         initComponents();
@@ -43,7 +46,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         tablero = new TableroAjedrez(matrizCasillas);
         iniciarFichas();
         pnlCoronacion = new PnlCoronacion();
-
+        corona = new JdCoronacion(new Frame(), true);
     }
 
     public void llenarMatriz() {
@@ -1122,12 +1125,40 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 opciones[2] = "Alfil";
                 opciones[3] = "Dama";
                 if (turnoBlanco && (posicion >= 0) && (posicion <= 7)) {
-                    System.out.println("entrando al if de la coronación");
-                    FrmChessGame.agregarPanelDerecho(pnlCoronacion);
+                    corona.setLocationRelativeTo(this);
+                    corona.setVisible(true);
+                    System.out.println(JdCoronacion.tipoFicha+" ficha seleccionada");
+                    if(JdCoronacion.tipoFicha == 0){
+                        ficha.setTipoFicha(2);
+                        ImageIcon tB = new ImageIcon("imagenes/torreBlanco.png");
+                        ImageIcon tB2 = new ImageIcon(tB.getImage().getScaledInstance(boton.getWidth(), boton.getHeight(), 1));
+                        boton.setIcon(tB2);
+                    }
+                    if(JdCoronacion.tipoFicha == 1){
+                        ficha.setTipoFicha(3);
+                        ImageIcon cB = new ImageIcon("imagenes/caballoBlanco.png");
+                        ImageIcon cB2 = new ImageIcon(cB.getImage().getScaledInstance(boton.getWidth(), boton.getHeight(), 1));
+                        boton.setIcon(cB2);
+                    }
+                    if(JdCoronacion.tipoFicha == 2){
+                        ficha.setTipoFicha(4);
+                        ImageIcon aB = new ImageIcon("imagenes/alfilBlanco.png");
+                        ImageIcon aB2 = new ImageIcon(aB.getImage().getScaledInstance(boton.getWidth(), boton.getHeight(), 1));
+                        boton.setIcon(aB2);
+                    }
+                    if(JdCoronacion.tipoFicha == 3){
+                        ficha.setTipoFicha(5);
+                        ImageIcon dB = new ImageIcon("imagenes/damaBlanco.png");
+                        ImageIcon dB2 = new ImageIcon(dB.getImage().getScaledInstance(boton.getWidth(), boton.getHeight(), 1));
+                        boton.setIcon(dB2);
+                    }
                 } else {
                     if (!turnoBlanco && (posicion >= 56) && (posicion <= 63)) {
                         System.out.println("entrando a la coronación");
-                        FrmChessGame.agregarPanelDerecho(pnlCoronacion);
+                        corona.setLocationRelativeTo(this);
+                        corona.setVisible(true);
+                        System.out.println(JdCoronacion.tipoFicha+" ficha seleccionada");
+                        
                     } else {
                         System.out.println("Error");
                     }
@@ -1187,12 +1218,11 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                         opciones[3] = "Dama";
                         if (turnoBlanco && (posicion >= 0) && (posicion <= 7)) {
                             System.out.println("Entrando al if de la coronación roja");
-                            FrmChessGame.agregarPanelDerecho(pnlCoronacion);
+
                         } else {
                             if (!turnoBlanco && (posicion >= 56) && (posicion <= 63)) {
                                 System.out.println("entrando a la coronación roja");
-                                FrmChessGame.agregarPanelDerecho(pnlCoronacion);
-                                System.out.println(PnlCoronacion.tipoFicha);
+
                             } else {
                                 System.out.println("Error");
                             }
@@ -1248,32 +1278,32 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                             System.out.println("no esta posicion inicial");
                             ficha.movimiento(posicion, turnoBlanco, false);
                         }
-                        System.out.println("1");
+                        System.out.println("peon");
                     }
 
                     if (ficha.getTipoFicha() == 2) {
-                        System.out.println("entrando torre");
+                        System.out.println("torre");
                         ficha.movimiento(posicion, turnoBlanco, false);
 
                     }
 
                     if (ficha.getTipoFicha() == 3) {
-                        System.out.println("entrando a caballo");
+                        System.out.println("caballo");
                         ficha.movimiento(posicion, turnoBlanco, false);
                     }
 
                     if (ficha.getTipoFicha() == 4) {
-                        System.out.println("entrando a alfil");
+                        System.out.println("alfil");
                         ficha.movimiento(posicion, turnoBlanco, false);
                     }
 
                     if (ficha.getTipoFicha() == 5) {
-                        System.out.println("entrando dama");
+                        System.out.println("dama");
                         ficha.movimiento(posicion, turnoBlanco, false);
                     }
 
                     if (ficha.getTipoFicha() == 6) {
-                        System.out.println("entrando rey");
+                        System.out.println("rey");
                         ficha.movimiento(posicion, turnoBlanco, false);
                     }
 
