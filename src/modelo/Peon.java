@@ -18,6 +18,8 @@ public class Peon extends Ficha {
         super.movimientoX = posicion / 8;
         super.movimientoY = posicion % 8;
         int i, j;
+        
+        System.out.println("Mensaje en PEON a ver si vale :V");
 
         //fichas blancas hacia arriba
         if (turnoBlanco) {

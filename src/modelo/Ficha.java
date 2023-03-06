@@ -6,7 +6,7 @@ import javax.swing.JButton;
 public abstract class Ficha {
 
     protected static boolean esFichaBlanca;
-    public int tipoFicha; //1 - peon | 2 - Torre | 3 - Caballo | 4 - Alfil | 5 - Dama | 6 - Rey
+    private int tipoFicha; //1 - peon | 2 - Torre | 3 - Caballo | 4 - Alfil | 5 - Dama | 6 - Rey
     protected int identificacion;
     protected int movimientoX;
     protected int movimientoY;
@@ -81,38 +81,7 @@ public abstract class Ficha {
                     ImageIcon rB2 = new ImageIcon(rB.getImage().getScaledInstance(w, h, 1));
                     casilla.setIcon(rB2);
                 }
-            /*} else {
-                if (tipoFicha == 1) {
-                    ImageIcon pN = new ImageIcon("iconos/PeonNegro.png");
-                    ImageIcon pN2 = new ImageIcon(pN.getImage().getScaledInstance(w, h, 1));
-                    casilla.setIcon(pN2);
-                }
-                if (tipoFicha == 2) {
-                    ImageIcon tN = new ImageIcon("iconos/TorreNegro.png");
-                    ImageIcon tN2 = new ImageIcon(tN.getImage().getScaledInstance(w, h, 1));
-                    casilla.setIcon(tN2);
-                }
-                if (tipoFicha == 3) {
-                    ImageIcon cN = new ImageIcon("iconos/CaballoNegro.png");
-                    ImageIcon cN2 = new ImageIcon(cN.getImage().getScaledInstance(w, h, 1));
-                    casilla.setIcon(cN2);
-                }
-                if (tipoFicha == 4) {
-                    ImageIcon aN = new ImageIcon("iconos/AlfilNegro.png");
-                    ImageIcon aN2 = new ImageIcon(aN.getImage().getScaledInstance(w, h, 1));
-                    casilla.setIcon(aN2);
-                }
-                if (tipoFicha == 5) {
-                    ImageIcon dN = new ImageIcon("iconos/DamaNegro.png");
-                    ImageIcon dN2 = new ImageIcon(dN.getImage().getScaledInstance(w, h, 1));
-                    casilla.setIcon(dN2);
-                }
-                if (tipoFicha == 6) {
-                    ImageIcon rN = new ImageIcon("iconos/ReyNegro.png");
-                    ImageIcon rN2 = new ImageIcon(rN.getImage().getScaledInstance(w, h, 1));
-                    casilla.setIcon(rN2);
-                }
-            }*/
+       
         } catch (Exception e) {
             System.out.println("Error en la imagen: " + e.toString());
         }

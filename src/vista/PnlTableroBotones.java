@@ -29,6 +29,8 @@ public class PnlTableroBotones extends javax.swing.JPanel {
     Jugador blanco;
     Jugador negro;
     JdCoronacion corona;
+    FrmChessGame menuInicial;
+    PnlImagenIzquierda pnlImagenIzquierda;
 
     public PnlTableroBotones() {
         initComponents();
@@ -1111,46 +1113,61 @@ public class PnlTableroBotones extends javax.swing.JPanel {
     }//GEN-LAST:event_btnH4ActionPerformed
 
     private void accionBoton(JButton boton, int posicion) {
-        boolean turnoBlanco = tablero.isEsTurnoBlanco();
+        boolean turnoBlanco = tablero.esTurnoBlanco();
 
         if (boton.getBackground().equals(Color.blue)) {
             ficha.setCasilla(null);
             boton.setIcon(btnSeleccionado.getIcon());
             btnSeleccionado.setIcon(null);
             ficha.setCasilla(boton);
-            if (ficha.getTipoFicha() == 1 && ((posicion >= 0) && (posicion <= 7) 
+
+            if (ficha.getTipoFicha() == 1 && ((posicion >= 0) && (posicion <= 7)
                     || (posicion >= 56) && (posicion <= 63))) {
                 String[] opciones = new String[4];
                 opciones[0] = "Torre";
                 opciones[1] = "Caballo";
                 opciones[2] = "Alfil";
                 opciones[3] = "Dama";
+
                 if (turnoBlanco && (posicion >= 0) && (posicion <= 7)) {
                     corona.setLocationRelativeTo(this);
                     corona.setVisible(true);
-                    System.out.println(JdCoronacion.tipoFicha+" ficha seleccionada");
+                    System.out.println(JdCoronacion.tipoFicha + " ficha seleccionada");
                     System.out.println(boton.getIcon());
-                    if(JdCoronacion.tipoFicha == 0){
-                        ficha.setTipoFicha(2);
-                        ImageIcon tB = new ImageIcon("iconos/TorreBlanca.png");
+
+                    if (JdCoronacion.tipoFicha == 0) {
+                        System.out.println("Si llega aqui :v");
+
+                        ficha = null;
+                        // ficha.setCasilla();
+
+                        boton.setIcon(btnA1.getIcon());
+                        /*    ficha.setCasilla(boton);
+                        ficha.setTipoFicha(2);*/
+
+                        Ficha torreBlancoCoronacion = new Torre(true, 2, 20, tablero.getTablero()[posicion % 8][0]);
+
+                        ficha = torreBlancoCoronacion;
+                        /*      ImageIcon tB = new ImageIcon("iconos/TorreBlanca.png");
+
                         //ImageIcon tB2 = new ImageIcon(tB.getImage().getScaledInstance(boton.getWidth(), boton.getHeight(), 1));
-                        
                         boton.setIcon(tB);
+                         */
                     }
-                    if(JdCoronacion.tipoFicha == 1){
+                    if (JdCoronacion.tipoFicha == 1) {
                         ficha.setTipoFicha(3);
                         ImageIcon cB = new ImageIcon("iconos/CaballoBlanco.png");
+
                         //ImageIcon cB2 = new ImageIcon(cB.getImage().getScaledInstance(boton.getWidth(), boton.getHeight(), 1));
-                        
                         boton.setIcon(cB);
                     }
-                    if(JdCoronacion.tipoFicha == 2){
+                    if (JdCoronacion.tipoFicha == 2) {
                         ficha.setTipoFicha(4);
                         ImageIcon aB = new ImageIcon("iconos/AlfilBlanco.png");
                         ImageIcon aB2 = new ImageIcon(aB.getImage().getScaledInstance(boton.getWidth(), boton.getHeight(), 1));
                         boton.setIcon(aB2);
                     }
-                    if(JdCoronacion.tipoFicha == 3){
+                    if (JdCoronacion.tipoFicha == 3) {
                         ficha.setTipoFicha(5);
                         ImageIcon dB = new ImageIcon("iconos/DamaBlanca.png");
                         ImageIcon dB2 = new ImageIcon(dB.getImage().getScaledInstance(boton.getWidth(), boton.getHeight(), 1));
@@ -1161,8 +1178,8 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                         System.out.println("entrando a la coronación");
                         corona.setLocationRelativeTo(this);
                         corona.setVisible(true);
-                        System.out.println(JdCoronacion.tipoFicha+" ficha seleccionada");
-                        
+                        System.out.println(JdCoronacion.tipoFicha + " ficha seleccionada");
+
                     } else {
                         System.out.println("Error");
                     }
@@ -1173,6 +1190,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
             }
 
             TableroAjedrez.pintarCasillasNormal(tablero.getTablero());
+
             tablero.cambiarTurno();
             btnSeleccionado = null;
             ficha = null;
@@ -1201,6 +1219,9 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                     if (turnoBlanco) {
                         if (tablero.comer(tablero.getNegro(), comida)) {
                             JOptionPane.showMessageDialog(null, "¡Las fichas BLANCAS gana la partida!");
+                           // pnlImagenIzquierda = new PnlImagenIzquierda();
+                          //  FrmChessGame.agregarPanelIzquierdo(pnlImagenIzquierda);
+                          reiniciarTablero();
                             //this.dispose();
                         }
                     } else {
@@ -1317,6 +1338,21 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 }
             }
         }
+
+    }
+
+    public void reiniciarTablero() {
+        Ficha peonBlanco0 = new Peon(true, 1, 0, tablero.getTablero()[6][0]);
+        Ficha peonBlanco1 = new Peon(true, 1, 1, tablero.getTablero()[6][1]);
+        Ficha peonBlanco2 = new Peon(true, 1, 2, tablero.getTablero()[6][2]);
+        Ficha peonBlanco3 = new Peon(true, 1, 3, tablero.getTablero()[6][3]);
+        Ficha peonBlanco4 = new Peon(true, 1, 4, tablero.getTablero()[6][4]);
+        Ficha peonBlanco5 = new Peon(true, 1, 5, tablero.getTablero()[6][5]);
+        Ficha peonBlanco6 = new Peon(true, 1, 6, tablero.getTablero()[6][6]);
+        Ficha peonBlanco7 = new Peon(true, 1, 7, tablero.getTablero()[6][7]);
+        
+        ImageIcon icono = new ImageIcon("iconos/PeónBlanco.png");
+        btnA2.setIcon(icono);
     }
 
 

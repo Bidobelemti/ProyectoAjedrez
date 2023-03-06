@@ -58,7 +58,7 @@ public class TableroAjedrez {
 
     
     
-    public boolean isEsTurnoBlanco() {
+    public boolean esTurnoBlanco() {
         return esTurnoBlanco;
     }
 

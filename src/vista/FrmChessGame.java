@@ -20,6 +20,7 @@ public class FrmChessGame extends javax.swing.JFrame {
 
     static PnlRegistroDeJugadores pnlRegistroDeJugadores;
     static PnlTableroBotones pnlTablero;
+    static PnlImagenIzquierda pnlImagenIzquierda;
 
     // PnlTablero pnlTablero;
 
@@ -80,7 +81,7 @@ public class FrmChessGame extends javax.swing.JFrame {
         );
 
         pnlMenuIzquierdo.add(pnlFondoAzul);
-        pnlFondoAzul.setBounds(0, 60, 650, 80);
+        pnlFondoAzul.setBounds(0, 0, 650, 80);
 
         pnlJugar.setBackground(new java.awt.Color(0, 41, 133));
         pnlJugar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -280,8 +281,8 @@ public class FrmChessGame extends javax.swing.JFrame {
         pnlRegistroDeJugadores = new PnlRegistroDeJugadores();
         agregarPanelDerecho(pnlRegistroDeJugadores);
         //Controlador controlador = new Controlador();
-        pnlTablero = new PnlTableroBotones();
-        agregarPanelIzquierdo(pnlTablero);
+        pnlImagenIzquierda = new PnlImagenIzquierda();
+        agregarPanelIzquierdo(pnlImagenIzquierda);
         
 
     }//GEN-LAST:event_pnlJugarMouseClicked
@@ -309,6 +310,20 @@ public class FrmChessGame extends javax.swing.JFrame {
     public static void agregarPanelIzquierdo(JPanel pnl) {
         //ajustamos el tamaño
         pnl.setSize(650, 600);
+        //colocamos, la esquina superior izquierda posee coordenadas (0,0)
+        pnl.setLocation(0, 0);
+        //remueve lo del panel inicio
+        pnlMenuIzquierdo.removeAll();
+        //en el panel inicio agregue el panel clientes con una ubicación
+        pnlMenuIzquierdo.add(pnl, BorderLayout.CENTER);
+        //elimina toda la jerarquia y la construye nuevamente
+        pnlMenuIzquierdo.revalidate();
+        pnlMenuIzquierdo.repaint();
+    }
+    
+    public static void agregarPanelFondo(JPanel pnl) {
+        //ajustamos el tamaño
+        pnl.setSize(1000, 600);
         //colocamos, la esquina superior izquierda posee coordenadas (0,0)
         pnl.setLocation(0, 0);
         //remueve lo del panel inicio

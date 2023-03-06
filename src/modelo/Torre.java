@@ -25,6 +25,7 @@ public class Torre extends Ficha {
         int j = movimientoY;
         boolean ocupada = false;
 
+        System.out.println("Mensaje en torre a ver si vale :V");
         //movimiento de la torre de fichas blancas
         while ((i >= 0) && (i < 8) && !ocupada) {
             if (!TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j], TableroAjedrez.getNegro())
