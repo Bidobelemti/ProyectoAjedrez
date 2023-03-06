@@ -1132,27 +1132,32 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 if (turnoBlanco && (posicion >= 0) && (posicion <= 7)) {
                     corona.setLocationRelativeTo(this);
                     corona.setVisible(true);
-                    System.out.println(JdCoronacion.tipoFicha + " ficha seleccionada");
-                    System.out.println(boton.getIcon());
 
                     if (JdCoronacion.tipoFicha == 0) {
-                        System.out.println("Si llega aqui :v");
 
+                        System.out.println(ficha.getIdentificacion() + " " + ficha.getClass());
+                        System.out.println(ficha.getCasilla());
+                        System.out.println(boton + "boton we");
+                        Ficha torreBlancoCoronacion = new Torre(true, 2, ficha.getIdentificacion(), tablero.getTablero()[0][posicion%8]);
                         ficha = null;
-                        // ficha.setCasilla();
+                        int i = 0;
+                        while (ficha == null && (i < tablero.getNegro().getFichas().size() || i
+                                < tablero.getBlanco().getFichas().size())) {
+                            
+                                if (i < tablero.getBlanco().getFichas().size() && turnoBlanco) {
+                                    if (tablero.getBlanco().getFichas().get(i).getCasilla().equals(boton)) {
+
+                                        tablero.getBlanco().getFichas().get(i).setCasilla(boton);
+                                        //ficha = tablero.getBlanco().getFichas().get(i);
+                                        tablero.getBlanco().getFichas().set(i, torreBlancoCoronacion);
+                                        System.out.println(tablero.getBlanco().getFichas().get(i) + " loq ue guerda ficha");
+                                    }
+                                }
+                            i++;
+                        }
 
                         boton.setIcon(btnA1.getIcon());
-                        /*    ficha.setCasilla(boton);
-                        ficha.setTipoFicha(2);*/
 
-                        Ficha torreBlancoCoronacion = new Torre(true, 2, 20, tablero.getTablero()[posicion % 8][0]);
-
-                        ficha = torreBlancoCoronacion;
-                        /*      ImageIcon tB = new ImageIcon("iconos/TorreBlanca.png");
-
-                        //ImageIcon tB2 = new ImageIcon(tB.getImage().getScaledInstance(boton.getWidth(), boton.getHeight(), 1));
-                        boton.setIcon(tB);
-                         */
                     }
                     if (JdCoronacion.tipoFicha == 1) {
                         ficha.setTipoFicha(3);
@@ -1219,9 +1224,9 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                     if (turnoBlanco) {
                         if (tablero.comer(tablero.getNegro(), comida)) {
                             JOptionPane.showMessageDialog(null, "¡Las fichas BLANCAS gana la partida!");
-                           // pnlImagenIzquierda = new PnlImagenIzquierda();
-                          //  FrmChessGame.agregarPanelIzquierdo(pnlImagenIzquierda);
-                          reiniciarTablero();
+                            // pnlImagenIzquierda = new PnlImagenIzquierda();
+                            //  FrmChessGame.agregarPanelIzquierdo(pnlImagenIzquierda);
+                            reiniciarTablero();
                             //this.dispose();
                         }
                     } else {
@@ -1268,26 +1273,24 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 TableroAjedrez.pintarCasillasNormal(tablero.getTablero());
                 int i;
                 i = 0;
-                System.out.println(tablero.getNegro().getFichas());
                 while (ficha == null && (i < tablero.getNegro().getFichas().size() || i
                         < tablero.getBlanco().getFichas().size())) {
+                    System.out.println(boton + "boton");
+                    System.out.println(tablero.getBlanco().getFichas().get(i).getCasilla());
                     if (i < tablero.getNegro().getFichas().size() && !turnoBlanco) {
                         System.out.println("turno negro");
-                        System.out.println(tablero.getNegro().getFichas().get(i).getCasilla() + "El boton");
-                        System.out.println(boton);
                         if (tablero.getNegro().getFichas().get(i).getCasilla().equals(boton)) {
                             btnSeleccionado = tablero.getNegro().getFichas().get(i).getCasilla();
                             ficha = tablero.getNegro().getFichas().get(i);
                         }
                     } else {
                         if (i < tablero.getBlanco().getFichas().size() && turnoBlanco) {
-                            System.out.println("tunro blanco");
-                            System.out.println(tablero.getBlanco().getFichas().get(i).getCasilla() + "El boton");
-                            System.out.println(boton);
+                            System.out.println("turno blanco");
                             if (tablero.getBlanco().getFichas().get(i).getCasilla().equals(boton)) {
-                                System.out.println("entrando al if del if del while para blancos");
+
                                 btnSeleccionado = tablero.getBlanco().getFichas().get(i).getCasilla();
                                 ficha = tablero.getBlanco().getFichas().get(i);
+                                System.out.println(tablero.getBlanco().getFichas().get(i).getCasilla() + " loq ue guerda ficha");
                             }
                         }
                     }
@@ -1295,6 +1298,10 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 }
                 //System.out.println(ficha.getTipoFicha()+" este es el tipo");
                 if (ficha != null) {
+                    System.out.println("tipo de ficha" + ficha.getClass());
+                    for (Ficha f : tablero.getBlanco().getFichas()) {
+                        System.out.println(f);
+                    }
                     if (ficha.getTipoFicha() == 1) {
                         if ((posicion >= 48) && (posicion <= 55) || (posicion >= 8) && (posicion <= 15)) {
                             System.out.println("posicion inicial");
@@ -1350,7 +1357,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         Ficha peonBlanco5 = new Peon(true, 1, 5, tablero.getTablero()[6][5]);
         Ficha peonBlanco6 = new Peon(true, 1, 6, tablero.getTablero()[6][6]);
         Ficha peonBlanco7 = new Peon(true, 1, 7, tablero.getTablero()[6][7]);
-        
+
         ImageIcon icono = new ImageIcon("iconos/PeónBlanco.png");
         btnA2.setIcon(icono);
     }
