@@ -5,6 +5,7 @@
 package vista;
 
 import java.awt.Color;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -14,6 +15,7 @@ public class PnlRegistroDeJugadores extends javax.swing.JPanel {
 
     static String jugadores[][];
     static PnlTableroBotones pnlTableroBotones;
+    static PnlMenuDeJuego pnlMenuDeJuego;
 
     public PnlRegistroDeJugadores() {
         initComponents();
@@ -196,75 +198,98 @@ public class PnlRegistroDeJugadores extends javax.swing.JPanel {
             .addComponent(pnlFondoAzulSuperior, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addGroup(layout.createSequentialGroup()
                 .addGap(20, 20, 20)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblPrimerJugador)
-                            .addComponent(txtNombrePrimerJugador, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(sprNombrePrimerJugador, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblFichaPrimerJugador)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(10, 10, 10)
-                                .addComponent(rbtBlancasPrimerJugador)
-                                .addGap(37, 37, 37)
-                                .addComponent(rbtNegrasPrimerJugador))
-                            .addComponent(lblSegundoJugador)
-                            .addComponent(lblNombreSegundoJugador)
-                            .addComponent(sprNombreSegundoJugador, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtNombreSegundoJugador, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblFichaSegundoJugador)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(20, 20, 20)
-                                .addComponent(rbtBlancasSegundoJugador)
-                                .addGap(27, 27, 27)
-                                .addComponent(rbtNegrasSegundoJugador))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addComponent(pnlIniciarJuego, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(25, 25, 25)
-                        .addComponent(pnlFondoAzulDerecho, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(lblNombrePrimerJugador)))
+                .addComponent(lblNombrePrimerJugador))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(txtNombrePrimerJugador, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(rbtBlancasPrimerJugador))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(lblSegundoJugador))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(lblNombreSegundoJugador))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(sprNombreSegundoJugador, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(38, 38, 38)
+                .addComponent(pnlIniciarJuego, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(130, 130, 130)
+                .addComponent(rbtNegrasPrimerJugador))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(lblPrimerJugador))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(txtNombreSegundoJugador, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(lblFichaSegundoJugador))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(40, 40, 40)
+                .addComponent(rbtBlancasSegundoJugador))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(305, 305, 305)
+                .addComponent(pnlFondoAzulDerecho, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(sprNombrePrimerJugador, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(130, 130, 130)
+                .addComponent(rbtNegrasSegundoJugador))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(lblFichaPrimerJugador))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(110, 110, 110)
-                .addComponent(lblPrimerJugador)
-                .addGap(48, 48, 48)
+                .addComponent(pnlFondoAzulSuperior, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(80, 80, 80)
+                .addComponent(lblNombrePrimerJugador)
+                .addGap(4, 4, 4)
                 .addComponent(txtNombrePrimerJugador, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(6, 6, 6)
-                .addComponent(sprNombrePrimerJugador, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
-                .addComponent(lblFichaPrimerJugador)
-                .addGap(14, 14, 14)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(rbtBlancasPrimerJugador)
-                    .addComponent(rbtNegrasPrimerJugador))
+                .addGap(56, 56, 56)
+                .addComponent(rbtBlancasPrimerJugador)
                 .addGap(29, 29, 29)
                 .addComponent(lblSegundoJugador)
                 .addGap(28, 28, 28)
                 .addComponent(lblNombreSegundoJugador)
-                .addGap(4, 4, 4)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(sprNombreSegundoJugador, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(txtNombreSegundoJugador, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(20, 20, 20)
-                .addComponent(lblFichaSegundoJugador)
-                .addGap(14, 14, 14)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(rbtBlancasSegundoJugador)
-                    .addComponent(rbtNegrasSegundoJugador))
-                .addGap(48, 48, 48)
+                .addGap(44, 44, 44)
+                .addComponent(sprNombreSegundoJugador, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(109, 109, 109)
                 .addComponent(pnlIniciarJuego, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(270, 270, 270)
+                .addComponent(rbtNegrasPrimerJugador))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(110, 110, 110)
+                .addComponent(lblPrimerJugador))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(390, 390, 390)
+                .addComponent(txtNombreSegundoJugador, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(450, 450, 450)
+                .addComponent(lblFichaSegundoJugador))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(480, 480, 480)
+                .addComponent(rbtBlancasSegundoJugador))
             .addGroup(layout.createSequentialGroup()
                 .addGap(78, 78, 78)
                 .addComponent(pnlFondoAzulDerecho, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(layout.createSequentialGroup()
-                .addGap(160, 160, 160)
-                .addComponent(lblNombrePrimerJugador))
-            .addComponent(pnlFondoAzulSuperior, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(220, 220, 220)
+                .addComponent(sprNombrePrimerJugador, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(480, 480, 480)
+                .addComponent(rbtNegrasSegundoJugador))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(240, 240, 240)
+                .addComponent(lblFichaPrimerJugador))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -287,15 +312,25 @@ public class PnlRegistroDeJugadores extends javax.swing.JPanel {
         String colorFichaSegundoJugador = asignarColorAJugadorDos();
         int puntuacionSegundoJugador = 0;
 
-        jugadores[0][0] = nombrePrimerJugador;
-        jugadores[0][1] = colorFichaPrimerJugador;
+        if (nombrePrimerJugador.equals("Ingrese su nombre") || nombrePrimerJugador.equals("")
+                || nombreSegundoJugador.equals("Ingrese su nombre") || nombreSegundoJugador.equals("")) {
 
-        jugadores[1][0] = nombreSegundoJugador;
-        jugadores[1][1] = colorFichaSegundoJugador;
+            JOptionPane.showMessageDialog(null, "Ingrese el nombre de ambos jugadores");
+
+        } else {
+
+            jugadores[0][0] = nombrePrimerJugador;
+            jugadores[0][1] = colorFichaPrimerJugador;
+
+            jugadores[1][0] = nombreSegundoJugador;
+            jugadores[1][1] = colorFichaSegundoJugador;
 
             pnlTableroBotones = new PnlTableroBotones();
             FrmChessGame.agregarPanelIzquierdo(pnlTableroBotones);
-
+            
+            pnlMenuDeJuego = new PnlMenuDeJuego();
+            FrmChessGame.agregarPanelDerecho(pnlMenuDeJuego);
+        }
 
 
     }//GEN-LAST:event_pnlIniciarJuegoMouseClicked
