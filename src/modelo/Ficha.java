@@ -19,6 +19,7 @@ public abstract class Ficha {
         this.identificacion = id;
         this.casilla = casilla;
     }
+    
 
     public JButton getCasilla() {
         return casilla;

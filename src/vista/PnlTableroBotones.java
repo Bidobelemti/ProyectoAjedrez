@@ -1337,6 +1337,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
             TableroAjedrez.pintarCasillasNormal(tablero.getTablero());
 
             tablero.cambiarTurno();
+            pnlMenuDeJuego.colocarTurno(tablero.esTurnoBlanco());
             btnSeleccionado = null;
             ficha = null;
         } else {

@@ -4,14 +4,24 @@
  */
 package vista;
 
+import modelo.TableroAjedrez;
+
 /**
  *
  * @author pc
  */
 public class PnlMenuDeJuego extends javax.swing.JPanel {
 
+    TableroAjedrez tablero = new TableroAjedrez();
+    
+    boolean esBlanca = tablero.esTurnoBlanco();
+    String jugadorUno = "x";
+    String jugadorDos = "y";
+    
     public PnlMenuDeJuego() {
         initComponents();
+        //colocarTurno(esBlanca);
+        imprimirJugadores(jugadorUno, jugadorDos);
     }
 
     /**
@@ -101,19 +111,25 @@ public class PnlMenuDeJuego extends javax.swing.JPanel {
     }
     
     public void colocarTurno(boolean esBlanco){
+        
+        if(esBlanco == true){
         System.out.println("entrado al metodo");
         if(esBlanco){
             System.out.println("Entra aquii");
-            lblColorJugador.setText("Turno blanco");
+            lblColorJugador.setText("Blanco");
+        } else {
+            System.out.println("Entra al else");
+            lblColorJugador.setText("Negro");
+        }
         }
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public static javax.swing.JLabel lblColorJugador;
+    private javax.swing.JLabel lblColorJugador;
     private javax.swing.JLabel lblMensajeBlancas;
     private javax.swing.JLabel lblMensajeNegras;
-    public static javax.swing.JLabel lblNombreJugadorBlancas;
-    public static javax.swing.JLabel lblNombreJugadorNegras;
+    private javax.swing.JLabel lblNombreJugadorBlancas;
+    private javax.swing.JLabel lblNombreJugadorNegras;
     private javax.swing.JLabel lblReyBlanco;
     private javax.swing.JLabel lblReyNegro;
     public static javax.swing.JPanel pnlColorJugador;

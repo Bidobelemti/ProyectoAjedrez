@@ -19,6 +19,10 @@ public class TableroAjedrez {
         //this.negro = negro;
         
     }
+    
+    public TableroAjedrez(){
+        
+    }
 
     public JButton getBtnSeleccionado() {
         return btnSeleccionado;
@@ -56,8 +60,6 @@ public class TableroAjedrez {
         this.negro = negro;
     }
 
-    
-    
     public boolean esTurnoBlanco() {
         return esTurnoBlanco;
     }
