@@ -53,6 +53,10 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         btnCaballoBlanco.setVisible(false);
         btnAlfilBlanco.setVisible(false);
         btnDamaBlanca.setVisible(false);
+        btnTorreNegra.setVisible(false);
+        btnCaballoNegro.setVisible(false);
+        btnAlfilNegro.setVisible(false);
+        btnDamaNegra.setVisible(false);
     }
 
     public void llenarMatriz() {
@@ -248,6 +252,10 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         btnCaballoBlanco = new javax.swing.JButton();
         btnAlfilBlanco = new javax.swing.JButton();
         btnDamaBlanca = new javax.swing.JButton();
+        btnTorreNegra = new javax.swing.JButton();
+        btnDamaNegra = new javax.swing.JButton();
+        btnAlfilNegro = new javax.swing.JButton();
+        btnCaballoNegro = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new java.awt.BorderLayout());
@@ -896,6 +904,42 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         });
         pnlFondoTablero.add(btnDamaBlanca, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 310, 70, 70));
 
+        btnTorreNegra.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/TorreNegra.png"))); // NOI18N
+        btnTorreNegra.setBorder(null);
+        btnTorreNegra.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTorreNegraActionPerformed(evt);
+            }
+        });
+        pnlFondoTablero.add(btnTorreNegra, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 240, 70, 70));
+
+        btnDamaNegra.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/DamaNegra.png"))); // NOI18N
+        btnDamaNegra.setBorder(null);
+        btnDamaNegra.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDamaNegraActionPerformed(evt);
+            }
+        });
+        pnlFondoTablero.add(btnDamaNegra, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 70, 70));
+
+        btnAlfilNegro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/AlfilNegro.png"))); // NOI18N
+        btnAlfilNegro.setBorder(null);
+        btnAlfilNegro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAlfilNegroActionPerformed(evt);
+            }
+        });
+        pnlFondoTablero.add(btnAlfilNegro, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 70, 70));
+
+        btnCaballoNegro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/CaballoNegro.png"))); // NOI18N
+        btnCaballoNegro.setBorder(null);
+        btnCaballoNegro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCaballoNegroActionPerformed(evt);
+            }
+        });
+        pnlFondoTablero.add(btnCaballoNegro, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, 70, 70));
+
         add(pnlFondoTablero, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -1172,6 +1216,22 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnDamaBlancaActionPerformed
 
+    private void btnTorreNegraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTorreNegraActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnTorreNegraActionPerformed
+
+    private void btnDamaNegraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDamaNegraActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnDamaNegraActionPerformed
+
+    private void btnAlfilNegroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlfilNegroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnAlfilNegroActionPerformed
+
+    private void btnCaballoNegroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCaballoNegroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCaballoNegroActionPerformed
+
     private void accionBoton(JButton boton, int posicion) {
         boolean turnoBlanco = tablero.esTurnoBlanco();
 
@@ -1183,17 +1243,13 @@ public class PnlTableroBotones extends javax.swing.JPanel {
 
             if (ficha.getTipoFicha() == 1 && ((posicion >= 0) && (posicion <= 7)
                     || (posicion >= 56) && (posicion <= 63))) {
-                String[] opciones = new String[4];
-                opciones[0] = "Torre";
-                opciones[1] = "Caballo";
-                opciones[2] = "Alfil";
-                opciones[3] = "Dama";
 
                 if (turnoBlanco && (posicion >= 0) && (posicion <= 7)) {
                     corona.setLocationRelativeTo(this);
                     corona.setVisible(true);
 
                     if (JdCoronacion.tipoFicha == 0) {
+                        //Torre
                         Ficha torreBlancoCoronacion = new Torre(true, 2, ficha.getIdentificacion(), tablero.getTablero()[0][posicion % 8]);
                         ficha = null;
 
@@ -1264,10 +1320,34 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                     }
                 } else {
                     if (!turnoBlanco && (posicion >= 56) && (posicion <= 63)) {
+                        corona.setLocationRelativeTo(this);
+                        corona.setVisible(true);
+
+                        if (JdCoronacion.tipoFicha == 0) {
+                            //Torre
+                            Ficha torreNegroCoronacion = new Torre(false, 2, ficha.getIdentificacion(), tablero.getTablero()[7][posicion % 8]);
+                            ficha = null;
+
+                            int i = 0;
+                            while (ficha == null && (i < tablero.getNegro().getFichas().size() || i
+                                    < tablero.getBlanco().getFichas().size())) {
+                                if (i < tablero.getBlanco().getFichas().size() && turnoBlanco) {
+                                    if (tablero.getBlanco().getFichas().get(i).getCasilla().equals(boton)) {
+                                        tablero.getBlanco().getFichas().get(i).setCasilla(boton);
+                       //                 tablero.getBlanco().getFichas().set(i, torreBlancoCoronacion);
+                                    }
+                                }
+                                i++;
+                            }
+                            boton.setIcon(btnTorreBlanca.getIcon());
+
+                        }
+/*
                         System.out.println("entrando a la coronación");
                         corona.setLocationRelativeTo(this);
                         corona.setVisible(true);
                         System.out.println(JdCoronacion.tipoFicha + " ficha seleccionada");
+*/
 
                     } else {
                         System.out.println("Error");
@@ -1442,6 +1522,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
     public static javax.swing.JButton btnA7;
     public static javax.swing.JButton btnA8;
     public static javax.swing.JButton btnAlfilBlanco;
+    public static javax.swing.JButton btnAlfilNegro;
     public static javax.swing.JButton btnB1;
     public static javax.swing.JButton btnB2;
     public static javax.swing.JButton btnB3;
@@ -1459,6 +1540,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
     public static javax.swing.JButton btnC7;
     public static javax.swing.JButton btnC8;
     public static javax.swing.JButton btnCaballoBlanco;
+    public static javax.swing.JButton btnCaballoNegro;
     public static javax.swing.JButton btnD1;
     public static javax.swing.JButton btnD2;
     public static javax.swing.JButton btnD3;
@@ -1468,6 +1550,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
     public static javax.swing.JButton btnD7;
     public static javax.swing.JButton btnD8;
     public static javax.swing.JButton btnDamaBlanca;
+    public static javax.swing.JButton btnDamaNegra;
     public static javax.swing.JButton btnE1;
     public static javax.swing.JButton btnE2;
     public static javax.swing.JButton btnE3;
@@ -1501,6 +1584,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
     public static javax.swing.JButton btnH7;
     public static javax.swing.JButton btnH8;
     public static javax.swing.JButton btnTorreBlanca;
+    public static javax.swing.JButton btnTorreNegra;
     private javax.swing.JPanel pnlBordeDerecho;
     private javax.swing.JPanel pnlBordeInf;
     private javax.swing.JPanel pnlBordeIzquierdo;
