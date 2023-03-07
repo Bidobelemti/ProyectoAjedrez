@@ -49,6 +49,10 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         iniciarFichas();
         pnlCoronacion = new PnlCoronacion();
         corona = new JdCoronacion(new Frame(), true);
+        btnTorreBlanca.setVisible(false);
+        btnCaballoBlanco.setVisible(false);
+        btnAlfilBlanco.setVisible(false);
+        btnDamaBlanca.setVisible(false);
     }
 
     public void llenarMatriz() {
@@ -240,6 +244,10 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         pnlBordeSuperior = new javax.swing.JPanel();
         pnlBordeDerecho = new javax.swing.JPanel();
         pnlBordeInf = new javax.swing.JPanel();
+        btnTorreBlanca = new javax.swing.JButton();
+        btnCaballoBlanco = new javax.swing.JButton();
+        btnAlfilBlanco = new javax.swing.JButton();
+        btnDamaBlanca = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new java.awt.BorderLayout());
@@ -852,6 +860,42 @@ public class PnlTableroBotones extends javax.swing.JPanel {
 
         pnlFondoTablero.add(pnlBordeInf, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 580, -1, -1));
 
+        btnTorreBlanca.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/TorreBlanca.png"))); // NOI18N
+        btnTorreBlanca.setBorder(null);
+        btnTorreBlanca.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTorreBlancaActionPerformed(evt);
+            }
+        });
+        pnlFondoTablero.add(btnTorreBlanca, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 520, 70, 70));
+
+        btnCaballoBlanco.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/CaballoBlanco.png"))); // NOI18N
+        btnCaballoBlanco.setBorder(null);
+        btnCaballoBlanco.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCaballoBlancoActionPerformed(evt);
+            }
+        });
+        pnlFondoTablero.add(btnCaballoBlanco, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 450, 70, 70));
+
+        btnAlfilBlanco.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/AlfilBlanco.png"))); // NOI18N
+        btnAlfilBlanco.setBorder(null);
+        btnAlfilBlanco.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAlfilBlancoActionPerformed(evt);
+            }
+        });
+        pnlFondoTablero.add(btnAlfilBlanco, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 380, 70, 70));
+
+        btnDamaBlanca.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/DamaBlanca.png"))); // NOI18N
+        btnDamaBlanca.setBorder(null);
+        btnDamaBlanca.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDamaBlancaActionPerformed(evt);
+            }
+        });
+        pnlFondoTablero.add(btnDamaBlanca, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 310, 70, 70));
+
         add(pnlFondoTablero, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -1112,6 +1156,22 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         accionBoton(btnH4, 39);
     }//GEN-LAST:event_btnH4ActionPerformed
 
+    private void btnTorreBlancaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTorreBlancaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnTorreBlancaActionPerformed
+
+    private void btnCaballoBlancoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCaballoBlancoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCaballoBlancoActionPerformed
+
+    private void btnAlfilBlancoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlfilBlancoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnAlfilBlancoActionPerformed
+
+    private void btnDamaBlancaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDamaBlancaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnDamaBlancaActionPerformed
+
     private void accionBoton(JButton boton, int posicion) {
         boolean turnoBlanco = tablero.esTurnoBlanco();
 
@@ -1134,49 +1194,73 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                     corona.setVisible(true);
 
                     if (JdCoronacion.tipoFicha == 0) {
+                        Ficha torreBlancoCoronacion = new Torre(true, 2, ficha.getIdentificacion(), tablero.getTablero()[0][posicion % 8]);
+                        ficha = null;
 
-                        System.out.println(ficha.getIdentificacion() + " " + ficha.getClass());
-                        System.out.println(ficha.getCasilla());
-                        System.out.println(boton + "boton we");
-                        Ficha torreBlancoCoronacion = new Torre(true, 2, ficha.getIdentificacion(), tablero.getTablero()[0][posicion%8]);
+                        int i = 0;
+                        while (ficha == null && (i < tablero.getNegro().getFichas().size() || i
+                                < tablero.getBlanco().getFichas().size())) {
+                            if (i < tablero.getBlanco().getFichas().size() && turnoBlanco) {
+                                if (tablero.getBlanco().getFichas().get(i).getCasilla().equals(boton)) {
+                                    tablero.getBlanco().getFichas().get(i).setCasilla(boton);
+                                    tablero.getBlanco().getFichas().set(i, torreBlancoCoronacion);
+                                }
+                            }
+                            i++;
+                        }
+                        boton.setIcon(btnTorreBlanca.getIcon());
+
+                    }
+                    if (JdCoronacion.tipoFicha == 1) {
+                        //caballo
+                        Ficha caballoBlancoCoronacion = new Caballo(true, 3, ficha.getIdentificacion(), tablero.getTablero()[0][posicion % 8]);
                         ficha = null;
                         int i = 0;
                         while (ficha == null && (i < tablero.getNegro().getFichas().size() || i
                                 < tablero.getBlanco().getFichas().size())) {
-                            
-                                if (i < tablero.getBlanco().getFichas().size() && turnoBlanco) {
-                                    if (tablero.getBlanco().getFichas().get(i).getCasilla().equals(boton)) {
-
-                                        tablero.getBlanco().getFichas().get(i).setCasilla(boton);
-                                        //ficha = tablero.getBlanco().getFichas().get(i);
-                                        tablero.getBlanco().getFichas().set(i, torreBlancoCoronacion);
-                                        System.out.println(tablero.getBlanco().getFichas().get(i) + " loq ue guerda ficha");
-                                    }
+                            if (i < tablero.getBlanco().getFichas().size() && turnoBlanco) {
+                                if (tablero.getBlanco().getFichas().get(i).getCasilla().equals(boton)) {
+                                    tablero.getBlanco().getFichas().get(i).setCasilla(boton);
+                                    tablero.getBlanco().getFichas().set(i, caballoBlancoCoronacion);
                                 }
+                            }
                             i++;
                         }
-
-                        boton.setIcon(btnA1.getIcon());
-
-                    }
-                    if (JdCoronacion.tipoFicha == 1) {
-                        ficha.setTipoFicha(3);
-                        ImageIcon cB = new ImageIcon("iconos/CaballoBlanco.png");
-
-                        //ImageIcon cB2 = new ImageIcon(cB.getImage().getScaledInstance(boton.getWidth(), boton.getHeight(), 1));
-                        boton.setIcon(cB);
+                        boton.setIcon(btnCaballoBlanco.getIcon());
                     }
                     if (JdCoronacion.tipoFicha == 2) {
-                        ficha.setTipoFicha(4);
-                        ImageIcon aB = new ImageIcon("iconos/AlfilBlanco.png");
-                        ImageIcon aB2 = new ImageIcon(aB.getImage().getScaledInstance(boton.getWidth(), boton.getHeight(), 1));
-                        boton.setIcon(aB2);
+                        //alfil 4
+                        Ficha alfilBlancoCoronacion = new Alfil(true, 4, ficha.getIdentificacion(), tablero.getTablero()[0][posicion % 8]);
+                        ficha = null;
+                        int i = 0;
+                        while (ficha == null && (i < tablero.getNegro().getFichas().size() || i
+                                < tablero.getBlanco().getFichas().size())) {
+                            if (i < tablero.getBlanco().getFichas().size() && turnoBlanco) {
+                                if (tablero.getBlanco().getFichas().get(i).getCasilla().equals(boton)) {
+                                    tablero.getBlanco().getFichas().get(i).setCasilla(boton);
+                                    tablero.getBlanco().getFichas().set(i, alfilBlancoCoronacion);
+                                }
+                            }
+                            i++;
+                        }
+                        boton.setIcon(btnAlfilBlanco.getIcon());
                     }
                     if (JdCoronacion.tipoFicha == 3) {
-                        ficha.setTipoFicha(5);
-                        ImageIcon dB = new ImageIcon("iconos/DamaBlanca.png");
-                        ImageIcon dB2 = new ImageIcon(dB.getImage().getScaledInstance(boton.getWidth(), boton.getHeight(), 1));
-                        boton.setIcon(dB2);
+                        //dama 5
+                        Ficha damaBlancoCoronacion = new Dama(true, 5, ficha.getIdentificacion(), tablero.getTablero()[0][posicion % 8]);
+                        ficha = null;
+                        int i = 0;
+                        while (ficha == null && (i < tablero.getNegro().getFichas().size() || i
+                                < tablero.getBlanco().getFichas().size())) {
+                            if (i < tablero.getBlanco().getFichas().size() && turnoBlanco) {
+                                if (tablero.getBlanco().getFichas().get(i).getCasilla().equals(boton)) {
+                                    tablero.getBlanco().getFichas().get(i).setCasilla(boton);
+                                    tablero.getBlanco().getFichas().set(i, damaBlancoCoronacion);
+                                }
+                            }
+                            i++;
+                        }
+                        boton.setIcon(btnDamaBlanca.getIcon());
                     }
                 } else {
                     if (!turnoBlanco && (posicion >= 56) && (posicion <= 63)) {
@@ -1226,7 +1310,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                             JOptionPane.showMessageDialog(null, "¡Las fichas BLANCAS gana la partida!");
                             // pnlImagenIzquierda = new PnlImagenIzquierda();
                             //  FrmChessGame.agregarPanelIzquierdo(pnlImagenIzquierda);
-                            reiniciarTablero();
+
                             //this.dispose();
                         }
                     } else {
@@ -1296,7 +1380,6 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                     }
                     i++;
                 }
-                //System.out.println(ficha.getTipoFicha()+" este es el tipo");
                 if (ficha != null) {
                     System.out.println("tipo de ficha" + ficha.getClass());
                     for (Ficha f : tablero.getBlanco().getFichas()) {
@@ -1348,20 +1431,6 @@ public class PnlTableroBotones extends javax.swing.JPanel {
 
     }
 
-    public void reiniciarTablero() {
-        Ficha peonBlanco0 = new Peon(true, 1, 0, tablero.getTablero()[6][0]);
-        Ficha peonBlanco1 = new Peon(true, 1, 1, tablero.getTablero()[6][1]);
-        Ficha peonBlanco2 = new Peon(true, 1, 2, tablero.getTablero()[6][2]);
-        Ficha peonBlanco3 = new Peon(true, 1, 3, tablero.getTablero()[6][3]);
-        Ficha peonBlanco4 = new Peon(true, 1, 4, tablero.getTablero()[6][4]);
-        Ficha peonBlanco5 = new Peon(true, 1, 5, tablero.getTablero()[6][5]);
-        Ficha peonBlanco6 = new Peon(true, 1, 6, tablero.getTablero()[6][6]);
-        Ficha peonBlanco7 = new Peon(true, 1, 7, tablero.getTablero()[6][7]);
-
-        ImageIcon icono = new ImageIcon("iconos/PeónBlanco.png");
-        btnA2.setIcon(icono);
-    }
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public static javax.swing.JButton btnA1;
@@ -1372,6 +1441,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
     public static javax.swing.JButton btnA6;
     public static javax.swing.JButton btnA7;
     public static javax.swing.JButton btnA8;
+    public static javax.swing.JButton btnAlfilBlanco;
     public static javax.swing.JButton btnB1;
     public static javax.swing.JButton btnB2;
     public static javax.swing.JButton btnB3;
@@ -1388,6 +1458,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
     public static javax.swing.JButton btnC6;
     public static javax.swing.JButton btnC7;
     public static javax.swing.JButton btnC8;
+    public static javax.swing.JButton btnCaballoBlanco;
     public static javax.swing.JButton btnD1;
     public static javax.swing.JButton btnD2;
     public static javax.swing.JButton btnD3;
@@ -1396,6 +1467,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
     public static javax.swing.JButton btnD6;
     public static javax.swing.JButton btnD7;
     public static javax.swing.JButton btnD8;
+    public static javax.swing.JButton btnDamaBlanca;
     public static javax.swing.JButton btnE1;
     public static javax.swing.JButton btnE2;
     public static javax.swing.JButton btnE3;
@@ -1428,10 +1500,9 @@ public class PnlTableroBotones extends javax.swing.JPanel {
     public static javax.swing.JButton btnH6;
     public static javax.swing.JButton btnH7;
     public static javax.swing.JButton btnH8;
+    public static javax.swing.JButton btnTorreBlanca;
     private javax.swing.JPanel pnlBordeDerecho;
     private javax.swing.JPanel pnlBordeInf;
-    private javax.swing.JPanel pnlBordeInferior;
-    private javax.swing.JPanel pnlBordeInferior1;
     private javax.swing.JPanel pnlBordeIzquierdo;
     private javax.swing.JPanel pnlBordeSuperior;
     private javax.swing.JPanel pnlFondoTablero;
