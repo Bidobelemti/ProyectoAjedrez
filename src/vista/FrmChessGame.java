@@ -21,6 +21,7 @@ public class FrmChessGame extends javax.swing.JFrame {
     static PnlRegistroDeJugadores pnlRegistroDeJugadores;
     static PnlTableroBotones pnlTablero;
     static PnlImagenIzquierda pnlImagenIzquierda;
+    static PnlCreditosJuego pnlCreditosJuego;
 
     // PnlTablero pnlTablero;
 
@@ -177,6 +178,9 @@ public class FrmChessGame extends javax.swing.JFrame {
         pnlCreditos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         pnlCreditos.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         pnlCreditos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pnlCreditosMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 pnlCreditosMouseEntered(evt);
             }
@@ -292,6 +296,12 @@ public class FrmChessGame extends javax.swing.JFrame {
         pnlPuntuaciones = new PnlPuntuaciones();
         agregarPanelDerecho(pnlPuntuaciones);
     }//GEN-LAST:event_pnlPuntuacionesMouseClicked
+
+    private void pnlCreditosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlCreditosMouseClicked
+        // TODO add your handling code here:
+        pnlCreditosJuego = new PnlCreditosJuego();
+        agregarPanelDerecho(pnlCreditosJuego);
+    }//GEN-LAST:event_pnlCreditosMouseClicked
 
     public static void agregarPanelDerecho(JPanel pnl) {
         //ajustamos el tamaño

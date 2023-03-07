@@ -25,7 +25,6 @@ public class PnlTableroBotones extends javax.swing.JPanel {
     Ficha ficha;
     static ArrayList<Ficha> fichasNegras = new ArrayList<>();
     static ArrayList<Ficha> fichasBlancas = new ArrayList<>();
-    PnlCoronacion pnlCoronacion;
     Jugador blanco;
     Jugador negro;
     JdCoronacion corona;
@@ -47,7 +46,6 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         TableroAjedrez.pintarCasillasNormal(matrizCasillas);
         tablero = new TableroAjedrez(matrizCasillas);
         iniciarFichas();
-        pnlCoronacion = new PnlCoronacion();
         corona = new JdCoronacion(new Frame(), true);
         btnTorreBlanca.setVisible(false);
         btnCaballoBlanco.setVisible(false);
