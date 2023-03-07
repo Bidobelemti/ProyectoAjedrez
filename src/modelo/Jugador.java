@@ -38,5 +38,15 @@ public class Jugador {
     public void setPuntaje(int puntaje) {
         this.puntaje = puntaje;
     }
+
+    public String getUsuario() {
+        return usuario;
+    }
+
+    public String getColor() {
+        return color;
+    }
+    
+    
       
 }

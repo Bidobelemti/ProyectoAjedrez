@@ -30,9 +30,11 @@ public class PnlTableroBotones extends javax.swing.JPanel {
     JdCoronacion corona;
     FrmChessGame menuInicial;
     PnlImagenIzquierda pnlImagenIzquierda;
+    PnlMenuDeJuego pnlMenuDeJuego;
 
     public PnlTableroBotones() {
         initComponents();
+        pnlMenuDeJuego = new PnlMenuDeJuego();
         matrizCasillas = new JButton[8][8];
         ArrayButtons = new JButton[]{btnA8, btnB8, btnC8, btnD8, btnE8, btnF8, btnG8, btnH8,
             btnA7, btnB7, btnC7, btnD7, btnE7, btnF7, btnG7, btnH7,
@@ -55,6 +57,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         btnCaballoNegro.setVisible(false);
         btnAlfilNegro.setVisible(false);
         btnDamaNegra.setVisible(false);
+        
     }
 
     public void llenarMatriz() {
@@ -165,7 +168,8 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         negro = new Jugador("Pepe", "negro", fichasNegras);
         tablero.setBlanco(blanco);
         tablero.setNegro(negro);
-
+        pnlMenuDeJuego.imprimirJugadores(blanco.getUsuario(), negro.getUsuario());
+        pnlMenuDeJuego.colocarTurno(true);
     }
 
     /**
@@ -868,74 +872,34 @@ public class PnlTableroBotones extends javax.swing.JPanel {
 
         btnTorreBlanca.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/TorreBlanca.png"))); // NOI18N
         btnTorreBlanca.setBorder(null);
-        btnTorreBlanca.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnTorreBlancaActionPerformed(evt);
-            }
-        });
         pnlFondoTablero.add(btnTorreBlanca, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 520, 70, 70));
 
         btnCaballoBlanco.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/CaballoBlanco.png"))); // NOI18N
         btnCaballoBlanco.setBorder(null);
-        btnCaballoBlanco.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCaballoBlancoActionPerformed(evt);
-            }
-        });
         pnlFondoTablero.add(btnCaballoBlanco, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 450, 70, 70));
 
         btnAlfilBlanco.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/AlfilBlanco.png"))); // NOI18N
         btnAlfilBlanco.setBorder(null);
-        btnAlfilBlanco.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAlfilBlancoActionPerformed(evt);
-            }
-        });
         pnlFondoTablero.add(btnAlfilBlanco, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 380, 70, 70));
 
         btnDamaBlanca.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/DamaBlanca.png"))); // NOI18N
         btnDamaBlanca.setBorder(null);
-        btnDamaBlanca.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDamaBlancaActionPerformed(evt);
-            }
-        });
         pnlFondoTablero.add(btnDamaBlanca, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 310, 70, 70));
 
         btnTorreNegra.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/TorreNegra.png"))); // NOI18N
         btnTorreNegra.setBorder(null);
-        btnTorreNegra.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnTorreNegraActionPerformed(evt);
-            }
-        });
         pnlFondoTablero.add(btnTorreNegra, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 240, 70, 70));
 
         btnDamaNegra.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/DamaNegra.png"))); // NOI18N
         btnDamaNegra.setBorder(null);
-        btnDamaNegra.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDamaNegraActionPerformed(evt);
-            }
-        });
         pnlFondoTablero.add(btnDamaNegra, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 70, 70));
 
         btnAlfilNegro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/AlfilNegro.png"))); // NOI18N
         btnAlfilNegro.setBorder(null);
-        btnAlfilNegro.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAlfilNegroActionPerformed(evt);
-            }
-        });
         pnlFondoTablero.add(btnAlfilNegro, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 70, 70));
 
         btnCaballoNegro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/CaballoNegro.png"))); // NOI18N
         btnCaballoNegro.setBorder(null);
-        btnCaballoNegro.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCaballoNegroActionPerformed(evt);
-            }
-        });
         pnlFondoTablero.add(btnCaballoNegro, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, 70, 70));
 
         add(pnlFondoTablero, java.awt.BorderLayout.CENTER);
@@ -1197,38 +1161,6 @@ public class PnlTableroBotones extends javax.swing.JPanel {
     private void btnH4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnH4ActionPerformed
         accionBoton(btnH4, 39);
     }//GEN-LAST:event_btnH4ActionPerformed
-
-    private void btnTorreBlancaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTorreBlancaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnTorreBlancaActionPerformed
-
-    private void btnCaballoBlancoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCaballoBlancoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnCaballoBlancoActionPerformed
-
-    private void btnAlfilBlancoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlfilBlancoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnAlfilBlancoActionPerformed
-
-    private void btnDamaBlancaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDamaBlancaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnDamaBlancaActionPerformed
-
-    private void btnTorreNegraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTorreNegraActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnTorreNegraActionPerformed
-
-    private void btnDamaNegraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDamaNegraActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnDamaNegraActionPerformed
-
-    private void btnAlfilNegroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlfilNegroActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnAlfilNegroActionPerformed
-
-    private void btnCaballoNegroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCaballoNegroActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnCaballoNegroActionPerformed
 
     private void accionBoton(JButton boton, int posicion) {
         boolean turnoBlanco = tablero.esTurnoBlanco();

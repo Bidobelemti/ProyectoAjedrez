@@ -10,9 +10,6 @@ package vista;
  */
 public class PnlMenuDeJuego extends javax.swing.JPanel {
 
-    /**
-     * Creates new form PnlMenuDeJuego
-     */
     public PnlMenuDeJuego() {
         initComponents();
     }
@@ -97,16 +94,29 @@ public class PnlMenuDeJuego extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    public void imprimirJugadores(String usuarioUno,String usuarioDos){
+        System.out.println(usuarioUno+" "+usuarioDos);
+        lblNombreJugadorBlancas.setText(usuarioUno);
+        lblNombreJugadorNegras.setText(usuarioDos);
+    }
+    
+    public void colocarTurno(boolean esBlanco){
+        System.out.println("entrado al metodo");
+        if(esBlanco){
+            System.out.println("Entra aquii");
+            lblColorJugador.setText("Turno blanco");
+        }
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel lblColorJugador;
+    public static javax.swing.JLabel lblColorJugador;
     private javax.swing.JLabel lblMensajeBlancas;
     private javax.swing.JLabel lblMensajeNegras;
-    private javax.swing.JLabel lblNombreJugadorBlancas;
-    private javax.swing.JLabel lblNombreJugadorNegras;
+    public static javax.swing.JLabel lblNombreJugadorBlancas;
+    public static javax.swing.JLabel lblNombreJugadorNegras;
     private javax.swing.JLabel lblReyBlanco;
     private javax.swing.JLabel lblReyNegro;
-    private javax.swing.JPanel pnlColorJugador;
+    public static javax.swing.JPanel pnlColorJugador;
     private javax.swing.JPanel pnlFondo;
     // End of variables declaration//GEN-END:variables
 }
