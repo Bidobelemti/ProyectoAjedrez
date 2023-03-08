@@ -1,13 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package vista;
 
-import desplazable.Desface;
+
 import java.awt.BorderLayout;
 import javax.swing.JPanel;
-//import utilidades.Controlador;
 
 /**
  *
@@ -16,18 +11,13 @@ import javax.swing.JPanel;
 public class FrmChessGame extends javax.swing.JFrame {
 
     //se inicializa la variable de la clase de desplazamiento
-    Desface desplazamiento = new Desface();
+    //Desface desplazamiento = new Desface();
 
     static PnlRegistroDeJugadores pnlRegistroDeJugadores;
     static PnlTableroBotones pnlTablero;
     static PnlImagenIzquierda pnlImagenIzquierda;
     static PnlCreditosJuego pnlCreditosJuego;
 
-    // PnlTablero pnlTablero;
-
-    /**
-     * Creates new form FrmChessGame
-     */
     public FrmChessGame() {
         initComponents();
         //para que la ventana aparezca en el centro y no en la esquina
@@ -127,7 +117,7 @@ public class FrmChessGame extends javax.swing.JFrame {
         );
 
         pnlMenuIzquierdo.add(pnlJugar);
-        pnlJugar.setBounds(-270, 240, 360, 80);
+        pnlJugar.setBounds(40, 190, 360, 80);
 
         pnlPuntuaciones.setBackground(new java.awt.Color(0, 41, 133));
         pnlPuntuaciones.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -172,7 +162,7 @@ public class FrmChessGame extends javax.swing.JFrame {
         );
 
         pnlMenuIzquierdo.add(pnlPuntuaciones);
-        pnlPuntuaciones.setBounds(-270, 350, 360, 80);
+        pnlPuntuaciones.setBounds(40, 300, 360, 80);
 
         pnlCreditos.setBackground(new java.awt.Color(0, 41, 133));
         pnlCreditos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -217,7 +207,7 @@ public class FrmChessGame extends javax.swing.JFrame {
         );
 
         pnlMenuIzquierdo.add(pnlCreditos);
-        pnlCreditos.setBounds(-270, 460, 360, 80);
+        pnlCreditos.setBounds(40, 410, 360, 80);
 
         pnlFondo.add(pnlMenuIzquierdo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 650, 600));
 
@@ -244,44 +234,45 @@ public class FrmChessGame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void pnlJugarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlJugarMouseEntered
-
+/*
         if (pnlJugar.getX() >= -270 && pnlJugar.getX() <= 0) {
 // libreria importada de desplazamiento
             //( objeto a mover | desde donde comienza  | donde termina | pasos en ir de a hacia b | tiempo)
             desplazamiento.desplazarDerecha(pnlJugar, -270, 0, 10, 15);
         }
         //comentario
-
+*/
     }//GEN-LAST:event_pnlJugarMouseEntered
 
     private void pnlJugarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlJugarMouseExited
 
         // lo mismo pero al revés el inicio y final
-        desplazamiento.desplazarIzquierda(pnlJugar, 0, -270, 10, 15);
+        //desplazamiento.desplazarIzquierda(pnlJugar, 0, -270, 10, 15);
     }//GEN-LAST:event_pnlJugarMouseExited
 
     private void pnlPuntuacionesMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlPuntuacionesMouseEntered
         // TODO add your handling code here:
-        desplazamiento.desplazarDerecha(pnlPuntuaciones, -270, 0, 10, 15);
+        //desplazamiento.desplazarDerecha(pnlPuntuaciones, -270, 0, 10, 15);
     }//GEN-LAST:event_pnlPuntuacionesMouseEntered
 
     private void pnlPuntuacionesMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlPuntuacionesMouseExited
         // TODO add your handling code here:
-        desplazamiento.desplazarIzquierda(pnlPuntuaciones, 0, -270, 10, 15);
+        //desplazamiento.desplazarIzquierda(pnlPuntuaciones, 0, -270, 10, 15);
     }//GEN-LAST:event_pnlPuntuacionesMouseExited
 
     private void pnlCreditosMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlCreditosMouseEntered
         // TODO add your handling code here:
-        desplazamiento.desplazarDerecha(pnlCreditos, -270, 0, 10, 15);
+        //desplazamiento.desplazarDerecha(pnlCreditos, -270, 0, 10, 15);
     }//GEN-LAST:event_pnlCreditosMouseEntered
 
     private void pnlCreditosMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlCreditosMouseExited
         // TODO add your handling code here:
-        desplazamiento.desplazarIzquierda(pnlCreditos, 0, -270, 10, 15);
+        //desplazamiento.desplazarIzquierda(pnlCreditos, 0, -270, 10, 15);
     }//GEN-LAST:event_pnlCreditosMouseExited
 
     private void pnlJugarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlJugarMouseClicked
         // TODO add your handling code here:
+        
         pnlRegistroDeJugadores = new PnlRegistroDeJugadores();
         agregarPanelDerecho(pnlRegistroDeJugadores);
         //Controlador controlador = new Controlador();
@@ -303,6 +294,7 @@ public class FrmChessGame extends javax.swing.JFrame {
 
     public static void agregarPanelDerecho(JPanel pnl) {
         //ajustamos el tamaño
+        
         pnl.setSize(350, 600);
         //colocamos, la esquina superior izquierda posee coordenadas (0,0)
         pnl.setLocation(0, 0);
