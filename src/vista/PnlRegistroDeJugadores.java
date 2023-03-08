@@ -318,6 +318,9 @@ public class PnlRegistroDeJugadores extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Ingrese el nombre de ambos jugadores");
 
         } else {
+            
+            if ((rbtBlancasPrimerJugador.isSelected() && rbtNegrasSegundoJugador.isSelected()) ||
+                    (rbtBlancasSegundoJugador.isSelected() && rbtNegrasPrimerJugador.isSelected())){
 
             jugadores[0][0] = nombrePrimerJugador;
             jugadores[0][1] = colorFichaPrimerJugador;
@@ -330,6 +333,9 @@ public class PnlRegistroDeJugadores extends javax.swing.JPanel {
             
             pnlMenuDeJuego = new PnlMenuDeJuego();
             FrmChessGame.agregarPanelDerecho(pnlMenuDeJuego);
+            } else {
+                JOptionPane.showMessageDialog(null, "Escoja un color de ficha");
+            }
         }
 
 
@@ -395,6 +401,7 @@ public class PnlRegistroDeJugadores extends javax.swing.JPanel {
             return "Negras";
         }
     }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup btgFichaPrimerJugador;
     private javax.swing.ButtonGroup btgFichaSegundoJugador;

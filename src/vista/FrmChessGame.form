@@ -323,11 +323,6 @@
           </Layout>
           <SubComponents>
             <Component class="javax.swing.JLabel" name="lblImagenAjedrezProvicional">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/iconos/Chess.jpg"/>
-                </Property>
-              </Properties>
             </Component>
           </SubComponents>
         </Container>

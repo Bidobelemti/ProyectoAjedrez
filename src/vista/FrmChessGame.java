@@ -17,12 +17,16 @@ public class FrmChessGame extends javax.swing.JFrame {
     static PnlTableroBotones pnlTablero;
     static PnlImagenIzquierda pnlImagenIzquierda;
     static PnlCreditosJuego pnlCreditosJuego;
+    static PnlImagenDerecha pnlImagenDerecha;
 
     public FrmChessGame() {
         initComponents();
         //para que la ventana aparezca en el centro y no en la esquina
         this.setLocationRelativeTo(null);
         this.setTitle("Chess Game");
+        pnlImagenDerecha = new PnlImagenDerecha();
+        agregarPanelDerecho(pnlImagenDerecha);
+        
     }
 
     /**
@@ -212,8 +216,6 @@ public class FrmChessGame extends javax.swing.JFrame {
         pnlFondo.add(pnlMenuIzquierdo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 650, 600));
 
         pnlMenuDerecho.setBackground(new java.awt.Color(255, 255, 255));
-
-        lblImagenAjedrezProvicional.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Chess.jpg"))); // NOI18N
 
         javax.swing.GroupLayout pnlMenuDerechoLayout = new javax.swing.GroupLayout(pnlMenuDerecho);
         pnlMenuDerecho.setLayout(pnlMenuDerechoLayout);
