@@ -14,7 +14,6 @@ public class Jugador {
     private final String usuario;
     private final String color;
     private ArrayList<Ficha> fichas;
-    private int puntaje;
     
     public Jugador(String usuario, String color, ArrayList fichas){
         this.fichas = new ArrayList<>();
@@ -29,14 +28,6 @@ public class Jugador {
     
     public void setFichas(ArrayList<Ficha> fichas) {
         this.fichas = fichas;
-    }
-
-    public int getPuntaje() {
-        return puntaje;
-    }
-
-    public void setPuntaje(int puntaje) {
-        this.puntaje = puntaje;
     }
 
     public String getUsuario() {
