@@ -1,21 +1,19 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package vista;
 
 import desplazable.Desface;
-import java.awt.BorderLayout;
-import javax.swing.JPanel;
-//import utilidades.Controlador;
+import static vista.FrmChessGame.agregarPanelDerecho;
+import static vista.FrmChessGame.agregarPanelIzquierdo;
 
 /**
  *
- * @author pc
+ * @author Bidob
  */
-public class FrmChessGame extends javax.swing.JFrame {
+public class PnlMenuIzquierdoPrincipal extends javax.swing.JPanel {
 
-    //se inicializa la variable de la clase de desplazamiento
     Desface desplazamiento = new Desface();
 
     static PnlRegistroDeJugadores pnlRegistroDeJugadores;
@@ -23,16 +21,12 @@ public class FrmChessGame extends javax.swing.JFrame {
     static PnlImagenIzquierda pnlImagenIzquierda;
     static PnlCreditosJuego pnlCreditosJuego;
 
-    // PnlTablero pnlTablero;
-
     /**
-     * Creates new form FrmChessGame
+     * Creates new form PnlMenuIzquierdoPrincipal
      */
-    public FrmChessGame() {
+    public PnlMenuIzquierdoPrincipal() {
         initComponents();
-        //para que la ventana aparezca en el centro y no en la esquina
-        this.setLocationRelativeTo(null);
-        this.setTitle("Chess Game");
+        
     }
 
     /**
@@ -44,7 +38,6 @@ public class FrmChessGame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        pnlFondo = new javax.swing.JPanel();
         pnlMenuIzquierdo = new javax.swing.JPanel();
         pnlFondoAzul = new javax.swing.JPanel();
         pnlJugar = new javax.swing.JPanel();
@@ -56,14 +49,6 @@ public class FrmChessGame extends javax.swing.JFrame {
         pnlCreditos = new javax.swing.JPanel();
         lblICreditos = new javax.swing.JLabel();
         lblCreditos = new javax.swing.JLabel();
-        pnlMenuDerecho = new javax.swing.JPanel();
-        lblImagenAjedrezProvicional = new javax.swing.JLabel();
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        pnlFondo.setBackground(new java.awt.Color(255, 255, 255));
-        pnlFondo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         pnlMenuIzquierdo.setBackground(new java.awt.Color(255, 255, 255));
         pnlMenuIzquierdo.setLayout(null);
@@ -219,39 +204,46 @@ public class FrmChessGame extends javax.swing.JFrame {
         pnlMenuIzquierdo.add(pnlCreditos);
         pnlCreditos.setBounds(-270, 460, 360, 80);
 
-        pnlFondo.add(pnlMenuIzquierdo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 650, 600));
-
-        pnlMenuDerecho.setBackground(new java.awt.Color(255, 255, 255));
-
-        lblImagenAjedrezProvicional.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Chess.jpg"))); // NOI18N
-
-        javax.swing.GroupLayout pnlMenuDerechoLayout = new javax.swing.GroupLayout(pnlMenuDerecho);
-        pnlMenuDerecho.setLayout(pnlMenuDerechoLayout);
-        pnlMenuDerechoLayout.setHorizontalGroup(
-            pnlMenuDerechoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblImagenAjedrezProvicional, javax.swing.GroupLayout.PREFERRED_SIZE, 780, javax.swing.GroupLayout.PREFERRED_SIZE)
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 650, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(pnlMenuIzquierdo, javax.swing.GroupLayout.PREFERRED_SIZE, 650, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
-        pnlMenuDerechoLayout.setVerticalGroup(
-            pnlMenuDerechoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblImagenAjedrezProvicional, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 600, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(pnlMenuIzquierdo, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
-
-        pnlFondo.add(pnlMenuDerecho, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 0, 350, 600));
-
-        getContentPane().add(pnlFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 600));
-
-        pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void pnlJugarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlJugarMouseClicked
+        // TODO add your handling code here:
+        pnlRegistroDeJugadores = new PnlRegistroDeJugadores();
+        agregarPanelDerecho(pnlRegistroDeJugadores);
+        //Controlador controlador = new Controlador();
+        pnlImagenIzquierda = new PnlImagenIzquierda();
+        agregarPanelIzquierdo(pnlImagenIzquierda);
+
+    }//GEN-LAST:event_pnlJugarMouseClicked
 
     private void pnlJugarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlJugarMouseEntered
 
         if (pnlJugar.getX() >= -270 && pnlJugar.getX() <= 0) {
-// libreria importada de desplazamiento
+            // libreria importada de desplazamiento
             //( objeto a mover | desde donde comienza  | donde termina | pasos en ir de a hacia b | tiempo)
             desplazamiento.desplazarDerecha(pnlJugar, -270, 0, 10, 15);
         }
         //comentario
-
     }//GEN-LAST:event_pnlJugarMouseEntered
 
     private void pnlJugarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlJugarMouseExited
@@ -259,6 +251,12 @@ public class FrmChessGame extends javax.swing.JFrame {
         // lo mismo pero al revés el inicio y final
         desplazamiento.desplazarIzquierda(pnlJugar, 0, -270, 10, 15);
     }//GEN-LAST:event_pnlJugarMouseExited
+
+    private void pnlPuntuacionesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlPuntuacionesMouseClicked
+        // TODO add your handling code here:
+        pnlPuntuaciones = new PnlPuntuaciones();
+        agregarPanelDerecho(pnlPuntuaciones);
+    }//GEN-LAST:event_pnlPuntuacionesMouseClicked
 
     private void pnlPuntuacionesMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlPuntuacionesMouseEntered
         // TODO add your handling code here:
@@ -270,6 +268,12 @@ public class FrmChessGame extends javax.swing.JFrame {
         desplazamiento.desplazarIzquierda(pnlPuntuaciones, 0, -270, 10, 15);
     }//GEN-LAST:event_pnlPuntuacionesMouseExited
 
+    private void pnlCreditosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlCreditosMouseClicked
+        // TODO add your handling code here:
+        pnlCreditosJuego = new PnlCreditosJuego();
+        agregarPanelDerecho(pnlCreditosJuego);
+    }//GEN-LAST:event_pnlCreditosMouseClicked
+
     private void pnlCreditosMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlCreditosMouseEntered
         // TODO add your handling code here:
         desplazamiento.desplazarDerecha(pnlCreditos, -270, 0, 10, 15);
@@ -280,120 +284,17 @@ public class FrmChessGame extends javax.swing.JFrame {
         desplazamiento.desplazarIzquierda(pnlCreditos, 0, -270, 10, 15);
     }//GEN-LAST:event_pnlCreditosMouseExited
 
-    private void pnlJugarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlJugarMouseClicked
-        // TODO add your handling code here:
-        pnlRegistroDeJugadores = new PnlRegistroDeJugadores();
-        agregarPanelDerecho(pnlRegistroDeJugadores);
-        //Controlador controlador = new Controlador();
-        pnlImagenIzquierda = new PnlImagenIzquierda();
-        agregarPanelIzquierdo(pnlImagenIzquierda);
-        
-
-    }//GEN-LAST:event_pnlJugarMouseClicked
-
-    private void pnlPuntuacionesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlPuntuacionesMouseClicked
-        // TODO add your handling code here:
-        pnlPuntuaciones = new PnlPuntuaciones();
-        agregarPanelDerecho(pnlPuntuaciones);
-    }//GEN-LAST:event_pnlPuntuacionesMouseClicked
-
-    private void pnlCreditosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlCreditosMouseClicked
-        // TODO add your handling code here:
-        pnlCreditosJuego = new PnlCreditosJuego();
-        agregarPanelDerecho(pnlCreditosJuego);
-    }//GEN-LAST:event_pnlCreditosMouseClicked
-
-    public static void agregarPanelDerecho(JPanel pnl) {
-        //ajustamos el tamaño
-        pnl.setSize(350, 600);
-        //colocamos, la esquina superior izquierda posee coordenadas (0,0)
-        pnl.setLocation(0, 0);
-        //remueve lo del panel inicio
-        pnlMenuDerecho.removeAll();
-        //en el panel inicio agregue el panel clientes con una ubicación
-        pnlMenuDerecho.add(pnl, BorderLayout.CENTER);
-        //elimina toda la jerarquia y la construye nuevamente
-        pnlMenuDerecho.revalidate();
-        pnlMenuDerecho.repaint();
-    }
-
-    public static void agregarPanelIzquierdo(JPanel pnl) {
-        //ajustamos el tamaño
-        pnl.setSize(650, 600);
-        //colocamos, la esquina superior izquierda posee coordenadas (0,0)
-        pnl.setLocation(0, 0);
-        //remueve lo del panel inicio
-        pnlMenuIzquierdo.removeAll();
-        //en el panel inicio agregue el panel clientes con una ubicación
-        pnlMenuIzquierdo.add(pnl, BorderLayout.CENTER);
-        //elimina toda la jerarquia y la construye nuevamente
-        pnlMenuIzquierdo.revalidate();
-        pnlMenuIzquierdo.repaint();
-    }
-    
-    public static void agregarPanelFondo(JPanel pnl) {
-        //ajustamos el tamaño
-        pnl.setSize(1000, 600);
-        //colocamos, la esquina superior izquierda posee coordenadas (0,0)
-        pnl.setLocation(0, 0);
-        //remueve lo del panel inicio
-        pnlMenuIzquierdo.removeAll();
-        //en el panel inicio agregue el panel clientes con una ubicación
-        pnlMenuIzquierdo.add(pnl, BorderLayout.CENTER);
-        //elimina toda la jerarquia y la construye nuevamente
-        pnlMenuIzquierdo.revalidate();
-        pnlMenuIzquierdo.repaint();
-    }
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(FrmChessGame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(FrmChessGame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(FrmChessGame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(FrmChessGame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new FrmChessGame().setVisible(true);
-            }
-        });
-    }
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel lblCreditos;
     private javax.swing.JLabel lblICreditos;
     private javax.swing.JLabel lblIconoJugar;
     private javax.swing.JLabel lblIconoPuntuaciones;
-    private javax.swing.JLabel lblImagenAjedrezProvicional;
     private javax.swing.JLabel lblJugar;
     private javax.swing.JLabel lblPuntuaciones;
     private javax.swing.JPanel pnlCreditos;
-    private javax.swing.JPanel pnlFondo;
     private javax.swing.JPanel pnlFondoAzul;
     private javax.swing.JPanel pnlJugar;
-    public static javax.swing.JPanel pnlMenuDerecho;
     public static javax.swing.JPanel pnlMenuIzquierdo;
     private javax.swing.JPanel pnlPuntuaciones;
     // End of variables declaration//GEN-END:variables

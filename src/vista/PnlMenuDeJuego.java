@@ -21,7 +21,7 @@ public class PnlMenuDeJuego extends javax.swing.JPanel {
     public PnlMenuDeJuego() {
         initComponents();
         //colocarTurno(esBlanca);
-        imprimirJugadores(jugadorUno, jugadorDos);
+        
     }
 
     /**
@@ -128,11 +128,11 @@ public class PnlMenuDeJuego extends javax.swing.JPanel {
     private javax.swing.JLabel lblColorJugador;
     private javax.swing.JLabel lblMensajeBlancas;
     private javax.swing.JLabel lblMensajeNegras;
-    private javax.swing.JLabel lblNombreJugadorBlancas;
-    private javax.swing.JLabel lblNombreJugadorNegras;
+    public javax.swing.JLabel lblNombreJugadorBlancas;
+    public javax.swing.JLabel lblNombreJugadorNegras;
     private javax.swing.JLabel lblReyBlanco;
     private javax.swing.JLabel lblReyNegro;
-    public static javax.swing.JPanel pnlColorJugador;
+    public javax.swing.JPanel pnlColorJugador;
     private javax.swing.JPanel pnlFondo;
     // End of variables declaration//GEN-END:variables
 }
