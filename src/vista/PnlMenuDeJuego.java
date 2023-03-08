@@ -4,7 +4,7 @@
  */
 package vista;
 
-import modelo.TableroAjedrez;
+import java.awt.Color;
 
 /**
  *
@@ -12,10 +12,14 @@ import modelo.TableroAjedrez;
  */
 public class PnlMenuDeJuego extends javax.swing.JPanel {
 
-    TableroAjedrez tablero = new TableroAjedrez();
-
     public PnlMenuDeJuego() {
         initComponents();
+    }
+
+    public PnlMenuDeJuego(String usuarioUno, String usuarioDos, boolean esBlanco) {
+        initComponents();
+        imprimirJugadores(usuarioUno, usuarioDos);
+        colocarTurno(esBlanco);
     }
 
     @SuppressWarnings("unchecked")
@@ -89,28 +93,27 @@ public class PnlMenuDeJuego extends javax.swing.JPanel {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnlFondo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pnlFondo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
     public void imprimirJugadores(String usuarioUno, String usuarioDos) {
-        System.out.println(usuarioUno + " " + usuarioDos);
+        System.out.println(usuarioUno + " nb " + usuarioDos);
         lblNombreJugadorBlancas.setText(usuarioUno);
         lblNombreJugadorNegras.setText(usuarioDos);
     }
 
     public void colocarTurno(boolean esBlanco) {
-
-        if (esBlanco == true) {
-            System.out.println("entrado al metodo");
-            if (esBlanco) {
-                System.out.println("Entra aquii");
-                lblColorJugador.setText("Blanco");
-            } else {
-                System.out.println("Entra al else");
-                lblColorJugador.setText("Negro");
-            }
+        System.out.println("entrado al metodo");
+        if (esBlanco) {
+            System.out.println("Entra aquii");
+            lblColorJugador.setText("Blanco");
+        } else {
+            System.out.println("Entra al else");
+            lblColorJugador.setText("Negro");
         }
+
+        pnlFondo.repaint();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

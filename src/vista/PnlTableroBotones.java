@@ -16,6 +16,7 @@ import modelo.Rey;
 import modelo.Torre;
 
 public class PnlTableroBotones extends javax.swing.JPanel {
+
     JButton btnSeleccionado;
     JButton[][] matrizCasillas;
     JButton ArrayButtons[];
@@ -27,6 +28,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
     Jugador negro;
     JdCoronacion corona;
     PnlMenuDeJuego pnlMenuDeJuego;
+
     public PnlTableroBotones() {
         initComponents();
         pnlMenuDeJuego = new PnlMenuDeJuego();
@@ -53,7 +55,10 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         btnCaballoNegro.setVisible(false);
         btnAlfilNegro.setVisible(false);
         btnDamaNegra.setVisible(false);
+        System.out.println(tablero.esTurnoBlanco()+" turno");
+        colorearBordes(tablero.esTurnoBlanco());
     }
+
     public void llenarMatriz() {
         int n = 0;
         for (int i = 0; i < 8; i++) {
@@ -62,6 +67,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
             }
         }
     }
+
     public void iniciarFichas() {
         /**
          * Declaracion de fichas 1 - peon 2 - Torre 3 - Caballo 4 - Alfil 5 -
@@ -146,8 +152,6 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         negro = new Jugador("Pepe", "negro", fichasNegras);
         tablero.setBlanco(blanco);
         tablero.setNegro(negro);
-        pnlMenuDeJuego.imprimirJugadores(blanco.getUsuario(), negro.getUsuario());
-        pnlMenuDeJuego.colocarTurno(true);
     }
 
     @SuppressWarnings("unchecked")
@@ -235,7 +239,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new java.awt.BorderLayout());
 
-        pnlFondoTablero.setBackground(new java.awt.Color(255, 255, 255));
+        pnlFondoTablero.setBackground(new java.awt.Color(0, 109, 200));
         pnlFondoTablero.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnH1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/TorreBlanca.png"))); // NOI18N
@@ -1134,7 +1138,22 @@ public class PnlTableroBotones extends javax.swing.JPanel {
     private void btnH4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnH4ActionPerformed
         accionBoton(btnH4, 39);
     }//GEN-LAST:event_btnH4ActionPerformed
-    private void accionBoton(JButton boton, int posicion) {
+    private void colorearBordes(boolean esBlanco) {
+        if (esBlanco) {
+            pnlBordeSuperior.setBackground(Color.WHITE);
+            pnlBordeInf.setBackground(Color.WHITE);
+            pnlBordeIzquierdo.setBackground(Color.WHITE);
+            pnlBordeDerecho.setBackground(Color.WHITE);
+        } else {
+            pnlBordeSuperior.setBackground(Color.BLACK);
+            pnlBordeInf.setBackground(Color.BLACK);
+            pnlBordeIzquierdo.setBackground(Color.BLACK);
+            pnlBordeDerecho.setBackground(Color.BLACK);
+        }
+    }
+
+
+private void accionBoton(JButton boton, int posicion) {
         boolean turnoBlanco = tablero.esTurnoBlanco();
         if (boton.getBackground().equals(Color.blue)) {
             ficha.setCasilla(null);
@@ -1285,6 +1304,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
             }
             TableroAjedrez.pintarCasillasNormal(tablero.getTablero());
             tablero.cambiarTurno();
+            colorearBordes(tablero.esTurnoBlanco());
             pnlMenuDeJuego.colocarTurno(tablero.esTurnoBlanco());
             btnSeleccionado = null;
             ficha = null;
@@ -1469,6 +1489,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                     }
                     TableroAjedrez.pintarCasillasNormal(tablero.getTablero());
                     tablero.cambiarTurno();
+                    colorearBordes(tablero.esTurnoBlanco());
                     btnSeleccionado = null;
                     ficha = null;
                 }

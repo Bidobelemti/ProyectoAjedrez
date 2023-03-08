@@ -44,7 +44,7 @@ public abstract class Ficha {
     public int getIdentificacion() {
         return identificacion;
     }
-    
+
 
     public void poneImagenes(int w, int h) {
         try {
