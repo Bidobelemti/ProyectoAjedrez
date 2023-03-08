@@ -1365,15 +1365,14 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                     if (turnoBlanco) {
                         if (tablero.comer(tablero.getNegro(), comida)) {
                             JOptionPane.showMessageDialog(null, "¡Las fichas BLANCAS gana la partida!");
-                            // pnlImagenIzquierda = new PnlImagenIzquierda();
-                            //  FrmChessGame.agregarPanelIzquierdo(pnlImagenIzquierda);
-
-                            //this.dispose();
+                            PnlMenuIzquierdoPrincipal pnlMenu = new PnlMenuIzquierdoPrincipal();
+                            FrmChessGame.agregarPanelIzquierdo(pnlMenu);
                         }
                     } else {
                         if (tablero.comer(tablero.getBlanco(), comida)) {
                             JOptionPane.showMessageDialog(null, "¡Las fichas NEGRAS gana la partida!");
-                            //this.dispose();
+                            PnlMenuIzquierdoPrincipal pnlMenu = new PnlMenuIzquierdoPrincipal();
+                            FrmChessGame.agregarPanelIzquierdo(pnlMenu);
                         }
                     }
 
