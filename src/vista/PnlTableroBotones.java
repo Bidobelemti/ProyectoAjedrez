@@ -1561,6 +1561,7 @@ private void accionBoton(JButton boton, int posicion) {
             }
         }
     }
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public static javax.swing.JButton btnA1;
     public static javax.swing.JButton btnA2;

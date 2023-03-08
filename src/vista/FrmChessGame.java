@@ -10,8 +10,7 @@ import javax.swing.JPanel;
  */
 public class FrmChessGame extends javax.swing.JFrame {
 
-    //se inicializa la variable de la clase de desplazamiento
-    //Desface desplazamiento = new Desface();
+    //se inicializa los panales
 
     static PnlRegistroDeJugadores pnlRegistroDeJugadores;
     static PnlTableroBotones pnlTablero;
@@ -85,12 +84,6 @@ public class FrmChessGame extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 pnlJugarMouseClicked(evt);
             }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                pnlJugarMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                pnlJugarMouseExited(evt);
-            }
         });
 
         lblIconoJugar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Jugar.png"))); // NOI18N
@@ -130,12 +123,6 @@ public class FrmChessGame extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 pnlPuntuacionesMouseClicked(evt);
             }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                pnlPuntuacionesMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                pnlPuntuacionesMouseExited(evt);
-            }
         });
 
         lblIconoPuntuaciones.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Puntuación.png"))); // NOI18N
@@ -174,12 +161,6 @@ public class FrmChessGame extends javax.swing.JFrame {
         pnlCreditos.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 pnlCreditosMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                pnlCreditosMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                pnlCreditosMouseExited(evt);
             }
         });
 
@@ -235,49 +216,11 @@ public class FrmChessGame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void pnlJugarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlJugarMouseEntered
-/*
-        if (pnlJugar.getX() >= -270 && pnlJugar.getX() <= 0) {
-// libreria importada de desplazamiento
-            //( objeto a mover | desde donde comienza  | donde termina | pasos en ir de a hacia b | tiempo)
-            desplazamiento.desplazarDerecha(pnlJugar, -270, 0, 10, 15);
-        }
-        //comentario
-*/
-    }//GEN-LAST:event_pnlJugarMouseEntered
-
-    private void pnlJugarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlJugarMouseExited
-
-        // lo mismo pero al revés el inicio y final
-        //desplazamiento.desplazarIzquierda(pnlJugar, 0, -270, 10, 15);
-    }//GEN-LAST:event_pnlJugarMouseExited
-
-    private void pnlPuntuacionesMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlPuntuacionesMouseEntered
-        // TODO add your handling code here:
-        //desplazamiento.desplazarDerecha(pnlPuntuaciones, -270, 0, 10, 15);
-    }//GEN-LAST:event_pnlPuntuacionesMouseEntered
-
-    private void pnlPuntuacionesMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlPuntuacionesMouseExited
-        // TODO add your handling code here:
-        //desplazamiento.desplazarIzquierda(pnlPuntuaciones, 0, -270, 10, 15);
-    }//GEN-LAST:event_pnlPuntuacionesMouseExited
-
-    private void pnlCreditosMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlCreditosMouseEntered
-        // TODO add your handling code here:
-        //desplazamiento.desplazarDerecha(pnlCreditos, -270, 0, 10, 15);
-    }//GEN-LAST:event_pnlCreditosMouseEntered
-
-    private void pnlCreditosMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlCreditosMouseExited
-        // TODO add your handling code here:
-        //desplazamiento.desplazarIzquierda(pnlCreditos, 0, -270, 10, 15);
-    }//GEN-LAST:event_pnlCreditosMouseExited
-
     private void pnlJugarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlJugarMouseClicked
         // TODO add your handling code here:
         
         pnlRegistroDeJugadores = new PnlRegistroDeJugadores();
         agregarPanelDerecho(pnlRegistroDeJugadores);
-        //Controlador controlador = new Controlador();
         pnlImagenIzquierda = new PnlImagenIzquierda();
         agregarPanelIzquierdo(pnlImagenIzquierda);
     }//GEN-LAST:event_pnlJugarMouseClicked
@@ -294,6 +237,10 @@ public class FrmChessGame extends javax.swing.JFrame {
         agregarPanelDerecho(pnlCreditosJuego);
     }//GEN-LAST:event_pnlCreditosMouseClicked
 
+    /**
+     * Método para agregar un panel derecho
+     * @param pnl 
+     */
     public static void agregarPanelDerecho(JPanel pnl) {
         //ajustamos el tamaño
         
@@ -308,6 +255,11 @@ public class FrmChessGame extends javax.swing.JFrame {
         pnlMenuDerecho.revalidate();
         pnlMenuDerecho.repaint();
     }
+    
+    /**
+     * Método para agregar un panel izquierdo
+     * @param pnl 
+     */
 
     public static void agregarPanelIzquierdo(JPanel pnl) {
         //ajustamos el tamaño
@@ -322,6 +274,11 @@ public class FrmChessGame extends javax.swing.JFrame {
         pnlMenuIzquierdo.revalidate();
         pnlMenuIzquierdo.repaint();
     }
+    
+    /**
+     * Método para agregar un panel de fondo
+     * @param pnl 
+     */
     
     public static void agregarPanelFondo(JPanel pnl) {
         //ajustamos el tamaño
