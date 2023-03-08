@@ -16,7 +16,6 @@ import modelo.Rey;
 import modelo.Torre;
 
 public class PnlTableroBotones extends javax.swing.JPanel {
-
     JButton btnSeleccionado;
     JButton[][] matrizCasillas;
     JButton ArrayButtons[];
@@ -28,12 +27,12 @@ public class PnlTableroBotones extends javax.swing.JPanel {
     Jugador negro;
     JdCoronacion corona;
     PnlMenuDeJuego pnlMenuDeJuego;
-
     public PnlTableroBotones() {
         initComponents();
         pnlMenuDeJuego = new PnlMenuDeJuego();
         matrizCasillas = new JButton[8][8];
-        ArrayButtons = new JButton[]{btnA8, btnB8, btnC8, btnD8, btnE8, btnF8, btnG8, btnH8,
+        ArrayButtons = new JButton[]{
+            btnA8, btnB8, btnC8, btnD8, btnE8, btnF8, btnG8, btnH8,
             btnA7, btnB7, btnC7, btnD7, btnE7, btnF7, btnG7, btnH7,
             btnA6, btnB6, btnC6, btnD6, btnE6, btnF6, btnG6, btnH6,
             btnA5, btnB5, btnC5, btnD5, btnE5, btnF5, btnG5, btnH5,
@@ -54,19 +53,15 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         btnCaballoNegro.setVisible(false);
         btnAlfilNegro.setVisible(false);
         btnDamaNegra.setVisible(false);
-
     }
-
     public void llenarMatriz() {
         int n = 0;
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++, n++) {
                 matrizCasillas[i][j] = ArrayButtons[n];
-
             }
         }
     }
-
     public void iniciarFichas() {
         /**
          * Declaracion de fichas 1 - peon 2 - Torre 3 - Caballo 4 - Alfil 5 -
@@ -80,7 +75,6 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         Ficha peonBlanco5 = new Peon(true, 1, 5, tablero.getTablero()[6][5]);
         Ficha peonBlanco6 = new Peon(true, 1, 6, tablero.getTablero()[6][6]);
         Ficha peonBlanco7 = new Peon(true, 1, 7, tablero.getTablero()[6][7]);
-
         fichasBlancas.add(peonBlanco0);
         fichasBlancas.add(peonBlanco1);
         fichasBlancas.add(peonBlanco2);
@@ -89,29 +83,24 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         fichasBlancas.add(peonBlanco5);
         fichasBlancas.add(peonBlanco6);
         fichasBlancas.add(peonBlanco7);
-
         //torres blancos
         Ficha torreBlanco0 = new Torre(true, 2, 8, tablero.getTablero()[7][0]);
         Ficha torreBlanco1 = new Torre(true, 2, 9, tablero.getTablero()[7][7]);
         fichasBlancas.add(torreBlanco0);
         fichasBlancas.add(torreBlanco1);
-
         //Caballos blancos
         Ficha caballoBlanco0 = new Caballo(true, 3, 10, tablero.getTablero()[7][1]);
         Ficha caballoBlanco1 = new Caballo(true, 3, 11, tablero.getTablero()[7][6]);
         fichasBlancas.add(caballoBlanco0);
         fichasBlancas.add(caballoBlanco1);
-
         //Alfiles blancos
         Ficha alfilBlanco0 = new Alfil(true, 4, 12, tablero.getTablero()[7][2]);
         Ficha alfilBlanco1 = new Alfil(true, 4, 13, tablero.getTablero()[7][5]);
         fichasBlancas.add(alfilBlanco0);
         fichasBlancas.add(alfilBlanco1);
-
         //Dama blanco
         Ficha damaBlanco = new Dama(true, 5, 14, tablero.getTablero()[7][3]);
         fichasBlancas.add(damaBlanco);
-
         //Rey blanco
         Ficha reyBlanco = new Rey(true, 6, 15, tablero.getTablero()[7][4]);
         fichasBlancas.add(reyBlanco);
@@ -124,7 +113,6 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         Ficha peonNegro5 = new Peon(false, 1, 5, tablero.getTablero()[1][5]);
         Ficha peonNegro6 = new Peon(false, 1, 6, tablero.getTablero()[1][6]);
         Ficha peonNegro7 = new Peon(false, 1, 7, tablero.getTablero()[1][7]);
-
         fichasNegras.add(peonNegro0);
         fichasNegras.add(peonNegro1);
         fichasNegras.add(peonNegro2);
@@ -133,33 +121,27 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         fichasNegras.add(peonNegro5);
         fichasNegras.add(peonNegro6);
         fichasNegras.add(peonNegro7);
-
         //Torres negras
         Ficha torreNegro0 = new Torre(false, 2, 8, tablero.getTablero()[0][0]);
         Ficha torreNegro1 = new Torre(false, 2, 9, tablero.getTablero()[0][7]);
         fichasNegras.add(torreNegro0);
         fichasNegras.add(torreNegro1);
-
         //Caballos negros
         Ficha caballoNegro0 = new Caballo(false, 3, 10, tablero.getTablero()[0][1]);
         Ficha caballoNegro1 = new Caballo(false, 3, 11, tablero.getTablero()[0][6]);
         fichasNegras.add(caballoNegro0);
         fichasNegras.add(caballoNegro1);
-
         //Alfiles negros
         Ficha alfilNegro0 = new Alfil(false, 4, 12, tablero.getTablero()[0][2]);
         Ficha alfilNegro1 = new Alfil(false, 4, 13, tablero.getTablero()[0][5]);
         fichasNegras.add(alfilNegro0);
         fichasNegras.add(alfilNegro1);
-
         //Dama blanco
         Ficha damaNegro = new Dama(true, 5, 14, tablero.getTablero()[0][3]);
         fichasNegras.add(damaNegro);
-
         //Rey negro
         Ficha reyNegro = new Rey(false, 6, 15, tablero.getTablero()[0][4]);
         fichasNegras.add(reyNegro);
-
         blanco = new Jugador("Camelo", "blanco", fichasBlancas);
         negro = new Jugador("Pepe", "negro", fichasNegras);
         tablero.setBlanco(blanco);
@@ -1152,28 +1134,22 @@ public class PnlTableroBotones extends javax.swing.JPanel {
     private void btnH4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnH4ActionPerformed
         accionBoton(btnH4, 39);
     }//GEN-LAST:event_btnH4ActionPerformed
-
     private void accionBoton(JButton boton, int posicion) {
         boolean turnoBlanco = tablero.esTurnoBlanco();
-
         if (boton.getBackground().equals(Color.blue)) {
             ficha.setCasilla(null);
             boton.setIcon(btnSeleccionado.getIcon());
             btnSeleccionado.setIcon(null);
             ficha.setCasilla(boton);
-
             if (ficha.getTipoFicha() == 1 && ((posicion >= 0) && (posicion <= 7)
                     || (posicion >= 56) && (posicion <= 63))) {
-
                 if (turnoBlanco && (posicion >= 0) && (posicion <= 7)) {
                     corona.setLocationRelativeTo(this);
                     corona.setVisible(true);
-
                     if (JdCoronacion.tipoFicha == 0) {
                         //Torre
                         Ficha torreBlancoCoronacion = new Torre(true, 2, ficha.getIdentificacion(), tablero.getTablero()[0][posicion % 8]);
                         ficha = null;
-
                         int i = 0;
                         while (ficha == null && (i < tablero.getBlanco().getFichas().size())) {
                             if (i < tablero.getBlanco().getFichas().size() && turnoBlanco) {
@@ -1185,7 +1161,6 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                             i++;
                         }
                         boton.setIcon(btnTorreBlanca.getIcon());
-
                     }
                     if (JdCoronacion.tipoFicha == 1) {
                         //caballo
@@ -1239,12 +1214,10 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                     if (!turnoBlanco && (posicion >= 56) && (posicion <= 63)) {
                         corona.setLocationRelativeTo(this);
                         corona.setVisible(true);
-
                         if (JdCoronacion.tipoFicha == 0) {
                             //Torre
                             Ficha torreNegroCoronacion = new Torre(false, 2, ficha.getIdentificacion(), tablero.getTablero()[7][posicion % 8]);
                             ficha = null;
-
                             int i = 0;
                             while (ficha == null && (i < tablero.getNegro().getFichas().size())) {
                                 if (i < tablero.getNegro().getFichas().size() && !turnoBlanco) {
@@ -1256,9 +1229,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                                 i++;
                             }
                             boton.setIcon(btnTorreNegra.getIcon());
-
                         }
-
                         if (JdCoronacion.tipoFicha == 1) {
                             //caballo
                             Ficha caballoNegroCoronacion = new Caballo(false, 3, ficha.getIdentificacion(), tablero.getTablero()[7][posicion % 8]);
@@ -1275,7 +1246,6 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                             }
                             boton.setIcon(btnCaballoNegro.getIcon());
                         }
-
                         if (JdCoronacion.tipoFicha == 2) {
                             //alfil 4
                             Ficha alfilNegroCoronacion = new Alfil(false, 4, ficha.getIdentificacion(), tablero.getTablero()[7][posicion % 8]);
@@ -1292,7 +1262,6 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                             }
                             boton.setIcon(btnAlfilNegro.getIcon());
                         }
-
                         if (JdCoronacion.tipoFicha == 3) {
                             //dama 5
                             Ficha damaNegroCoronacion = new Dama(false, 5, ficha.getIdentificacion(), tablero.getTablero()[7][posicion % 8]);
@@ -1357,9 +1326,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                     boton.setIcon(btnSeleccionado.getIcon());
                     btnSeleccionado.setIcon(null);
                     ficha.setCasilla(boton);
-
                     if (ficha.getTipoFicha() == 1 && ((posicion >= 0) && (posicion <= 7) || (posicion >= 56) && (posicion <= 63))) {
-
                         if (turnoBlanco && (posicion >= 0) && (posicion <= 7)) {
                             corona.setLocationRelativeTo(this);
                             corona.setVisible(true);
@@ -1367,7 +1334,6 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                                 //Torre
                                 Ficha torreBlancoCoronacion = new Torre(true, 2, ficha.getIdentificacion(), tablero.getTablero()[0][posicion % 8]);
                                 ficha = null;
-
                                 int i = 0;
                                 while (ficha == null && (i < tablero.getBlanco().getFichas().size())) {
                                     if (i < tablero.getBlanco().getFichas().size() && turnoBlanco) {
@@ -1379,7 +1345,6 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                                     i++;
                                 }
                                 boton.setIcon(btnTorreBlanca.getIcon());
-
                             }
                             if (JdCoronacion.tipoFicha == 1) {
                                 //caballo
@@ -1429,17 +1394,14 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                                 }
                                 boton.setIcon(btnDamaBlanca.getIcon());
                             }
-
                         } else {
                             if (!turnoBlanco && (posicion >= 56) && (posicion <= 63)) {
                                 corona.setLocationRelativeTo(this);
                                 corona.setVisible(true);
-
                                 if (JdCoronacion.tipoFicha == 0) {
                                     //Torre
                                     Ficha torreNegroCoronacion = new Torre(false, 2, ficha.getIdentificacion(), tablero.getTablero()[7][posicion % 8]);
                                     ficha = null;
-
                                     int i = 0;
                                     while (ficha == null && (i < tablero.getNegro().getFichas().size())) {
                                         if (i < tablero.getNegro().getFichas().size() && !turnoBlanco) {
@@ -1451,9 +1413,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                                         i++;
                                     }
                                     boton.setIcon(btnTorreNegra.getIcon());
-
                                 }
-
                                 if (JdCoronacion.tipoFicha == 1) {
                                     //caballo
                                     Ficha caballoNegroCoronacion = new Caballo(false, 3, ficha.getIdentificacion(), tablero.getTablero()[7][posicion % 8]);
@@ -1470,7 +1430,6 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                                     }
                                     boton.setIcon(btnCaballoNegro.getIcon());
                                 }
-
                                 if (JdCoronacion.tipoFicha == 2) {
                                     //alfil 4
                                     Ficha alfilNegroCoronacion = new Alfil(false, 4, ficha.getIdentificacion(), tablero.getTablero()[7][posicion % 8]);
@@ -1487,7 +1446,6 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                                     }
                                     boton.setIcon(btnAlfilNegro.getIcon());
                                 }
-
                                 if (JdCoronacion.tipoFicha == 3) {
                                     //dama 5
                                     Ficha damaNegroCoronacion = new Dama(false, 5, ficha.getIdentificacion(), tablero.getTablero()[7][posicion % 8]);
@@ -1510,7 +1468,6 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                         }
                     }
                     TableroAjedrez.pintarCasillasNormal(tablero.getTablero());
-
                     tablero.cambiarTurno();
                     btnSeleccionado = null;
                     ficha = null;
@@ -1554,41 +1511,32 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                         }
                         System.out.println("peon");
                     }
-
                     if (ficha.getTipoFicha() == 2) {
                         System.out.println("torre");
                         ficha.movimiento(posicion, turnoBlanco, false);
-
                     }
-
                     if (ficha.getTipoFicha() == 3) {
                         System.out.println("caballo");
                         ficha.movimiento(posicion, turnoBlanco, false);
                     }
-
                     if (ficha.getTipoFicha() == 4) {
                         System.out.println("alfil");
                         ficha.movimiento(posicion, turnoBlanco, false);
                     }
-
                     if (ficha.getTipoFicha() == 5) {
                         System.out.println("dama");
                         ficha.movimiento(posicion, turnoBlanco, false);
                     }
-
                     if (ficha.getTipoFicha() == 6) {
                         System.out.println("rey");
                         ficha.movimiento(posicion, turnoBlanco, false);
                     }
-
                 } else {
                     System.out.println("no guarda nada ficha");
                 }
             }
         }
-
     }
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public static javax.swing.JButton btnA1;
     public static javax.swing.JButton btnA2;
