@@ -239,7 +239,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new java.awt.BorderLayout());
 
-        pnlFondoTablero.setBackground(new java.awt.Color(0, 109, 200));
+        pnlFondoTablero.setBackground(new java.awt.Color(255, 255, 255));
         pnlFondoTablero.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnH1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/TorreBlanca.png"))); // NOI18N
@@ -788,6 +788,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         pnlFondoTablero.add(btnA8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, 70, 70));
 
         pnlBordeIzquierdo.setBackground(new java.awt.Color(0, 109, 200));
+        pnlBordeIzquierdo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         javax.swing.GroupLayout pnlBordeIzquierdoLayout = new javax.swing.GroupLayout(pnlBordeIzquierdo);
         pnlBordeIzquierdo.setLayout(pnlBordeIzquierdoLayout);
@@ -803,6 +804,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         pnlFondoTablero.add(pnlBordeIzquierdo, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, -1, -1));
 
         pnlBordeSuperior.setBackground(new java.awt.Color(0, 109, 200));
+        pnlBordeSuperior.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         javax.swing.GroupLayout pnlBordeSuperiorLayout = new javax.swing.GroupLayout(pnlBordeSuperior);
         pnlBordeSuperior.setLayout(pnlBordeSuperiorLayout);
@@ -818,6 +820,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         pnlFondoTablero.add(pnlBordeSuperior, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, -1, -1));
 
         pnlBordeDerecho.setBackground(new java.awt.Color(0, 109, 200));
+        pnlBordeDerecho.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         javax.swing.GroupLayout pnlBordeDerechoLayout = new javax.swing.GroupLayout(pnlBordeDerecho);
         pnlBordeDerecho.setLayout(pnlBordeDerechoLayout);
@@ -833,6 +836,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         pnlFondoTablero.add(pnlBordeDerecho, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 20, -1, -1));
 
         pnlBordeInf.setBackground(new java.awt.Color(0, 109, 200));
+        pnlBordeInf.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         javax.swing.GroupLayout pnlBordeInfLayout = new javax.swing.GroupLayout(pnlBordeInf);
         pnlBordeInf.setLayout(pnlBordeInfLayout);
