@@ -52,8 +52,8 @@ public class PnlCreditosJuego extends javax.swing.JPanel {
         pnlFondo.add(lblIntegrantes, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 250, -1, -1));
 
         lblMishelRamirez.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblMishelRamirez.setText("Michelle Nicole Ramirez");
-        pnlFondo.add(lblMishelRamirez, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 340, -1, -1));
+        lblMishelRamirez.setText("Mishel Ramirez");
+        pnlFondo.add(lblMishelRamirez, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 340, -1, -1));
 
         lblMauricioMorales.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblMauricioMorales.setText("Mauricio Morales");

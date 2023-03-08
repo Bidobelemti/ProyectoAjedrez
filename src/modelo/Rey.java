@@ -24,7 +24,8 @@ public class Rey extends Ficha {
         super.movimientoY = posicion % 8;
         int i = movimientoX;
         int j = movimientoY;
-
+                
+        //movimiento del rey de fichas blancas
         if (turnoBlanco) {
             System.out.println("entra al metodo del rey");
             for (i = movimientoX - 1; i < movimientoX + 2; i++) {
