@@ -287,8 +287,6 @@ public class FrmChessGame extends javax.swing.JFrame {
         //Controlador controlador = new Controlador();
         pnlImagenIzquierda = new PnlImagenIzquierda();
         agregarPanelIzquierdo(pnlImagenIzquierda);
-        
-
     }//GEN-LAST:event_pnlJugarMouseClicked
 
     private void pnlPuntuacionesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlPuntuacionesMouseClicked
