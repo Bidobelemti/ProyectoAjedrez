@@ -1309,7 +1309,6 @@ private void accionBoton(JButton boton, int posicion) {
             TableroAjedrez.pintarCasillasNormal(tablero.getTablero());
             tablero.cambiarTurno();
             colorearBordes(tablero.esTurnoBlanco());
-            pnlMenuDeJuego.colocarTurno(tablero.esTurnoBlanco());
             btnSeleccionado = null;
             ficha = null;
         } else {
