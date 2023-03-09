@@ -28,9 +28,11 @@ public class PnlTableroBotones extends javax.swing.JPanel {
     Jugador negro;
     JdCoronacion corona;
     PnlMenuDeJuego pnlMenuDeJuego;
+    PnlRegistroPartidas pnlPrueba;
 
     public PnlTableroBotones() {
         initComponents();
+        pnlPrueba = new PnlRegistroPartidas();
         pnlMenuDeJuego = new PnlMenuDeJuego();
         matrizCasillas = new JButton[8][8];
         ArrayButtons = new JButton[]{
@@ -1361,7 +1363,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 if (comida != null) {
                     if (turnoBlanco) {
                         if (tablero.JaqueMate(tablero.getNegro(), comida)) {
-                            PnlRegistroPartidas.agregarJugadorALaTabla(blanco,negro);
+                            pnlPrueba.agregarJugadorALaTabla(blanco,negro);
                             String mensaje = "¡"+blanco.getUsuario()+" gana!";
                             JOptionPane.showMessageDialog(null, mensaje);
                             PnlMenuIzquierdoPrincipal pnlMenu = new PnlMenuIzquierdoPrincipal();
@@ -1371,7 +1373,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                         }
                     } else {
                         if (tablero.JaqueMate(tablero.getBlanco(), comida)) {
-                            PnlRegistroPartidas.agregarJugadorALaTabla(negro,blanco);
+                            pnlPrueba.agregarJugadorALaTabla(negro,blanco);
                             String mensaje = "¡"+negro.getUsuario()+" gana!";
                             JOptionPane.showMessageDialog(null, mensaje);
                             PnlMenuIzquierdoPrincipal pnlMenu = new PnlMenuIzquierdoPrincipal();
