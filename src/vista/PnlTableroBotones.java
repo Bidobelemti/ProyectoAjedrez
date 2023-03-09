@@ -164,8 +164,9 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         //Rey negro
         Ficha reyNegro = new Rey(false, 6, 15, tablero.getTablero()[0][4]);
         fichasNegras.add(reyNegro);
-        blanco = new Jugador("Camelo", "blanco", fichasBlancas);
-        negro = new Jugador("Pepe", "negro", fichasNegras);
+        blanco = new Jugador(PnlRegistroDeJugadores.retornarJugadorBlanco(), "blanco", fichasBlancas);
+        negro = new Jugador(PnlRegistroDeJugadores.retornarJugadorNegro(), "negro", fichasNegras);
+        System.out.println(blanco.getUsuario() +" "+negro.getUsuario());
         tablero.setBlanco(blanco);
         tablero.setNegro(negro);
     }
@@ -1185,7 +1186,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
      */
     private void accionBoton(JButton boton, int posicion) {
         boolean turnoBlanco = tablero.esTurnoBlanco();
-        if (boton.getBackground().equals(Color.blue)) {
+        if (boton.getBackground().equals(Color.decode("#ffff56"))) {
             ficha.setCasilla(null);
             boton.setIcon(btnSeleccionado.getIcon());
             btnSeleccionado.setIcon(null);
@@ -1338,7 +1339,7 @@ public class PnlTableroBotones extends javax.swing.JPanel {
             btnSeleccionado = null;
             ficha = null;
         } else {
-            if (boton.getBackground().equals(Color.red)) {
+            if (boton.getBackground().equals(Color.decode("#b22222"))) {
                 Ficha comida = null;
                 if (turnoBlanco) {
                     if (TableroAjedrez.casillaOcupada(boton, tablero.getNegro())) {
@@ -1360,15 +1361,23 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 if (comida != null) {
                     if (turnoBlanco) {
                         if (tablero.JaqueMate(tablero.getNegro(), comida)) {
-                            JOptionPane.showMessageDialog(null, "¡Las fichas BLANCAS gana la partida!");
+                            PnlRegistroPartidas.agregarJugadorALaTabla(negro,blanco);
+                            String mensaje = "¡"+negro.getUsuario()+" gana!";
+                            JOptionPane.showMessageDialog(null, mensaje);
                             PnlMenuIzquierdoPrincipal pnlMenu = new PnlMenuIzquierdoPrincipal();
                             FrmChessGame.agregarPanelIzquierdo(pnlMenu);
+                            FrmChessGame.agregarPanelDerecho(new PnlImagenDerecha());
+                            
                         }
                     } else {
                         if (tablero.JaqueMate(tablero.getBlanco(), comida)) {
-                            JOptionPane.showMessageDialog(null, "¡Las fichas NEGRAS gana la partida!");
+                            PnlRegistroPartidas.agregarJugadorALaTabla(blanco,negro);
+                            String mensaje = "¡"+blanco.getUsuario()+" gana!";
+                            JOptionPane.showMessageDialog(null, mensaje);
                             PnlMenuIzquierdoPrincipal pnlMenu = new PnlMenuIzquierdoPrincipal();
                             FrmChessGame.agregarPanelIzquierdo(pnlMenu);
+                            FrmChessGame.agregarPanelDerecho(new PnlImagenDerecha());
+                            
                         }
                     }
                     ficha.setCasilla(null);

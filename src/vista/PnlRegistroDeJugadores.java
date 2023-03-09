@@ -331,7 +331,6 @@ public class PnlRegistroDeJugadores extends javax.swing.JPanel {
 
                 pnlTableroBotones = new PnlTableroBotones();
                 FrmChessGame.agregarPanelIzquierdo(pnlTableroBotones);
-
                 pnlMenuDeJuego = new PnlMenuDeJuego();
                 FrmChessGame.agregarPanelDerecho(pnlMenuDeJuego);
             } else {

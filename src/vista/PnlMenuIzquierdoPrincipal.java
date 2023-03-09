@@ -217,7 +217,7 @@ public class PnlMenuIzquierdoPrincipal extends javax.swing.JPanel {
 
     private void pnlPuntuacionesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlPuntuacionesMouseClicked
         // TODO add your handling code here:
-        pnlPuntuaciones = new PnlPuntuaciones();
+        pnlPuntuaciones = new PnlRegistroPartidas();
         agregarPanelDerecho(pnlPuntuaciones);
     }//GEN-LAST:event_pnlPuntuacionesMouseClicked
 

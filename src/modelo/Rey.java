@@ -38,13 +38,13 @@ public class Rey extends Ficha {
                         if ((i >= 0) && (i < 8) && (j >= 0) && (j < 8)) {
                             if (TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j],
                                     TableroAjedrez.getNegro())) {
-                                TableroAjedrez.getTablero()[i][j].setBackground(Color.red);
+                                TableroAjedrez.getTablero()[i][j].setBackground(Color.decode("#b22222"));
                                 System.out.println(i + "," + j + " Matriz");
 
                             } else {
                                 if (!TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j],
                                         TableroAjedrez.getBlanco())) {
-                                    TableroAjedrez.getTablero()[i][j].setBackground(Color.blue);
+                                    TableroAjedrez.getTablero()[i][j].setBackground(Color.decode("#ffff56"));
                                     System.out.println(i + "," + j + " Matriz");
                                 }
 
@@ -60,12 +60,12 @@ public class Rey extends Ficha {
                         if ((i >= 0) && (i < 8) && (j >= 0) && (j < 8)) {
                             if (TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j],
                                     TableroAjedrez.getBlanco())) {
-                                TableroAjedrez.getTablero()[i][j].setBackground(Color.red);
+                                TableroAjedrez.getTablero()[i][j].setBackground(Color.decode("#b22222"));
                                 System.out.println(i + "," + j + " Matriz");
                             } else {
                                 if (!TableroAjedrez.casillaOcupada(TableroAjedrez.getTablero()[i][j],
                                         TableroAjedrez.getNegro())) {
-                                    TableroAjedrez.getTablero()[i][j].setBackground(Color.blue);
+                                    TableroAjedrez.getTablero()[i][j].setBackground(Color.decode("#ffff56"));
                                     System.out.println(i + "," + j + " Matriz");
                                 }
 

@@ -17,10 +17,12 @@ public class FrmChessGame extends javax.swing.JFrame {
     static PnlImagenIzquierda pnlImagenIzquierda;
     static PnlCreditosJuego pnlCreditosJuego;
     static PnlImagenDerecha pnlImagenDerecha;
+    static PnlRegistroPartidas pnlRegistroPartidas;
 
     public FrmChessGame() {
         initComponents();
         //para que la ventana aparezca en el centro y no en la esquina
+        pnlRegistroPartidas = new PnlRegistroPartidas();
         this.setLocationRelativeTo(null);
         this.setTitle("Chess Game");
         pnlImagenDerecha = new PnlImagenDerecha();
@@ -227,7 +229,6 @@ public class FrmChessGame extends javax.swing.JFrame {
 
     private void pnlPuntuacionesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlPuntuacionesMouseClicked
         // TODO add your handling code here:
-        pnlPuntuaciones = new PnlPuntuaciones();
         agregarPanelDerecho(pnlPuntuaciones);
     }//GEN-LAST:event_pnlPuntuacionesMouseClicked
 
