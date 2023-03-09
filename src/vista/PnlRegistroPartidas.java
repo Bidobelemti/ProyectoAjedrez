@@ -1,6 +1,7 @@
 package vista;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import javax.swing.table.DefaultTableModel;
 import modelo.Jugador;
 
@@ -118,9 +119,14 @@ public class PnlRegistroPartidas extends javax.swing.JPanel {
     }
 
     public void generarTabla() {
-        dtm.addRow(new String[]{nombreGanador, nombreSegundoLugar});
+        FrmChessGame.jugadores.add(new ArrayList<>(Arrays.asList(nombreGanador, nombreSegundoLugar)));
+        System.out.println(FrmChessGame.jugadores);
+        for (ArrayList<String> row : FrmChessGame.jugadores) {
+            for (String r : row ) {
+                dtm.addRow(new String[]{r,r});
+            }
+        }
     }
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel jPanel1;

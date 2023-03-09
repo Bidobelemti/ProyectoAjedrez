@@ -2,6 +2,7 @@ package vista;
 
 
 import java.awt.BorderLayout;
+import java.util.ArrayList;
 import javax.swing.JPanel;
 
 /**
@@ -18,9 +19,10 @@ public class FrmChessGame extends javax.swing.JFrame {
     static PnlCreditosJuego pnlCreditosJuego;
     static PnlImagenDerecha pnlImagenDerecha;
     static PnlRegistroPartidas pnlRegistroPartidas;
-
+    static ArrayList<ArrayList<String>> jugadores;
     public FrmChessGame() {
         initComponents();
+        jugadores = new ArrayList<>();
         //para que la ventana aparezca en el centro y no en la esquina
         pnlRegistroPartidas = new PnlRegistroPartidas();
         this.setLocationRelativeTo(null);
