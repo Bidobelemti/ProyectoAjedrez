@@ -1379,6 +1379,10 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                     } else {
                         if (tablero.JaqueMate(tablero.getBlanco(), comida)) {
                             String mensaje = "¡" + negro.getUsuario() + " gana!";
+                            String ganador = String.valueOf(negro.getUsuario());
+                            String segundoLugar = String.valueOf(blanco.getUsuario());
+                            pnlPrueba.guardarGanador(ganador);
+                            pnlPrueba.guardarSegundoLugar(segundoLugar);
                             JOptionPane.showMessageDialog(null, mensaje);
                             PnlMenuIzquierdoPrincipal pnlMenu = new PnlMenuIzquierdoPrincipal();
                             FrmChessGame.agregarPanelIzquierdo(pnlMenu);
