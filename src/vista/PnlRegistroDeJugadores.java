@@ -61,8 +61,8 @@ public class PnlRegistroDeJugadores extends javax.swing.JPanel {
         txtNombrePrimerJugador.setText("Ingrese su nombre");
         txtNombrePrimerJugador.setBorder(null);
         txtNombrePrimerJugador.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                txtNombrePrimerJugadorMouseClicked(evt);
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                txtNombrePrimerJugadorMousePressed(evt);
             }
         });
         txtNombrePrimerJugador.addActionListener(new java.awt.event.ActionListener() {
@@ -135,8 +135,8 @@ public class PnlRegistroDeJugadores extends javax.swing.JPanel {
         txtNombreSegundoJugador.setText("Ingrese su nombre");
         txtNombreSegundoJugador.setBorder(null);
         txtNombreSegundoJugador.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                txtNombreSegundoJugadorMouseClicked(evt);
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                txtNombreSegundoJugadorMousePressed(evt);
             }
         });
         txtNombreSegundoJugador.addActionListener(new java.awt.event.ActionListener() {
@@ -315,43 +315,33 @@ public class PnlRegistroDeJugadores extends javax.swing.JPanel {
         if (nombrePrimerJugador.equals("Ingrese su nombre") || nombrePrimerJugador.equals("")
                 || nombreSegundoJugador.equals("Ingrese su nombre") || nombreSegundoJugador.equals("")) {
 
-            JOptionPane.showMessageDialog(null, "Ingrese el nombre de ambos jugadores");
+            JOptionPane.showMessageDialog(null, "Ingrese el nombre "
+                    + "de ambos jugadores", "Error", JOptionPane.ERROR_MESSAGE);
 
         } else {
-            
-            if ((rbtBlancasPrimerJugador.isSelected() && rbtNegrasSegundoJugador.isSelected()) ||
-                    (rbtBlancasSegundoJugador.isSelected() && rbtNegrasPrimerJugador.isSelected())){
 
-            jugadores[0][0] = nombrePrimerJugador;
-            jugadores[0][1] = colorFichaPrimerJugador;
+            if ((rbtBlancasPrimerJugador.isSelected() && rbtNegrasSegundoJugador.isSelected())
+                    || (rbtBlancasSegundoJugador.isSelected() && rbtNegrasPrimerJugador.isSelected())) {
 
-            jugadores[1][0] = nombreSegundoJugador;
-            jugadores[1][1] = colorFichaSegundoJugador;
+                jugadores[0][0] = nombrePrimerJugador;
+                jugadores[0][1] = colorFichaPrimerJugador;
 
-            pnlTableroBotones = new PnlTableroBotones();
-            FrmChessGame.agregarPanelIzquierdo(pnlTableroBotones);
-            
-            pnlMenuDeJuego = new PnlMenuDeJuego();
-            FrmChessGame.agregarPanelDerecho(pnlMenuDeJuego);
+                jugadores[1][0] = nombreSegundoJugador;
+                jugadores[1][1] = colorFichaSegundoJugador;
+
+                pnlTableroBotones = new PnlTableroBotones();
+                FrmChessGame.agregarPanelIzquierdo(pnlTableroBotones);
+
+                pnlMenuDeJuego = new PnlMenuDeJuego();
+                FrmChessGame.agregarPanelDerecho(pnlMenuDeJuego);
             } else {
-                JOptionPane.showMessageDialog(null, "Escoja un color de ficha");
+                JOptionPane.showMessageDialog(null, "Ecoja un color "
+                        + "de ficha", "Error", JOptionPane.ERROR_MESSAGE);
             }
         }
 
 
     }//GEN-LAST:event_pnlIniciarJuegoMouseClicked
-
-    private void txtNombrePrimerJugadorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtNombrePrimerJugadorMouseClicked
-        // TODO add your handling code here:
-        txtNombrePrimerJugador.setText("");
-        txtNombrePrimerJugador.setForeground(Color.black);
-    }//GEN-LAST:event_txtNombrePrimerJugadorMouseClicked
-
-    private void txtNombreSegundoJugadorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtNombreSegundoJugadorMouseClicked
-        // TODO add your handling code here:
-        txtNombreSegundoJugador.setText("");
-        txtNombreSegundoJugador.setForeground(Color.black);
-    }//GEN-LAST:event_txtNombreSegundoJugadorMouseClicked
 
     private void rbtBlancasPrimerJugadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtBlancasPrimerJugadorActionPerformed
         rbtNegrasSegundoJugador.setSelected(true);
@@ -369,6 +359,34 @@ public class PnlRegistroDeJugadores extends javax.swing.JPanel {
     private void rbtNegrasSegundoJugadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtNegrasSegundoJugadorActionPerformed
         rbtBlancasPrimerJugador.setSelected(true);
     }//GEN-LAST:event_rbtNegrasSegundoJugadorActionPerformed
+
+    private void txtNombrePrimerJugadorMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtNombrePrimerJugadorMousePressed
+        // TODO add your handling code here:
+        if (txtNombrePrimerJugador.getText().equals("Ingrese su nombre")) {
+            txtNombrePrimerJugador.setText("");
+            txtNombrePrimerJugador.setForeground(Color.black);
+        }
+
+        if (String.valueOf(txtNombreSegundoJugador.getText()).isEmpty()) {
+            txtNombreSegundoJugador.setText("Ingrese su nombre");
+            txtNombreSegundoJugador.setForeground(Color.gray);
+        }
+
+    }//GEN-LAST:event_txtNombrePrimerJugadorMousePressed
+
+    private void txtNombreSegundoJugadorMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtNombreSegundoJugadorMousePressed
+        // TODO add your handling code here:
+        if (txtNombreSegundoJugador.getText().equals("Ingrese su nombre")) {
+            txtNombreSegundoJugador.setText("");
+            txtNombreSegundoJugador.setForeground(Color.black);
+        }
+
+        if (String.valueOf(txtNombrePrimerJugador.getText()).isEmpty()) {
+            txtNombrePrimerJugador.setText("Ingrese su nombre");
+            txtNombrePrimerJugador.setForeground(Color.gray);
+        }
+        
+    }//GEN-LAST:event_txtNombreSegundoJugadorMousePressed
 
     public static String retornarJugadorBlanco() {
         if (jugadores[0][1].equals("Blancas")) {
@@ -401,7 +419,7 @@ public class PnlRegistroDeJugadores extends javax.swing.JPanel {
             return "Negras";
         }
     }
-    
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup btgFichaPrimerJugador;
     private javax.swing.ButtonGroup btgFichaSegundoJugador;
