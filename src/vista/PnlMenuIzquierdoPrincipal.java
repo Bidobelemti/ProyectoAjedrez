@@ -4,7 +4,7 @@
  */
 package vista;
 
-import desplazable.Desface;
+
 import static vista.FrmChessGame.agregarPanelDerecho;
 import static vista.FrmChessGame.agregarPanelIzquierdo;
 
@@ -14,7 +14,6 @@ import static vista.FrmChessGame.agregarPanelIzquierdo;
  */
 public class PnlMenuIzquierdoPrincipal extends javax.swing.JPanel {
 
-    Desface desplazamiento = new Desface();
 
     static PnlRegistroDeJugadores pnlRegistroDeJugadores;
     static PnlTableroBotones pnlTablero;
@@ -76,12 +75,6 @@ public class PnlMenuIzquierdoPrincipal extends javax.swing.JPanel {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 pnlJugarMouseClicked(evt);
             }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                pnlJugarMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                pnlJugarMouseExited(evt);
-            }
         });
 
         lblIconoJugar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Jugar.png"))); // NOI18N
@@ -112,7 +105,7 @@ public class PnlMenuIzquierdoPrincipal extends javax.swing.JPanel {
         );
 
         pnlMenuIzquierdo.add(pnlJugar);
-        pnlJugar.setBounds(-270, 240, 360, 80);
+        pnlJugar.setBounds(50, 220, 360, 80);
 
         pnlPuntuaciones.setBackground(new java.awt.Color(0, 41, 133));
         pnlPuntuaciones.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -120,12 +113,6 @@ public class PnlMenuIzquierdoPrincipal extends javax.swing.JPanel {
         pnlPuntuaciones.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 pnlPuntuacionesMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                pnlPuntuacionesMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                pnlPuntuacionesMouseExited(evt);
             }
         });
 
@@ -157,7 +144,7 @@ public class PnlMenuIzquierdoPrincipal extends javax.swing.JPanel {
         );
 
         pnlMenuIzquierdo.add(pnlPuntuaciones);
-        pnlPuntuaciones.setBounds(-270, 350, 360, 80);
+        pnlPuntuaciones.setBounds(50, 330, 360, 80);
 
         pnlCreditos.setBackground(new java.awt.Color(0, 41, 133));
         pnlCreditos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -165,12 +152,6 @@ public class PnlMenuIzquierdoPrincipal extends javax.swing.JPanel {
         pnlCreditos.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 pnlCreditosMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                pnlCreditosMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                pnlCreditosMouseExited(evt);
             }
         });
 
@@ -202,7 +183,7 @@ public class PnlMenuIzquierdoPrincipal extends javax.swing.JPanel {
         );
 
         pnlMenuIzquierdo.add(pnlCreditos);
-        pnlCreditos.setBounds(-270, 460, 360, 80);
+        pnlCreditos.setBounds(50, 440, 360, 80);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -236,53 +217,17 @@ public class PnlMenuIzquierdoPrincipal extends javax.swing.JPanel {
 
     }//GEN-LAST:event_pnlJugarMouseClicked
 
-    private void pnlJugarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlJugarMouseEntered
-
-        if (pnlJugar.getX() >= -270 && pnlJugar.getX() <= 0) {
-            // libreria importada de desplazamiento
-            //( objeto a mover | desde donde comienza  | donde termina | pasos en ir de a hacia b | tiempo)
-            desplazamiento.desplazarDerecha(pnlJugar, -270, 0, 10, 15);
-        }
-        //comentario
-    }//GEN-LAST:event_pnlJugarMouseEntered
-
-    private void pnlJugarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlJugarMouseExited
-
-        // lo mismo pero al revés el inicio y final
-        desplazamiento.desplazarIzquierda(pnlJugar, 0, -270, 10, 15);
-    }//GEN-LAST:event_pnlJugarMouseExited
-
     private void pnlPuntuacionesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlPuntuacionesMouseClicked
         // TODO add your handling code here:
         pnlPuntuaciones = new PnlPuntuaciones();
         agregarPanelDerecho(pnlPuntuaciones);
     }//GEN-LAST:event_pnlPuntuacionesMouseClicked
 
-    private void pnlPuntuacionesMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlPuntuacionesMouseEntered
-        // TODO add your handling code here:
-        desplazamiento.desplazarDerecha(pnlPuntuaciones, -270, 0, 10, 15);
-    }//GEN-LAST:event_pnlPuntuacionesMouseEntered
-
-    private void pnlPuntuacionesMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlPuntuacionesMouseExited
-        // TODO add your handling code here:
-        desplazamiento.desplazarIzquierda(pnlPuntuaciones, 0, -270, 10, 15);
-    }//GEN-LAST:event_pnlPuntuacionesMouseExited
-
     private void pnlCreditosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlCreditosMouseClicked
         // TODO add your handling code here:
         pnlCreditosJuego = new PnlCreditosJuego();
         agregarPanelDerecho(pnlCreditosJuego);
     }//GEN-LAST:event_pnlCreditosMouseClicked
-
-    private void pnlCreditosMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlCreditosMouseEntered
-        // TODO add your handling code here:
-        desplazamiento.desplazarDerecha(pnlCreditos, -270, 0, 10, 15);
-    }//GEN-LAST:event_pnlCreditosMouseEntered
-
-    private void pnlCreditosMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlCreditosMouseExited
-        // TODO add your handling code here:
-        desplazamiento.desplazarIzquierda(pnlCreditos, 0, -270, 10, 15);
-    }//GEN-LAST:event_pnlCreditosMouseExited
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

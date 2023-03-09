@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package modelo;
 
 import java.awt.Color;
@@ -9,10 +5,19 @@ import javax.swing.JButton;
 
 /**
  *
- * @author pc
+ * Clase caballo heredada de ficha
  */
 public class Caballo extends Ficha {
 
+    /**
+     * Crea una ficha de tipo caballo con un color, de tipo 3, con un
+     * identificador único y con una casilla única
+     *
+     * @param esBlanca
+     * @param tipo
+     * @param id
+     * @param casilla
+     */
     public Caballo(boolean esBlanca, int tipo, int id, JButton casilla) {
         super(esBlanca, tipo, id, casilla);
     }

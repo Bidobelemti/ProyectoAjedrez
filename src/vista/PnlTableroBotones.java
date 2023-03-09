@@ -1333,13 +1333,13 @@ private void accionBoton(JButton boton, int posicion) {
                 }
                 if (comida != null) {
                     if (turnoBlanco) {
-                        if (tablero.comer(tablero.getNegro(), comida)) {
+                        if (tablero.JaqueMate(tablero.getNegro(), comida)) {
                             JOptionPane.showMessageDialog(null, "¡Las fichas BLANCAS gana la partida!");
                             PnlMenuIzquierdoPrincipal pnlMenu = new PnlMenuIzquierdoPrincipal();
                             FrmChessGame.agregarPanelIzquierdo(pnlMenu);
                         }
                     } else {
-                        if (tablero.comer(tablero.getBlanco(), comida)) {
+                        if (tablero.JaqueMate(tablero.getBlanco(), comida)) {
                             JOptionPane.showMessageDialog(null, "¡Las fichas NEGRAS gana la partida!");
                             PnlMenuIzquierdoPrincipal pnlMenu = new PnlMenuIzquierdoPrincipal();
                             FrmChessGame.agregarPanelIzquierdo(pnlMenu);

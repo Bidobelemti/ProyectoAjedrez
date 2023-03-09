@@ -1,18 +1,22 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package modelo;
 
 import java.awt.Color;
 import javax.swing.JButton;
 
 /**
- *
- * @author pc
+ * Clase torre heredada de ficha
  */
 public class Torre extends Ficha {
 
+    /**
+     * Crea una ficha de tipo torre, con un color, de tipo 2 con un
+     * identificador único, y una casiilla única
+     *
+     * @param esBlanca
+     * @param tipo
+     * @param id
+     * @param casilla
+     */
     public Torre(boolean esBlanca, int tipo, int id, JButton casilla) {
         super(esBlanca, tipo, id, casilla);
     }
