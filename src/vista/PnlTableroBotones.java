@@ -75,8 +75,8 @@ public class PnlTableroBotones extends javax.swing.JPanel {
 
     /**
      * Este método inicializa las fichas que se tendrán dentro del tablero
-     * Declaracion de fichas: 1 - peon 2 - Torre 3 - Caballo 4 - Alfil 
-     * 5 - Dama 6 - Rey
+     * Declaracion de fichas: 1 - peon 2 - Torre 3 - Caballo 4 - Alfil 5 - Dama
+     * 6 - Rey
      */
     public void iniciarFichas() {
         //peones blanco
@@ -96,33 +96,33 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         fichasBlancas.add(peonBlanco5);
         fichasBlancas.add(peonBlanco6);
         fichasBlancas.add(peonBlanco7);
-        
+
         //torres blancos
         Ficha torreBlanco0 = new Torre(true, 2, 8, tablero.getTablero()[7][0]);
         Ficha torreBlanco1 = new Torre(true, 2, 9, tablero.getTablero()[7][7]);
         fichasBlancas.add(torreBlanco0);
         fichasBlancas.add(torreBlanco1);
-        
+
         //Caballos blancos
         Ficha caballoBlanco0 = new Caballo(true, 3, 10, tablero.getTablero()[7][1]);
         Ficha caballoBlanco1 = new Caballo(true, 3, 11, tablero.getTablero()[7][6]);
         fichasBlancas.add(caballoBlanco0);
         fichasBlancas.add(caballoBlanco1);
-        
+
         //Alfiles blancos
         Ficha alfilBlanco0 = new Alfil(true, 4, 12, tablero.getTablero()[7][2]);
         Ficha alfilBlanco1 = new Alfil(true, 4, 13, tablero.getTablero()[7][5]);
         fichasBlancas.add(alfilBlanco0);
         fichasBlancas.add(alfilBlanco1);
-        
+
         //Dama blanco
         Ficha damaBlanco = new Dama(true, 5, 14, tablero.getTablero()[7][3]);
         fichasBlancas.add(damaBlanco);
-        
+
         //Rey blanco
         Ficha reyBlanco = new Rey(true, 6, 15, tablero.getTablero()[7][4]);
         fichasBlancas.add(reyBlanco);
-        
+
         //peones negros
         Ficha peonNegro0 = new Peon(false, 1, 0, tablero.getTablero()[1][0]);
         Ficha peonNegro1 = new Peon(false, 1, 1, tablero.getTablero()[1][1]);
@@ -140,35 +140,35 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         fichasNegras.add(peonNegro5);
         fichasNegras.add(peonNegro6);
         fichasNegras.add(peonNegro7);
-        
+
         //Torres negras
         Ficha torreNegro0 = new Torre(false, 2, 8, tablero.getTablero()[0][0]);
         Ficha torreNegro1 = new Torre(false, 2, 9, tablero.getTablero()[0][7]);
         fichasNegras.add(torreNegro0);
         fichasNegras.add(torreNegro1);
-        
+
         //Caballos negros
         Ficha caballoNegro0 = new Caballo(false, 3, 10, tablero.getTablero()[0][1]);
         Ficha caballoNegro1 = new Caballo(false, 3, 11, tablero.getTablero()[0][6]);
         fichasNegras.add(caballoNegro0);
         fichasNegras.add(caballoNegro1);
-        
+
         //Alfiles negros
         Ficha alfilNegro0 = new Alfil(false, 4, 12, tablero.getTablero()[0][2]);
         Ficha alfilNegro1 = new Alfil(false, 4, 13, tablero.getTablero()[0][5]);
         fichasNegras.add(alfilNegro0);
         fichasNegras.add(alfilNegro1);
-        
+
         //Dama blanco
         Ficha damaNegro = new Dama(true, 5, 14, tablero.getTablero()[0][3]);
         fichasNegras.add(damaNegro);
-        
+
         //Rey negro
         Ficha reyNegro = new Rey(false, 6, 15, tablero.getTablero()[0][4]);
         fichasNegras.add(reyNegro);
         blanco = new Jugador(PnlRegistroDeJugadores.retornarJugadorBlanco(), "blanco", fichasBlancas);
         negro = new Jugador(PnlRegistroDeJugadores.retornarJugadorNegro(), "negro", fichasNegras);
-        System.out.println(blanco.getUsuario() +" "+negro.getUsuario());
+        System.out.println(blanco.getUsuario() + " " + negro.getUsuario());
         tablero.setBlanco(blanco);
         tablero.setNegro(negro);
     }
@@ -1162,9 +1162,10 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         accionBoton(btnH4, 39);
     }//GEN-LAST:event_btnH4ActionPerformed
     /**
-     * Este método colorea el borde del tablero para indicar si es el turno 
-     * del jugador con fichas blancas o con fichas negras 
-     * @param esBlanco 
+     * Este método colorea el borde del tablero para indicar si es el turno del
+     * jugador con fichas blancas o con fichas negras
+     *
+     * @param esBlanco
      */
     private void colorearBordes(boolean esBlanco) {
         if (esBlanco) {
@@ -1181,10 +1182,11 @@ public class PnlTableroBotones extends javax.swing.JPanel {
     }
 
     /**
-     * Este método contiene todas las acciones de los botones para permitir el 
+     * Este método contiene todas las acciones de los botones para permitir el
      * movimiento de las fichas
+     *
      * @param boton
-     * @param posicion 
+     * @param posicion
      */
     private void accionBoton(JButton boton, int posicion) {
         boolean turnoBlanco = tablero.esTurnoBlanco();
@@ -1363,23 +1365,27 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 if (comida != null) {
                     if (turnoBlanco) {
                         if (tablero.JaqueMate(tablero.getNegro(), comida)) {
-                            pnlPrueba.agregarJugadorALaTabla(blanco,negro);
-                            String mensaje = "¡"+blanco.getUsuario()+" gana!";
+                             pnlPrueba.agregarJugadorALaTabla(blanco,negro);
+                            String mensaje = "¡" + blanco.getUsuario() + " gana!";
+                            String ganador = String.valueOf(blanco.getUsuario());
+                            String segundoLugar = String.valueOf(negro.getUsuario());
+                            pnlPrueba.guardarGanador(ganador);
+                            pnlPrueba.guardarSegundoLugar(segundoLugar);
                             JOptionPane.showMessageDialog(null, mensaje);
                             PnlMenuIzquierdoPrincipal pnlMenu = new PnlMenuIzquierdoPrincipal();
                             FrmChessGame.agregarPanelIzquierdo(pnlMenu);
                             FrmChessGame.agregarPanelDerecho(new PnlImagenDerecha());
-                            
+
                         }
                     } else {
                         if (tablero.JaqueMate(tablero.getBlanco(), comida)) {
-                            pnlPrueba.agregarJugadorALaTabla(negro,blanco);
-                            String mensaje = "¡"+negro.getUsuario()+" gana!";
+                            pnlPrueba.agregarJugadorALaTabla(negro, blanco);
+                            String mensaje = "¡" + negro.getUsuario() + " gana!";
                             JOptionPane.showMessageDialog(null, mensaje);
                             PnlMenuIzquierdoPrincipal pnlMenu = new PnlMenuIzquierdoPrincipal();
                             FrmChessGame.agregarPanelIzquierdo(pnlMenu);
                             FrmChessGame.agregarPanelDerecho(new PnlImagenDerecha());
-                            
+
                         }
                     }
                     ficha.setCasilla(null);
@@ -1597,7 +1603,9 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                 }
             }
         }
+
     }
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public static javax.swing.JButton btnA1;

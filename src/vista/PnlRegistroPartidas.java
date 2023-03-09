@@ -1,16 +1,23 @@
 package vista;
 
+import java.util.ArrayList;
 import javax.swing.table.DefaultTableModel;
 import modelo.Jugador;
 
 public class PnlRegistroPartidas extends javax.swing.JPanel {
+
     static DefaultTableModel dtm;
+    public static String nombreGanador;
+    public static String nombreSegundoLugar;
+
     public PnlRegistroPartidas() {
         initComponents();
         dtm = new DefaultTableModel();
         dtm.addColumn("Primer lugar");
         dtm.addColumn("Segundo lugar");
         tblRegistroJugadores.setModel(dtm);
+        generarTabla();
+
     }
 
     /**
@@ -28,9 +35,11 @@ public class PnlRegistroPartidas extends javax.swing.JPanel {
         pnlFondoAzulSuperior = new javax.swing.JPanel();
         pnlFondoAzulDerecho = new javax.swing.JPanel();
 
+        setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        tblRegistroJugadores.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+
         tblRegistroJugadores.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -55,9 +64,9 @@ public class PnlRegistroPartidas extends javax.swing.JPanel {
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 487, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 479, Short.MAX_VALUE)
                 .addGap(15, 15, 15))
         );
 
@@ -93,10 +102,25 @@ public class PnlRegistroPartidas extends javax.swing.JPanel {
 
         add(pnlFondoAzulDerecho, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 70, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
-    public static void agregarJugadorALaTabla(Jugador primero, Jugador segundo ) {
+    public static void agregarJugadorALaTabla(Jugador primero, Jugador segundo) {
         System.out.println("entrando a la tabla");
         dtm.addRow(new Object[]{primero.getUsuario(), segundo.getUsuario()});
     }
+
+    public static void guardarGanador(String ganador) {
+        System.out.println(ganador);
+        nombreGanador = ganador;
+    }
+
+    public static void guardarSegundoLugar(String segundoLugar) {
+        System.out.println(segundoLugar);
+        nombreSegundoLugar = segundoLugar;
+    }
+
+    public void generarTabla() {
+        dtm.addRow(new String[]{nombreGanador, nombreSegundoLugar});
+    }
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel jPanel1;

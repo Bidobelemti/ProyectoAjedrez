@@ -19,7 +19,9 @@ public class Jugador {
      * Asigna a cada jugador el tipo de fichas de aceurdo a su color
      */
     private ArrayList<Ficha> fichas;
-
+    
+    private String ganador;
+    
     /**
      * Crea un jugador con un usuario, un color y le asigna un arreglo de fichas
      *
@@ -50,4 +52,14 @@ public class Jugador {
         return color;
     }
 
+    public String getGanador() {
+        return ganador;
+    }
+
+    public void setGanador(String ganador) {
+        this.ganador = ganador;
+    }
+    
+    
+    
 }
