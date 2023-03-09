@@ -56,7 +56,7 @@ public class JdCoronacion extends javax.swing.JDialog {
             }
         });
 
-        lblIconoCaballo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/CaballoBlanco.png"))); // NOI18N
+        lblIconoCaballo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/CaballoCafe.png"))); // NOI18N
 
         lblTextoCaballo.setBackground(new java.awt.Color(255, 255, 255));
         lblTextoCaballo.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -95,7 +95,7 @@ public class JdCoronacion extends javax.swing.JDialog {
             }
         });
 
-        lblIconoTorre.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/TorreBlanca.png"))); // NOI18N
+        lblIconoTorre.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/TorreCafe.png"))); // NOI18N
 
         lblTextoTorre.setBackground(new java.awt.Color(255, 255, 255));
         lblTextoTorre.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -134,7 +134,7 @@ public class JdCoronacion extends javax.swing.JDialog {
             }
         });
 
-        lblIconoAlfil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/AlfilBlanco.png"))); // NOI18N
+        lblIconoAlfil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/AlfilCafe.png"))); // NOI18N
 
         lblTextoAlfil.setBackground(new java.awt.Color(255, 255, 255));
         lblTextoAlfil.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -173,7 +173,7 @@ public class JdCoronacion extends javax.swing.JDialog {
             }
         });
 
-        lblIconoCaballo3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/DamaBlanca.png"))); // NOI18N
+        lblIconoCaballo3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/DamaCafe.png"))); // NOI18N
 
         lblTextoDama.setBackground(new java.awt.Color(255, 255, 255));
         lblTextoDama.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N

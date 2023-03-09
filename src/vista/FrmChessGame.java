@@ -99,9 +99,9 @@ public class FrmChessGame extends javax.swing.JFrame {
         pnlJugarLayout.setHorizontalGroup(
             pnlJugarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlJugarLayout.createSequentialGroup()
-                .addGap(34, 34, 34)
+                .addGap(36, 36, 36)
                 .addComponent(lblJugar, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 130, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 238, Short.MAX_VALUE)
                 .addComponent(lblIconoJugar)
                 .addGap(23, 23, 23))
         );
@@ -116,7 +116,7 @@ public class FrmChessGame extends javax.swing.JFrame {
         );
 
         pnlMenuIzquierdo.add(pnlJugar);
-        pnlJugar.setBounds(40, 190, 360, 80);
+        pnlJugar.setBounds(90, 180, 470, 80);
 
         pnlPuntuaciones.setBackground(new java.awt.Color(0, 41, 133));
         pnlPuntuaciones.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -139,7 +139,7 @@ public class FrmChessGame extends javax.swing.JFrame {
             pnlPuntuacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlPuntuacionesLayout.createSequentialGroup()
                 .addGap(34, 34, 34)
-                .addComponent(lblPuntuaciones, javax.swing.GroupLayout.DEFAULT_SIZE, 240, Short.MAX_VALUE)
+                .addComponent(lblPuntuaciones, javax.swing.GroupLayout.DEFAULT_SIZE, 350, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addComponent(lblIconoPuntuaciones)
                 .addGap(23, 23, 23))
@@ -155,7 +155,7 @@ public class FrmChessGame extends javax.swing.JFrame {
         );
 
         pnlMenuIzquierdo.add(pnlPuntuaciones);
-        pnlPuntuaciones.setBounds(40, 300, 360, 80);
+        pnlPuntuaciones.setBounds(90, 320, 470, 80);
 
         pnlCreditos.setBackground(new java.awt.Color(0, 41, 133));
         pnlCreditos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -177,9 +177,9 @@ public class FrmChessGame extends javax.swing.JFrame {
         pnlCreditosLayout.setHorizontalGroup(
             pnlCreditosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlCreditosLayout.createSequentialGroup()
-                .addGap(34, 34, 34)
+                .addGap(29, 29, 29)
                 .addComponent(lblCreditos, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 101, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 216, Short.MAX_VALUE)
                 .addComponent(lblICreditos)
                 .addGap(23, 23, 23))
         );
@@ -194,7 +194,7 @@ public class FrmChessGame extends javax.swing.JFrame {
         );
 
         pnlMenuIzquierdo.add(pnlCreditos);
-        pnlCreditos.setBounds(40, 410, 360, 80);
+        pnlCreditos.setBounds(90, 460, 470, 80);
 
         pnlFondo.add(pnlMenuIzquierdo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 650, 600));
 
