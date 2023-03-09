@@ -5,6 +5,7 @@ import java.util.Arrays;
 import javax.swing.table.DefaultTableModel;
 import modelo.Jugador;
 
+
 public class PnlRegistroPartidas extends javax.swing.JPanel {
 
     static DefaultTableModel dtm;
@@ -103,16 +104,27 @@ public class PnlRegistroPartidas extends javax.swing.JPanel {
         add(pnlFondoAzulDerecho, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 70, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * Este método guarda el jugador que ganó la partida
+     * @param ganador 
+     */
     public static void guardarGanador(String ganador) {
         System.out.println(ganador);
         nombreGanador = ganador;
     }
 
+    /**
+     * Este método guarda el jugador que quedó en segundo lugar en la partida
+     * @param segundoLugar 
+     */
     public static void guardarSegundoLugar(String segundoLugar) {
         System.out.println(segundoLugar);
         nombreSegundoLugar = segundoLugar;
     }
 
+    /**
+     * Este método genera la tabla de resultados de las partidas
+     */
     public void generarTabla() {
         FrmChessGame.jugadores.add(new ArrayList<>(Arrays.asList(nombreGanador, nombreSegundoLugar)));
         System.out.println(FrmChessGame.jugadores);
