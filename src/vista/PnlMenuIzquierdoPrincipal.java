@@ -15,7 +15,6 @@ import static vista.FrmChessGame.agregarPanelIzquierdo;
 public class PnlMenuIzquierdoPrincipal extends javax.swing.JPanel {
 
     Desface desplazamiento = new Desface();
-
     static PnlRegistroDeJugadores pnlRegistroDeJugadores;
     static PnlTableroBotones pnlTablero;
     static PnlImagenIzquierda pnlImagenIzquierda;
@@ -230,7 +229,6 @@ public class PnlMenuIzquierdoPrincipal extends javax.swing.JPanel {
         // TODO add your handling code here:
         pnlRegistroDeJugadores = new PnlRegistroDeJugadores();
         agregarPanelDerecho(pnlRegistroDeJugadores);
-        //Controlador controlador = new Controlador();
         pnlImagenIzquierda = new PnlImagenIzquierda();
         agregarPanelIzquierdo(pnlImagenIzquierda);
 

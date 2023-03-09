@@ -175,25 +175,7 @@ public class PnlMenuDeJuego extends javax.swing.JPanel {
             .addComponent(pnlFondo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
-/*
-    public void imprimirJugadores(String usuarioUno, String usuarioDos) {
-        System.out.println(usuarioUno + " nb " + usuarioDos);
-        lblReglasDeJuego.setText(usuarioUno);
-        lblNombreJugadorNegras.setText(usuarioDos);
-    }
 
-    public void colocarTurno(boolean esBlanco) {
-        System.out.println("entrado al metodo");
-        if (esBlanco) {
-            System.out.println("Entra aquii");
-            lblColorJugador.setText("Blanco");
-        } else {
-            System.out.println("Entra al else");
-            lblColorJugador.setText("Negro");
-        }
-
-        pnlFondo.repaint();
-    }*/
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel lblAlfilBlanco;

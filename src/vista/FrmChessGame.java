@@ -50,7 +50,7 @@ public class FrmChessGame extends javax.swing.JFrame {
         lblICreditos = new javax.swing.JLabel();
         lblCreditos = new javax.swing.JLabel();
         pnlMenuDerecho = new javax.swing.JPanel();
-        lblImagenAjedrezProvicional = new javax.swing.JLabel();
+        lblImagenAjedrez = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -202,11 +202,11 @@ public class FrmChessGame extends javax.swing.JFrame {
         pnlMenuDerecho.setLayout(pnlMenuDerechoLayout);
         pnlMenuDerechoLayout.setHorizontalGroup(
             pnlMenuDerechoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblImagenAjedrezProvicional, javax.swing.GroupLayout.PREFERRED_SIZE, 780, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(lblImagenAjedrez, javax.swing.GroupLayout.PREFERRED_SIZE, 780, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         pnlMenuDerechoLayout.setVerticalGroup(
             pnlMenuDerechoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblImagenAjedrezProvicional, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(lblImagenAjedrez, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pnlFondo.add(pnlMenuDerecho, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 0, 350, 600));
@@ -238,12 +238,11 @@ public class FrmChessGame extends javax.swing.JFrame {
     }//GEN-LAST:event_pnlCreditosMouseClicked
 
     /**
-     * Método para agregar un panel derecho
+     * Este método agrega un panel al lado derecho 
      * @param pnl 
      */
     public static void agregarPanelDerecho(JPanel pnl) {
         //ajustamos el tamaño
-        
         pnl.setSize(350, 600);
         //colocamos, la esquina superior izquierda posee coordenadas (0,0)
         pnl.setLocation(0, 0);
@@ -257,7 +256,7 @@ public class FrmChessGame extends javax.swing.JFrame {
     }
     
     /**
-     * Método para agregar un panel izquierdo
+     * Este método agrega un panel izquierdo
      * @param pnl 
      */
 
@@ -275,25 +274,6 @@ public class FrmChessGame extends javax.swing.JFrame {
         pnlMenuIzquierdo.repaint();
     }
     
-    /**
-     * Método para agregar un panel de fondo
-     * @param pnl 
-     */
-    
-    public static void agregarPanelFondo(JPanel pnl) {
-        //ajustamos el tamaño
-        pnl.setSize(1000, 600);
-        //colocamos, la esquina superior izquierda posee coordenadas (0,0)
-        pnl.setLocation(0, 0);
-        //remueve lo del panel inicio
-        pnlMenuIzquierdo.removeAll();
-        //en el panel inicio agregue el panel clientes con una ubicación
-        pnlMenuIzquierdo.add(pnl, BorderLayout.CENTER);
-        //elimina toda la jerarquia y la construye nuevamente
-        pnlMenuIzquierdo.revalidate();
-        pnlMenuIzquierdo.repaint();
-    }
-
     /**
      * @param args the command line arguments
      */
@@ -335,7 +315,7 @@ public class FrmChessGame extends javax.swing.JFrame {
     private javax.swing.JLabel lblICreditos;
     private javax.swing.JLabel lblIconoJugar;
     private javax.swing.JLabel lblIconoPuntuaciones;
-    private javax.swing.JLabel lblImagenAjedrezProvicional;
+    private javax.swing.JLabel lblImagenAjedrez;
     private javax.swing.JLabel lblJugar;
     private javax.swing.JLabel lblPuntuaciones;
     private javax.swing.JPanel pnlCreditos;
