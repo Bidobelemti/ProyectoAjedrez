@@ -105,7 +105,7 @@
             <Component class="javax.swing.JLabel" name="lblIconoCaballo">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/iconos/CaballoBlanco.png"/>
+                  <Image iconType="3" name="/iconos/CaballoCafe.png"/>
                 </Property>
               </Properties>
             </Component>
@@ -171,7 +171,7 @@
             <Component class="javax.swing.JLabel" name="lblIconoTorre">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/iconos/TorreBlanca.png"/>
+                  <Image iconType="3" name="/iconos/TorreCafe.png"/>
                 </Property>
               </Properties>
             </Component>
@@ -237,7 +237,7 @@
             <Component class="javax.swing.JLabel" name="lblIconoAlfil">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/iconos/AlfilBlanco.png"/>
+                  <Image iconType="3" name="/iconos/AlfilCafe.png"/>
                 </Property>
               </Properties>
             </Component>
@@ -303,7 +303,7 @@
             <Component class="javax.swing.JLabel" name="lblIconoCaballo3">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/iconos/DamaBlanca.png"/>
+                  <Image iconType="3" name="/iconos/DamaCafe.png"/>
                 </Property>
               </Properties>
             </Component>
