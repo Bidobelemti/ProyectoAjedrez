@@ -6,6 +6,7 @@ package vista;
 
 import static vista.FrmChessGame.agregarPanelDerecho;
 import static vista.FrmChessGame.agregarPanelIzquierdo;
+import static vista.FrmChessGame.pnlRegistroPartidas;
 
 /**
  *
@@ -220,6 +221,7 @@ public class PnlMenuIzquierdoPrincipal extends javax.swing.JPanel {
         // TODO add your handling code here:
 
         agregarPanelDerecho(pnlRegistroDePartidas);
+        pnlRegistroPartidas.generarTabla();
     }//GEN-LAST:event_pnlPuntuacionesMouseClicked
 
     private void pnlCreditosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlCreditosMouseClicked

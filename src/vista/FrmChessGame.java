@@ -1,7 +1,8 @@
 package vista;
 
-
 import java.awt.BorderLayout;
+import java.awt.Image;
+import java.awt.Toolkit;
 import java.util.ArrayList;
 import javax.swing.JPanel;
 
@@ -12,7 +13,6 @@ import javax.swing.JPanel;
 public class FrmChessGame extends javax.swing.JFrame {
 
     //se inicializa los panales
-
     static PnlRegistroDeJugadores pnlRegistroDeJugadores;
     static PnlTableroBotones pnlTablero;
     static PnlImagenIzquierda pnlImagenIzquierda;
@@ -20,6 +20,7 @@ public class FrmChessGame extends javax.swing.JFrame {
     static PnlImagenDerecha pnlImagenDerecha;
     static PnlRegistroPartidas pnlRegistroPartidas;
     static ArrayList<ArrayList<String>> jugadores;
+
     public FrmChessGame() {
         initComponents();
         jugadores = new ArrayList<>();
@@ -29,7 +30,7 @@ public class FrmChessGame extends javax.swing.JFrame {
         this.setTitle("Chess Game");
         pnlImagenDerecha = new PnlImagenDerecha();
         agregarPanelDerecho(pnlImagenDerecha);
-        
+
     }
 
     /**
@@ -57,6 +58,8 @@ public class FrmChessGame extends javax.swing.JFrame {
         lblImagenAjedrez = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setIconImage(getIconImage());
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         pnlFondo.setBackground(new java.awt.Color(255, 255, 255));
@@ -222,7 +225,7 @@ public class FrmChessGame extends javax.swing.JFrame {
 
     private void pnlJugarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlJugarMouseClicked
         // TODO add your handling code here:
-        
+
         pnlRegistroDeJugadores = new PnlRegistroDeJugadores();
         agregarPanelDerecho(pnlRegistroDeJugadores);
         pnlImagenIzquierda = new PnlImagenIzquierda();
@@ -232,6 +235,7 @@ public class FrmChessGame extends javax.swing.JFrame {
     private void pnlPuntuacionesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlPuntuacionesMouseClicked
         // TODO add your handling code here:
         agregarPanelDerecho(pnlRegistroPartidas);
+
     }//GEN-LAST:event_pnlPuntuacionesMouseClicked
 
     private void pnlCreditosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlCreditosMouseClicked
@@ -241,8 +245,9 @@ public class FrmChessGame extends javax.swing.JFrame {
     }//GEN-LAST:event_pnlCreditosMouseClicked
 
     /**
-     * Este método agrega un panel al lado derecho 
-     * @param pnl 
+     * Este método agrega un panel al lado derecho
+     *
+     * @param pnl
      */
     public static void agregarPanelDerecho(JPanel pnl) {
         //ajustamos el tamaño
@@ -257,12 +262,12 @@ public class FrmChessGame extends javax.swing.JFrame {
         pnlMenuDerecho.revalidate();
         pnlMenuDerecho.repaint();
     }
-    
+
     /**
      * Este método agrega un panel izquierdo
-     * @param pnl 
+     *
+     * @param pnl
      */
-
     public static void agregarPanelIzquierdo(JPanel pnl) {
         //ajustamos el tamaño
         pnl.setSize(650, 600);
@@ -276,7 +281,15 @@ public class FrmChessGame extends javax.swing.JFrame {
         pnlMenuIzquierdo.revalidate();
         pnlMenuIzquierdo.repaint();
     }
-    
+
+    @Override
+    public Image getIconImage() {
+        Image retValue = Toolkit.getDefaultToolkit().
+                getImage(ClassLoader.getSystemResource("iconos/ReyBlanco.png"));
+
+        return retValue;
+    }
+
     /**
      * @param args the command line arguments
      */

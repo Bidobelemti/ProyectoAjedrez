@@ -17,7 +17,6 @@ public class PnlRegistroPartidas extends javax.swing.JPanel {
         dtm.addColumn("Primer lugar");
         dtm.addColumn("Segundo lugar");
         tblRegistroJugadores.setModel(dtm);
-        generarTabla();
 
     }
 
@@ -103,10 +102,6 @@ public class PnlRegistroPartidas extends javax.swing.JPanel {
 
         add(pnlFondoAzulDerecho, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 70, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
-    public static void agregarJugadorALaTabla(Jugador primero, Jugador segundo) {
-        System.out.println("entrando a la tabla");
-        dtm.addRow(new Object[]{primero.getUsuario(), segundo.getUsuario()});
-    }
 
     public static void guardarGanador(String ganador) {
         System.out.println(ganador);
@@ -121,11 +116,20 @@ public class PnlRegistroPartidas extends javax.swing.JPanel {
     public void generarTabla() {
         FrmChessGame.jugadores.add(new ArrayList<>(Arrays.asList(nombreGanador, nombreSegundoLugar)));
         System.out.println(FrmChessGame.jugadores);
-        for (ArrayList<String> row : FrmChessGame.jugadores) {
-            for (String r : row ) {
-                dtm.addRow(new String[]{r,r});
+
+        for (int i = 0; i < FrmChessGame.jugadores.size(); i++) {
+            boolean procesado = false;
+            for (int j = 0; j < FrmChessGame.jugadores.get(i).size(); j++) {
+                if (!procesado) {
+                    String[] fila = new String[2];
+                    fila[0] = FrmChessGame.jugadores.get(i).get(0);
+                    fila[1] = FrmChessGame.jugadores.get(i).get(1);
+                    dtm.addRow(fila);
+                    procesado = true;
+                }
             }
         }
+
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
