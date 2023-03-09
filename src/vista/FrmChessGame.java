@@ -229,7 +229,7 @@ public class FrmChessGame extends javax.swing.JFrame {
 
     private void pnlPuntuacionesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlPuntuacionesMouseClicked
         // TODO add your handling code here:
-        agregarPanelDerecho(pnlPuntuaciones);
+        agregarPanelDerecho(pnlRegistroPartidas);
     }//GEN-LAST:event_pnlPuntuacionesMouseClicked
 
     private void pnlCreditosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlCreditosMouseClicked

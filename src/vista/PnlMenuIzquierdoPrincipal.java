@@ -4,7 +4,6 @@
  */
 package vista;
 
-
 import static vista.FrmChessGame.agregarPanelDerecho;
 import static vista.FrmChessGame.agregarPanelIzquierdo;
 
@@ -18,13 +17,15 @@ public class PnlMenuIzquierdoPrincipal extends javax.swing.JPanel {
     static PnlTableroBotones pnlTablero;
     static PnlImagenIzquierda pnlImagenIzquierda;
     static PnlCreditosJuego pnlCreditosJuego;
+    static PnlRegistroPartidas pnlRegistroDePartidas;
 
     /**
      * Creates new form PnlMenuIzquierdoPrincipal
      */
     public PnlMenuIzquierdoPrincipal() {
         initComponents();
-        
+        pnlRegistroDePartidas = new PnlRegistroPartidas();
+
     }
 
     /**
@@ -217,8 +218,8 @@ public class PnlMenuIzquierdoPrincipal extends javax.swing.JPanel {
 
     private void pnlPuntuacionesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlPuntuacionesMouseClicked
         // TODO add your handling code here:
-        pnlPuntuaciones = new PnlRegistroPartidas();
-        agregarPanelDerecho(pnlPuntuaciones);
+
+        agregarPanelDerecho(pnlRegistroDePartidas);
     }//GEN-LAST:event_pnlPuntuacionesMouseClicked
 
     private void pnlCreditosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlCreditosMouseClicked
