@@ -28,11 +28,11 @@ public class PnlTableroBotones extends javax.swing.JPanel {
     Jugador negro;
     JdCoronacion corona;
     PnlMenuDeJuego pnlMenuDeJuego;
-    PnlRegistroPartidas pnlPrueba;
+    PnlRegistroPartidas pnlRegistroPartidas;
 
     public PnlTableroBotones() {
         initComponents();
-        pnlPrueba = new PnlRegistroPartidas();
+        pnlRegistroPartidas = new PnlRegistroPartidas();
         pnlMenuDeJuego = new PnlMenuDeJuego();
         matrizCasillas = new JButton[8][8];
         ArrayButtons = new JButton[]{
@@ -1368,8 +1368,8 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                             String mensaje = "¡" + blanco.getUsuario() + " gana!";
                             String ganador = String.valueOf(blanco.getUsuario());
                             String segundoLugar = String.valueOf(negro.getUsuario());
-                            pnlPrueba.guardarGanador(ganador);
-                            pnlPrueba.guardarSegundoLugar(segundoLugar);
+                            pnlRegistroPartidas.guardarGanador(ganador);
+                            pnlRegistroPartidas.guardarSegundoLugar(segundoLugar);
                             JOptionPane.showMessageDialog(null, mensaje);
                             PnlMenuIzquierdoPrincipal pnlMenu = new PnlMenuIzquierdoPrincipal();
                             FrmChessGame.agregarPanelIzquierdo(pnlMenu);
@@ -1381,8 +1381,8 @@ public class PnlTableroBotones extends javax.swing.JPanel {
                             String mensaje = "¡" + negro.getUsuario() + " gana!";
                             String ganador = String.valueOf(negro.getUsuario());
                             String segundoLugar = String.valueOf(blanco.getUsuario());
-                            pnlPrueba.guardarGanador(ganador);
-                            pnlPrueba.guardarSegundoLugar(segundoLugar);
+                            pnlRegistroPartidas.guardarGanador(ganador);
+                            pnlRegistroPartidas.guardarSegundoLugar(segundoLugar);
                             JOptionPane.showMessageDialog(null, mensaje);
                             PnlMenuIzquierdoPrincipal pnlMenu = new PnlMenuIzquierdoPrincipal();
                             FrmChessGame.agregarPanelIzquierdo(pnlMenu);
