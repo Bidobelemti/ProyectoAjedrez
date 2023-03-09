@@ -1,21 +1,33 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package modelo;
 
 import java.util.ArrayList;
 
 /**
- *
- * @author Bidob
+ * Clase representa a un jugador en el ajedrez
  */
 public class Jugador {
+
+    /**
+     * Guarda un usuario
+     */
     private final String usuario;
+    /**
+     * Guarda un color
+     */
     private final String color;
+    /**
+     * Asigna a cada jugador el tipo de fichas de aceurdo a su color
+     */
     private ArrayList<Ficha> fichas;
-    
-    public Jugador(String usuario, String color, ArrayList fichas){
+
+    /**
+     * Crea un jugador con un usuario, un color y le asigna un arreglo de fichas
+     *
+     * @param usuario
+     * @param color
+     * @param fichas
+     */
+    public Jugador(String usuario, String color, ArrayList fichas) {
         this.fichas = new ArrayList<>();
         this.usuario = usuario;
         this.color = color;
@@ -25,7 +37,7 @@ public class Jugador {
     public ArrayList<Ficha> getFichas() {
         return fichas;
     }
-    
+
     public void setFichas(ArrayList<Ficha> fichas) {
         this.fichas = fichas;
     }
@@ -37,7 +49,5 @@ public class Jugador {
     public String getColor() {
         return color;
     }
-    
-    
-      
+
 }

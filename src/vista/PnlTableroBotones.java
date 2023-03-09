@@ -55,10 +55,13 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         btnCaballoNegro.setVisible(false);
         btnAlfilNegro.setVisible(false);
         btnDamaNegra.setVisible(false);
-        System.out.println(tablero.esTurnoBlanco()+" turno");
+        System.out.println(tablero.esTurnoBlanco() + " turno");
         colorearBordes(tablero.esTurnoBlanco());
     }
 
+    /**
+     * Este método llena la matriz para que este compuesta por botones
+     */
     public void llenarMatriz() {
         int n = 0;
         for (int i = 0; i < 8; i++) {
@@ -68,11 +71,13 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         }
     }
 
+    /**
+     * Este método inicializa las fichas que se tendrán dentro del tablero
+     * Declaracion de fichas: 1 - peon 2 - Torre 3 - Caballo 4 - Alfil 
+     * 5 - Dama 6 - Rey
+     */
     public void iniciarFichas() {
-        /**
-         * Declaracion de fichas 1 - peon 2 - Torre 3 - Caballo 4 - Alfil 5 -
-         * Dama 6 - Rey
-         */
+        //peones blanco
         Ficha peonBlanco0 = new Peon(true, 1, 0, tablero.getTablero()[6][0]);
         Ficha peonBlanco1 = new Peon(true, 1, 1, tablero.getTablero()[6][1]);
         Ficha peonBlanco2 = new Peon(true, 1, 2, tablero.getTablero()[6][2]);
@@ -89,27 +94,33 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         fichasBlancas.add(peonBlanco5);
         fichasBlancas.add(peonBlanco6);
         fichasBlancas.add(peonBlanco7);
+        
         //torres blancos
         Ficha torreBlanco0 = new Torre(true, 2, 8, tablero.getTablero()[7][0]);
         Ficha torreBlanco1 = new Torre(true, 2, 9, tablero.getTablero()[7][7]);
         fichasBlancas.add(torreBlanco0);
         fichasBlancas.add(torreBlanco1);
+        
         //Caballos blancos
         Ficha caballoBlanco0 = new Caballo(true, 3, 10, tablero.getTablero()[7][1]);
         Ficha caballoBlanco1 = new Caballo(true, 3, 11, tablero.getTablero()[7][6]);
         fichasBlancas.add(caballoBlanco0);
         fichasBlancas.add(caballoBlanco1);
+        
         //Alfiles blancos
         Ficha alfilBlanco0 = new Alfil(true, 4, 12, tablero.getTablero()[7][2]);
         Ficha alfilBlanco1 = new Alfil(true, 4, 13, tablero.getTablero()[7][5]);
         fichasBlancas.add(alfilBlanco0);
         fichasBlancas.add(alfilBlanco1);
+        
         //Dama blanco
         Ficha damaBlanco = new Dama(true, 5, 14, tablero.getTablero()[7][3]);
         fichasBlancas.add(damaBlanco);
+        
         //Rey blanco
         Ficha reyBlanco = new Rey(true, 6, 15, tablero.getTablero()[7][4]);
         fichasBlancas.add(reyBlanco);
+        
         //peones negros
         Ficha peonNegro0 = new Peon(false, 1, 0, tablero.getTablero()[1][0]);
         Ficha peonNegro1 = new Peon(false, 1, 1, tablero.getTablero()[1][1]);
@@ -127,24 +138,29 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         fichasNegras.add(peonNegro5);
         fichasNegras.add(peonNegro6);
         fichasNegras.add(peonNegro7);
+        
         //Torres negras
         Ficha torreNegro0 = new Torre(false, 2, 8, tablero.getTablero()[0][0]);
         Ficha torreNegro1 = new Torre(false, 2, 9, tablero.getTablero()[0][7]);
         fichasNegras.add(torreNegro0);
         fichasNegras.add(torreNegro1);
+        
         //Caballos negros
         Ficha caballoNegro0 = new Caballo(false, 3, 10, tablero.getTablero()[0][1]);
         Ficha caballoNegro1 = new Caballo(false, 3, 11, tablero.getTablero()[0][6]);
         fichasNegras.add(caballoNegro0);
         fichasNegras.add(caballoNegro1);
+        
         //Alfiles negros
         Ficha alfilNegro0 = new Alfil(false, 4, 12, tablero.getTablero()[0][2]);
         Ficha alfilNegro1 = new Alfil(false, 4, 13, tablero.getTablero()[0][5]);
         fichasNegras.add(alfilNegro0);
         fichasNegras.add(alfilNegro1);
+        
         //Dama blanco
         Ficha damaNegro = new Dama(true, 5, 14, tablero.getTablero()[0][3]);
         fichasNegras.add(damaNegro);
+        
         //Rey negro
         Ficha reyNegro = new Rey(false, 6, 15, tablero.getTablero()[0][4]);
         fichasNegras.add(reyNegro);
@@ -1142,6 +1158,11 @@ public class PnlTableroBotones extends javax.swing.JPanel {
     private void btnH4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnH4ActionPerformed
         accionBoton(btnH4, 39);
     }//GEN-LAST:event_btnH4ActionPerformed
+    /**
+     * Este método colorea el borde del tablero para indicar si es el turno 
+     * del jugador con fichas blancas o con fichas negras 
+     * @param esBlanco 
+     */
     private void colorearBordes(boolean esBlanco) {
         if (esBlanco) {
             pnlBordeSuperior.setBackground(Color.WHITE);
@@ -1156,8 +1177,13 @@ public class PnlTableroBotones extends javax.swing.JPanel {
         }
     }
 
-
-private void accionBoton(JButton boton, int posicion) {
+    /**
+     * Este método contiene todas las acciones de los botones para permitir el 
+     * movimiento de las fichas
+     * @param boton
+     * @param posicion 
+     */
+    private void accionBoton(JButton boton, int posicion) {
         boolean turnoBlanco = tablero.esTurnoBlanco();
         if (boton.getBackground().equals(Color.blue)) {
             ficha.setCasilla(null);
@@ -1333,13 +1359,13 @@ private void accionBoton(JButton boton, int posicion) {
                 }
                 if (comida != null) {
                     if (turnoBlanco) {
-                        if (tablero.comer(tablero.getNegro(), comida)) {
+                        if (tablero.JaqueMate(tablero.getNegro(), comida)) {
                             JOptionPane.showMessageDialog(null, "¡Las fichas BLANCAS gana la partida!");
                             PnlMenuIzquierdoPrincipal pnlMenu = new PnlMenuIzquierdoPrincipal();
                             FrmChessGame.agregarPanelIzquierdo(pnlMenu);
                         }
                     } else {
-                        if (tablero.comer(tablero.getBlanco(), comida)) {
+                        if (tablero.JaqueMate(tablero.getBlanco(), comida)) {
                             JOptionPane.showMessageDialog(null, "¡Las fichas NEGRAS gana la partida!");
                             PnlMenuIzquierdoPrincipal pnlMenu = new PnlMenuIzquierdoPrincipal();
                             FrmChessGame.agregarPanelIzquierdo(pnlMenu);

@@ -1,18 +1,21 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package modelo;
 
 import java.awt.Color;
 import javax.swing.JButton;
 
 /**
- *
- * @author pc
+ * Clase Dama heredada de ficha
  */
 public class Dama extends Ficha {
 
+    /**
+     * Crea una ficha de tipo dama, con un color, de tipo 5, con un
+     * identificador único y con una casilla única
+     * @param esBlanca
+     * @param tipo
+     * @param id
+     * @param casilla
+     */
     public Dama(boolean esBlanca, int tipo, int id, JButton casilla) {
         super(esBlanca, tipo, id, casilla);
     }
